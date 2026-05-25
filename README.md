@@ -51,7 +51,7 @@ required for power electronics analysis.
 
 | # | Topic | Date Completed | Problems Solved | Status |
 |---|-------|----------------|-----------------|--------|
-| 1 | Ohm's Law | — | 7/7 | ✅️ |
+| 1 | Ohm's Law | 25/05/2026 | 7/7 | ✅️ |
 | 2 | Kirchhoff's Voltage Law (KVL) | — | 0/7 | ⬜ |
 | 3 | Kirchhoff's Current Law (KCL) | — | 0/6 | ⬜ |
 | 4 | Series & Parallel Circuits | — | 0/6 | ⬜ |
