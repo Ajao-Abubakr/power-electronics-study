@@ -1,0 +1,41 @@
+Exercises solved
+Q1. A 48V supply is connected to a 1.2kΩ resistor.
+(a) Calculate the current in mA
+(b) Calculate the power dissipated
+(c) Calculate the energy consumed in 2 hours
+(d) The resistor is rated 2W. Is it operating safely with a 2× derating margin?
+Q2. You measure 65mA flowing through an unknown component when 15.6V is applied across it.
+(a) Calculate the resistance
+(b) Calculate the power
+(c) Choose a resistor from the E24 series (values: 10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82 and their decade multiples). Which standard value is closest?
+(d) What is the percentage error introduced by using the standard value?
+(e) What minimum power rating should you specify?
+Q3. A MOSFET in a solar inverter carries 25A continuously. R_DS(on) = 0.012Ω at 25°C. The datasheet shows R_DS(on) doubles at 175°C junction temperature.
+(a) Conduction loss at 25°C
+(b) Conduction loss at 175°C
+(c) A better MOSFET has R_DS(on) = 0.004Ω at 175°C. Calculate the power saving.
+(d) Over a year of 10 hours/day operation, how many kWh does the better MOSFET save?
+(e) At ₦200 per kWh, what is the annual energy cost saving?
+Q4. A PCB trace for a 3A current path: copper (ρ = 1.68×10⁻⁸ Ω·m), 60mm long, 35µm thick (1oz copper).
+(a) If the trace is 0.5mm wide, calculate resistance and power loss at 3A
+(b) If the trace is 2mm wide, calculate resistance and power loss at 3A
+(c) What width would give power loss below 50mW at 3A?
+(d) At 80°C operating temperature, what is the resistance of the 2mm trace? (α = 0.00393/°C, T₀ = 25°C)
+Q5. Three resistors are connected to a 24V supply. R1 = 100Ω, R2 = 150Ω, R3 = 200Ω — all in separate branches each directly across the 24V supply (parallel arrangement). For each resistor find:
+(a) Current through it
+(b) Power dissipated
+(c) Total current from supply
+(d) Total power. Verify: P_total = V × I_total
+Q6. Derivation question — no numbers, pure algebra.
+(a) Starting from P = V×I and V = IR, derive P = I²R showing every step
+(b) Starting from P = V×I and I = V/R, derive P = V²/R showing every step
+(c) A component dissipates 50W at 10A. What is its resistance?
+(d) The same component now carries 15A. What is its power dissipation?
+(e) A component dissipates 50W with 20V across it. What current flows and what is the resistance?
+Q7. Resistivity and wire design.
+A motor winding uses 200m of copper wire, circular cross-section, diameter = 0.8mm. ρ = 1.68×10⁻⁸ Ω·m, α = 0.00393/°C.
+(a) Cross-sectional area A = π(d/2)²
+(b) DC resistance at 25°C
+(c) Motor runs at 120°C. Resistance at 120°C.
+(d) Winding current = 4A. Copper loss at 120°C.
+(e) If the wire diameter is increased to 1.0mm, find the new resistance at 120°C and new copper loss. What is the percentage improvement?
