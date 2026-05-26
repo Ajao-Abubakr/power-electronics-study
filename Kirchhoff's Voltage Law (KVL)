@@ -1,0 +1,40 @@
+exercises solved
+Q1. Series circuit: 24V source, R1 = 120Ω, R2 = 180Ω, R3 = 300Ω.
+(a) Write the KVL equation and solve for current
+(b) Find voltage across each resistor
+(c) Find power in each resistor
+(d) Verify: sum of voltages = source voltage
+(e) Verify: sum of powers = source power
+Q2. Two sources in series loop: 20V (V1), 8V (V2 opposing V1), R1 = 300Ω, R2 = 200Ω in series.
+(a) Write KVL and find current
+(b) Which battery is charging and which is discharging? Explain physically.
+(c) Find voltage across each resistor
+(d) Complete power balance
+Q3. Two-mesh circuit: 48V source on left. R1 = 150Ω (left branch), R2 = 250Ω (shared middle), R3 = 350Ω (right branch).
+(a) Write KVL equations for both meshes
+(b) Solve for I1 and I2
+(c) Find all three branch currents
+(d) Find all three branch voltages
+(e) Complete power balance verification
+Q4. Three-mesh circuit: 40V source in mesh 1, 20V source (opposing) in mesh 3. R1 = 100Ω, R2 = 200Ω, R3 = 150Ω, R4 = 300Ω, R5 = 250Ω.
+(a) Write all three KVL mesh equations
+(b) Solve for all three mesh currents
+(c) Find all branch currents
+Q5. KVL converter analysis.
+(a) Buck-boost converter switch ON state: V_in − V_L = 0. Switch OFF state: V_L − V_out = 0 (inverted output). Apply volt-second balance and derive V_out = −V_in × D/(1−D)
+(b) For V_in = 12V and V_out = −20V, find the required duty cycle
+(c) For V_in = 12V and V_out = −8V, find the required duty cycle
+(d) What does the negative sign on V_out mean for how you connect the load?
+Q6. A transformer primary has V1 = 230V applied. The core flux Φ links both windings. KVL gives V1 = N1 × dΦ/dt and V2 = N2 × dΦ/dt.
+(a) If N1 = 240 and N2 = 48, find V2
+(b) Find the turns ratio V1/V2 and confirm it equals N1/N2
+(c) A 10Ω load on the secondary draws current I2. Find I2.
+(d) Primary current I1 from power balance: V1×I1 = V2×I2. Find I1.
+(e) What would N2 need to be to produce 12V on the secondary?
+Q7. KVL applied to a real circuit with internal resistance.
+A battery has EMF = 9V and internal resistance r = 2Ω. Load resistance R_L = 25Ω.
+(a) Draw the loop and write the KVL equation
+(b) Find the current
+(c) Find the terminal voltage of the battery (V_L across R_L)
+(d) Why is terminal voltage less than EMF?
+(e) If R_L decreases to 5Ω, find the new terminal voltage. What happens as R_L → 0?
