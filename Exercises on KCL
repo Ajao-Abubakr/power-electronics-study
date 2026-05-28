@@ -1,0 +1,30 @@
+Practice Problems — Topic 3
+Q1. Five currents at a single node: I1 = 15A in, I2 = 7A in, I3 = 4A in, I4 = 11A out, I5 = unknown direction.
+(a) Find I5 and state its direction
+(b) Verify using ΣI = 0 with entering positive convention
+Q2. Node voltage method — single node: 30V source, R1 = 150Ω (source to node A), R2 = 300Ω (node A to ground), R3 = 600Ω (node A to ground), R4 = 200Ω (node A to ground).
+(a) Write KCL at node A
+(b) Solve for V_A
+(c) Find all four branch currents
+(d) Verify KCL
+Q3. Two-node circuit: 40V source → R1 = 80Ω → node A → R2 = 120Ω → node B → R3 = 160Ω → ground. R4 = 240Ω from node A to ground. R5 = 360Ω from node B to ground.
+(a) Write KCL at nodes A and B
+(b) Solve for V_A and V_B
+(c) Find all five branch currents
+(d) Power balance verification
+Q4. Current source circuit: 5A current source from ground to node A. R1 = 400Ω from node A to 20V supply node. R2 = 800Ω from node A to ground.
+(a) Write KCL at node A and find V_A
+(b) Find current through R1 and its direction
+(c) Find power delivered by the 5A current source: P = V_A × I_source
+(d) Find power delivered by the 20V source
+(e) Verify power balance
+Q5. Converter node analysis. A boost converter output node: diode current I_D flows in (only during switch OFF period), load current I_load = 3A flows out, capacitor current I_C flows in or out.
+(a) Write KCL at the output node
+(b) The diode conducts only during the OFF period. If D = 0.6, the diode conducts for 40% of each cycle. Average diode current must equal average load current. If average I_D = 3A but it flows only 40% of the time, what is peak I_D?
+(c) Capacitor = 470µF, f_s = 100kHz. Find peak-to-peak output voltage ripple: ΔV = peak_I_C / (f_s × C) × (1−D)/2
+(d) If load doubles to 6A, what happens to ripple? What happens to average diode current?
+Q6. Supernode problem: 20V source connects from node A to node B (V_A − V_B = 20V, A is positive). R1 = 100Ω from a 50V supply to node A. R2 = 200Ω from node A to ground. R3 = 150Ω from node B to ground.
+(a) Write the supernode constraint: V_A − V_B = 20
+(b) Write KCL for the combined supernode (treat A and B together — count currents entering and leaving the combined boundary)
+(c) Solve for V_A and V_B
+(d) Find all branch currents
