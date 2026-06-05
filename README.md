@@ -54,11 +54,11 @@ required for power electronics analysis.
 | 1 | Ohm's Law | 25/05/2026 | 7/7 | ✅️ |
 | 2 | Kirchhoff's Voltage Law (KVL) | 26/05/2026 | 7/7 | ✅️ |
 | 3 | Kirchhoff's Current Law (KCL) | 27/05/2026 | 6/6 | ✅️ |
-| 4 | Series & Parallel Circuits | 29/05/2026 | 0/6 |  🔄 |
-| 5 | Voltage & Current Dividers | — | 0/6 | ⬜ |
-| 6 | Capacitors | — | 0/5 | ⬜ |
-| 7 | Inductors | — | 0/5 | ⬜ |
-| 8 | RC & RL Circuits | — | 0/5 | ⬜ |
+| 4 | Series & Parallel Circuits | 29/05/2026 | 0/6 | ✅️ |
+| 5 | Voltage & Current Dividers | 2/06/2026 | 0/6 |  ✅️ |
+| 6 | Capacitors | 3/06/2026| 5/5 |  ✅️ |
+| 7 | Inductors | 4/06/2026 | 5/5 |  ✅️ |
+| 8 | RC & RL Circuits | — | 0/5 |  🔄 |
 | 9 | AC Signals & Phasors | — | 0/5 | ⬜ |
 | 10 | Power in AC Circuits | — | 0/5 | ⬜ |
 
