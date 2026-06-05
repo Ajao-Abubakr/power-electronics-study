@@ -1,0 +1,33 @@
+INDUCTORS EXERCISES 
+Q1. An inductor L = 100µH has 30V applied across it for 15µs.
+(a) Rate of current rise in A/s
+(b) Total current increase
+(c) If initial current = 1A, final current and energy stored at final current
+(d) The voltage is suddenly reversed to −30V. How long to bring current back to 1A?
+Q2. Buck converter complete design: V_in = 48V, V_out = 24V, I_load = 8A, f_s = 150kHz. Target ripple = 30% of I_load.
+(a) D, t_ON, t_OFF
+(b) V_L during ON and OFF
+(c) L_min
+(d) Choose from: 22µH, 33µH, 47µH, 68µH
+(e) Verify ripple with chosen value
+(f) Peak and valley currents
+(g) Required I_sat with 20% margin
+(h) Find L_crit for operation at minimum load of 1A. Does your chosen inductor stay in CCM at 1A?
+Q3. MOSFET protection: a buck converter has L = 47µH carrying 6A when the high-side MOSFET opens. The parasitic drain capacitance is 300pF.
+(a) Energy in inductor: E = ½LI²
+(b) This energy transfers to the parasitic capacitor: E = ½CV². Find the voltage spike.
+(c) The MOSFET is rated 100V. What is the safety margin?
+(d) In reality the freewheeling diode clamps the spike. If the diode clamps at V_in + 0.7V = 24.7V, what energy does the inductor still carry after clamping?
+Q4. RL circuit: 36V supply, R = 12Ω, L = 60mH, initial current = 0.
+(a) τ and I_∞
+(b) i_L(t) full expression
+(c) Current at t = 5ms, 10ms, 30ms
+(d) Voltage across R and L at t = 5ms
+(e) At t = 30ms the supply is switched off. Inductor now discharges through R. Write the discharge equation and find current at t = τ after switch-off.
+Q5. Boost converter: V_in = 12V, V_out = 36V, I_load = 2A, f_s = 100kHz, L = 100µH.
+(a) D from V_out = V_in/(1−D)
+(b) t_ON and t_OFF
+(c) V_L during ON and OFF
+(d) ΔI_L
+(e) Average inductor current = I_load/(1−D). Verify this is consistent with ΔI
+(f) Peak current and required I_sat
