@@ -1,0 +1,35 @@
+RC AND RL CIRCUITS EXERCISES 
+Q1. Use the three-step method (find x(0), x(∞), τ) for this RC circuit:
+25V source, R1 = 8kΩ from source to node A, R2 = 12kΩ from node A to ground, C = 50µF across R2. Initially uncharged.
+(a) V_C(∞) — use voltage divider with capacitor open
+(b) R_th and τ
+(c) V_C(t) full expression
+(d) V_C at t = τ, 2τ, 5τ
+(e) Current through R1 at t = 0, t = τ, t = ∞
+Q2. RL three-step method: 24V source, R1 = 4Ω in series, R2 = 12Ω in parallel with L = 120mH. i_L(0) = 0.
+(a) i_L(∞) — with L as short circuit, what is i_L?
+(b) R_th seen by L (kill 24V source)
+(c) τ
+(d) i_L(t) full expression
+(e) Voltage across L at t = 0 and t = τ
+(f) Current through R2 at t = 0 and t = ∞
+Q3. Non-zero initial condition: same RC circuit as Q1 but now V_C(0) = 10V (pre-charged). Source is now 25V.
+(a) Does τ change? Does x(∞) change?
+(b) Write V_C(t)
+(c) Does the capacitor charge up or discharge initially? How do you know from the formula?
+(d) At what time does V_C reach 14V?
+Q4. Gate drive problem: a 200kHz converter uses a MOSFET with C_iss = 3000pF. Gate voltage = 0 to 15V. Gate driver can supply 3A peak.
+(a) Minimum R_g to protect driver
+(b) At R_g = 10Ω: find τ, rise time, percentage of switching period
+(c) At R_g = 33Ω: find τ, rise time, percentage of switching period
+(d) Switching loss is proportional to rise time. If R_g = 10Ω gives 1W switching loss, estimate loss at R_g = 33Ω
+(e) A designer adds R_g = 10Ω for turn-on but 33Ω for turn-off (using a diode to bypass R during turn-on). Explain the purpose of this asymmetry.
+Q5. Complete two-switch sequence problem:
+R = 5kΩ, C = 40µF. Initially V_C = 0.
+Switch S1 closes at t = 0, connecting a 20V source through R to C.
+Switch S1 opens at t = 400ms. At the same instant, S2 closes, connecting a 5V source through the same R to C (in the same polarity direction, so capacitor now discharges toward 5V).
+(a) Phase 1: find τ₁, V_C(0), V_C(∞₁), write V_C(t) for 0 ≤ t ≤ 400ms
+(b) V_C at t = 400ms (this is the initial condition for phase 2)
+(c) Phase 2: find V_C(∞₂), τ₂ (same R and C), write V_C(t) for t after 400ms
+(d) Does the capacitor charge or discharge in phase 2? Why?
+(e) How long after S2 closes until V_C reaches 6V?
