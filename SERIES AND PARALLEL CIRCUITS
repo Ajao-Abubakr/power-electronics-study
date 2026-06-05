@@ -1,0 +1,38 @@
+SERIES AND PARALLEL CIRCUITS EXERCISES 
+Q1. Series circuit: 60V, R1 = 120Ω, R2 = 180Ω, R3 = 240Ω, R4 = 60Ω.
+(a) Total resistance and current
+(b) Voltage and power for each resistor
+(c) Verify KVL and power balance
+(d) R3 suddenly open-circuits. What is the new current? What voltage appears across the open R3?
+(e) R2 suddenly short-circuits. With original circuit otherwise intact, what is the new current?
+Q2. Parallel circuit: 15V, R1 = 30Ω, R2 = 60Ω, R3 = 90Ω, R4 = 45Ω.
+(a) Total equivalent resistance
+(b) Total current and each branch current
+(c) Power in each branch and total power
+(d) R1 open-circuits. New total current and new total power.
+(e) R3 short-circuits. What happens to the circuit? What is total current now?
+Q3. Mixed circuit: 48V source, R1 = 400Ω in series, then [R2 = 600Ω in parallel with (R3 = 300Ω in series with R4 = 300Ω)], then R5 = 200Ω in series.
+(a) Reduce step by step to find total resistance
+(b) Total current
+(c) Voltage across each element
+(d) Current through R2 and through R3/R4 branch
+(e) Power balance
+Q4. Capacitor design: a 48V buck converter output filter needs:
+Total capacitance ≥ 1000µF
+Maximum combined ESR ≤ 15mΩ
+Each available capacitor: 470µF/63V, ESR = 50mΩ
+(a) Minimum number of capacitors in parallel to meet capacitance requirement
+(b) Combined ESR with your chosen number
+(c) Does it meet the ESR requirement?
+(d) Ripple current through the bank = 4A peak-to-peak. Voltage ripple from ESR only = ΔI × ESR_combined. Find it.
+Q5. Series capacitors for high voltage: DC bus = 900V. Available capacitors: 500V rating, 100µF each.
+(a) Why can't a single 100µF/500V capacitor be used directly?
+(b) Connect two in series. What is each capacitor's voltage if perfectly matched?
+(c) Total series capacitance.
+(d) In practice capacitors are not perfectly matched. One has leakage resistance 2MΩ, the other 3MΩ. These resistances form a voltage divider. What voltage appears across each capacitor?
+(e) What is the solution to the imbalance found in (d)?
+Q6. Derive from first principles (algebra only, no numbers):
+(a) Show that for N identical resistors R in series: V across each = V_supply/N
+(b) Show that for N identical resistors R in parallel: I through each = I_total/N
+(c) Show that parallel resistance of two equal resistors R is always R/2
+(d) Show that adding a third equal resistor in parallel with the two gives R/3
