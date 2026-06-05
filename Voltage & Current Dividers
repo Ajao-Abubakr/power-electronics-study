@@ -1,0 +1,39 @@
+Voltage & Current Dividers Exercises
+Q1. Voltage divider design for a 36V-to-3.3V signal.
+(a) Calculate the required ratio
+(b) Choose R1 and R2 from E24 values (1k, 1.2k, 1.5k, 1.8k, 2.2k, 2.7k, 3.3k, 3.9k, 4.7k, 5.6k, 6.8k, 8.2k, 10k, 12k, 15k, 18k, 22k, 27k, 33k, 39k, 47k, 56k, 68k, 82k, 100k) to get as close as possible
+(c) Calculate actual V_out with your chosen values
+(d) The ADC input impedance is 50kΩ. Calculate loading effect error.
+(e) If error is unacceptable, what solutions exist?
+Q2. Loading effect — complete analysis.
+V_in = 5V, R1 = 22kΩ, R2 = 22kΩ.
+(a) Unloaded V_out
+(b) V_out with R_load = 220kΩ (10× R2). Calculate error.
+(c) V_out with R_load = 22kΩ (equal to R2). Calculate error.
+(d) V_out with R_load = 2.2kΩ (0.1× R2). Calculate error.
+(e) For less than 2% error, what is the minimum R_load?
+Q3. Current divider: I_total = 8A, R1 = 0.04Ω (sense resistor), R2 = 3.96Ω (motor winding resistance).
+(a) I1 through the sense resistor
+(b) I2 through the motor winding
+(c) Voltage across the parallel combination
+(d) Power in the sense resistor
+(e) If the ADC measuring V_R1 has 10-bit resolution (1024 steps) and full-scale = 0.5V, what current resolution can it measure?
+Q4. Converter output voltage design: IC with V_ref = 0.6V. R_bot = 68kΩ fixed.
+(a) Find R_top for V_out = 1.8V
+(b) Find R_top for V_out = 2.5V
+(c) Find R_top for V_out = 3.3V
+(d) Find R_top for V_out = 5.0V
+(e) R_top is 2% too high in case (c). By how many mV does V_out change? Is this acceptable for a digital supply?
+Q5. Battery voltage monitoring: a lithium-ion battery pack voltage varies from 25V (empty) to 42V (full charged). A microcontroller ADC has 3.3V full-scale, 12-bit resolution (4096 steps).
+(a) Design a voltage divider to map 0–42V to 0–3.3V
+(b) What voltage does the ADC see when battery is at 25V?
+(c) What is the voltage resolution — smallest voltage change the system can detect?
+(d) What is the corresponding battery voltage resolution?
+(e) ADC input impedance = 1MΩ. Calculate loading error.
+(f) Over a −20°C to +85°C temperature range, the resistors change by their TCR. If both resistors have α = 100ppm/°C (100×10⁻⁶/°C), calculate the percentage change in ratio over the full temperature range. Does this affect the divider output?
+Q6. Potentiometer as a variable divider: a 10kΩ potentiometer (variable voltage divider) has its wiper connected to an op-amp input (infinite impedance load). Supply is 12V.
+(a) When wiper is at 30% from ground end, what is V_out?
+(b) When wiper is at 75% from ground end, what is V_out?
+(c) The wiper position corresponds to R2 = 0.3 × 10k = 3kΩ (bottom) and R1 = 7kΩ (top). Verify (a) using the divider formula.
+(d) Now connect a 10kΩ load to the wiper. At 50% position: calculate the loaded V_out and compare to unloaded.
+(e) Explain why a potentiometer followed by an op-amp voltage follower (buffer) is a good practical design for a variable voltage reference.
