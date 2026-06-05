@@ -1,0 +1,29 @@
+ CAPACITORS EXERCISES 
+Q1. A 1000µF capacitor is charged to 63V.
+(a) Charge stored
+(b) Energy stored in joules
+(c) If discharged completely in 5ms, what is the average discharge current?
+(d) A technician touches the terminals 2 seconds after the supply is removed. The discharge path is through a 10kΩ bleed resistor. Find the voltage at t = 2s. Is it still dangerous?
+Q2. A 50µF capacitor has these voltage profiles. Find the current in each case:
+(a) Voltage rising linearly from 0 to 24V in 4ms
+(b) Voltage constant at 12V
+(c) Voltage falling linearly from 10V to 0V in 1ms
+(d) Voltage = 5×sin(1000t) V — find i(t) as a full expression
+Q3. RC circuit: R = 47kΩ, C = 22µF, V_supply = 9V, starts uncharged.
+(a) Time constant τ
+(b) Voltage at t = τ, 2τ, 5τ
+(c) Time to reach 6V
+(d) Initial current and current at t = 2τ
+(e) At t = 5τ the supply is disconnected and replaced with a short circuit through a 10kΩ resistor. Find the new τ and the voltage 500ms after discharge begins.
+Q4. Buck converter: V_in = 12V, V_out = 3.3V, I_load = 3A, f_s = 500kHz, L = 10µH.
+(a) Duty cycle D = V_out/V_in
+(b) Inductor current ripple ΔI_L = (V_in − V_out) × D / (f_s × L)
+(c) Required capacitance for ΔV_out ≤ 10mV (capacitance component only)
+(d) Chosen capacitor: 47µF ceramic, ESR = 3mΩ. Find total ripple.
+(e) Alternative: 100µF electrolytic, ESR = 80mΩ. Find total ripple.
+(f) Which is better and why?
+Q5. A 400V DC bus capacitor bank is made of 4 × 470µF capacitors in parallel.
+(a) Total capacitance
+(b) Total energy stored at 400V
+(c) The bank must discharge to below 10V through a 47kΩ bleed resistor for safety. Find τ and the time required.
+(d) During normal operation, ripple current of 8A peak-to-peak flows through the bank. Each capacitor has ESR = 60mΩ. Find the combined ESR and the ESR ripple voltage.
