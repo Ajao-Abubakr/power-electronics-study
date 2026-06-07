@@ -1,0 +1,38 @@
+Exercises 
+Q1. A load on 230V RMS draws 18A RMS and consumes 3,105W.
+(a) Apparent power S
+(b) Power factor and phase angle
+(c) Reactive power Q
+(d) Is the load inductive or capacitive?
+(e) Verify with power triangle: S² = P² + Q²
+Q2. Three loads in parallel on 400V RMS, 50Hz:
+Load 1: 10kW, PF = 0.85 lagging
+Load 2: 6kW, PF = 1.0
+Load 3: 4kW, PF = 0.70 leading
+(a) P_total, Q_total (careful with signs), S_total
+(b) Overall PF and phase angle
+(c) Total current
+(d) What type of reactive compensation is needed and why?
+Q3. Power factor correction: 230V, 50Hz, motor: P = 5kW, PF = 0.68 lagging.
+(a) Initial current I₁
+(b) Initial reactive power Q₁
+(c) Correct to PF = 0.96. Find Q_C.
+(d) Find capacitance C
+(e) New current I₂ after correction
+(f) Current reduction as percentage
+Q4. Derive the real power formula from scratch:
+v(t) = V_m sin(ωt), i(t) = I_m sin(ωt − φ)
+Instantaneous power: p(t) = v(t) × i(t) = V_m I_m sin(ωt) × sin(ωt − φ)
+Using the identity: sin(A)×sin(B) = ½[cos(A−B) − cos(A+B)]
+(a) Expand p(t) using this identity
+(b) Average the result over one complete cycle T. The cos(2ωt) term averages to zero.
+(c) Show the average equals ½ V_m I_m cos(φ)
+(d) Express in terms of V_rms and I_rms to get P = V_rms I_rms cos(φ)
+(e) What does the oscillating cos(2ωt−φ) term represent physically?
+Q5. A data centre has 2000 server power supplies. Each: 800W output, 92% efficiency, 230V supply, PF = 0.99 (with PFC).
+(a) Input power per supply
+(b) Input current per supply
+(c) Total current for 2000 supplies
+(d) Total reactive power Q for the whole data centre
+(e) If PFC failed on all units and PF dropped to 0.55: find new total current
+(f) The building transformer is rated 500kVA at 230V. How many supplies can it support with PF = 0.99? And with PF = 0.55?
