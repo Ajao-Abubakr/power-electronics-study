@@ -1,0 +1,30 @@
+Exercises
+Q1. A source: v(t) = 311×sin(314t + 45°) V.
+(a) Find V_m, V_rms, f, T, ω, φ
+(b) Find v at t = 5ms
+(c) Find the first time t > 0 when v = 200V
+(d) A second source: v2(t) = 200×sin(314t − 30°). Add using phasors. Give result in polar and time domain form.
+Q2. RMS calculations — mixed waveforms:
+(a) Sinusoid: V_m = 170V. Find V_rms.
+(b) PWM: 24V amplitude, D = 0.35. Find V_rms.
+(c) PWM: 12V amplitude, D = 0.75. Find V_rms.
+(d) Triangular wave: peaks at ±15V. Find V_rms.
+(e) A waveform that is 0V for half the period and a sinusoid of amplitude 10V for the other half. Explain why V_rms ≠ 10/√2.
+Q3. Series RC circuit: R = 100Ω, C = 50µF, source = 230V RMS at 50Hz.
+(a) Z_C at 50Hz
+(b) Z_total magnitude and phase angle
+(c) RMS current
+(d) V_R and V_C (RMS)
+(e) Does current lead or lag voltage? By how much?
+(f) At what frequency does |Z_C| = R? What is the significance of this frequency?
+Q4. Series RLC: R = 10Ω, L = 50mH, C = 200µF.
+(a) Resonant frequency f_r
+(b) At f_r: find Z_total. What is special about it?
+(c) At f_r with V_source = 50V RMS: find current, V_R, V_L, V_C
+(d) At 10Hz below resonance: is the circuit inductive or capacitive?
+(e) At 10Hz above resonance: is it inductive or capacitive?
+Q5. A single-phase solar inverter produces 230V RMS at 50Hz from a 400V DC bus.
+(a) Peak AC voltage required
+(b) Modulation index m = V_peak_AC / V_DC. Why must m ≤ 1?
+(c) Battery discharges and DC bus drops to 320V. Can 230V RMS still be produced? Show numerically.
+(d) Minimum DC bus voltage for 230V RMS output with m = 0.95
