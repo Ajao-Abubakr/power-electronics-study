@@ -29,8 +29,8 @@ Nothing is copied — every solution is my own work.
 
 | Phase | Content | Status |
 |-------|---------|--------|
-| Month 1 | Electrical Foundations (Topics 1–10) | ✅️ In Progress |
-| Month 2 | Semiconductor Devices | ⬜ Not Started |
+| Month 1 | Electrical Foundations (Topics 1–10) | ✅️ Completed |
+| Month 2 | Semiconductor Devices |  🔄 In Progress |
 | Month 3 | AC Circuit Analysis & Magnetics | ⬜ Not Started |
 | Month 4 | DC-DC Converters — Buck & Boost | ⬜ Not Started |
 | Month 5 | Isolated Converters — Flyback & Full Bridge | ⬜ Not Started |
@@ -63,5 +63,27 @@ required for power electronics analysis.
 | 10 | Power in AC Circuits | 07_06/2026 | 5/5 | ✅️ |
 
 ---
+Complete Month 1 — all 10 topics, 57/57 problems solved. Begin Month 2.
 
 ## Repository Structure
+
+## Month 2 — Semiconductor Devices
+
+**Objective:** Understand the physics and practical behaviour of every
+semiconductor device used in power electronics — from the PN junction
+to IGBTs. By the end of this month you can read any device datasheet,
+select the right component for a given application, and explain exactly
+what is happening inside the device during switching.
+
+| # | Topic | Date Completed | Problems Solved | Status |
+|---|-------|----------------|-----------------|--------|
+| 1 | PN Junction Physics | 8/06/2026 | 3/5 |  🔄 |
+| 2 | Diode Characteristics & Ratings | — | 0/5 | ⬜ |
+| 3 | Rectifier Circuits | — | 0/5 | ⬜ |
+| 4 | Ripple Voltage & Filter Capacitors | — | 0/5 | ⬜ |
+| 5 | Zener Diodes — Voltage Regulation | — | 0/5 | ⬜ |
+| 6 | Schottky Diodes | — | 0/5 | ⬜ |
+| 7 | BJT Transistors | — | 0/5 | ⬜ |
+| 8 | MOSFETs — Structure & Characteristics | — | 0/5 | ⬜ |
+| 9 | MOSFET as a Switch — Gate Drive & Losses | — | 0/5 | ⬜ |
+| 10 | IGBTs — Structure, Behaviour & Selection | — | 0/5 | ⬜ |
