@@ -1,0 +1,40 @@
+DIODE CHARACTERISTICS — I-V CURVE, RATINGS AND BEHAVIOUR
+
+Exercises 
+
+Q1. A silicon diode I-V characteristic shows:
+At V = 0.60V: I = 8mA
+At V = 0.65V: I = 25mA
+At V = 0.70V: I = 78mA
+At V = 0.75V: I = 245mA
+(a) Plot these four points (sketch on paper — voltage on x-axis, current on y-axis)
+(b) What is the approximate turn-on voltage?
+(c) For a circuit with 5V supply and 68Ω series resistor, use the 0.7V model to find the current
+(d) Use the ideal model to find the current
+(e) Which model gives a more accurate result and why?
+Q2. Diode selection for a 48V buck converter freewheeling diode. Load current = 5A, f_s = 300kHz.
+(a) Minimum PIV rating required (with 2× margin)
+(b) Minimum I_F(AV) rating required (with 2× margin)
+(c) Why is t_rr the most critical parameter at 300kHz?
+(d) A diode has t_rr = 50ns, I_RR = 3A. Calculate Q_rr and P_rr.
+(e) Another diode has t_rr = 25ns, I_RR = 1.5A. Calculate Q_rr and P_rr. How much better is it?
+Q3. Reverse recovery detailed analysis.
+A diode switches from conducting 8A forward current to reverse biased at 100V. t_rr = 40ns, I_RR = 4A, f_s = 500kHz.
+(a) Q_rr
+(b) Energy lost per switching event
+(c) Total reverse recovery power loss
+(d) Forward conduction power loss if V_f = 0.75V and duty cycle is 0.4 (diode conducts 60% of cycle)
+(e) Total diode power loss. As a percentage of 50W converter output, is this acceptable?
+Q4. Temperature effects on a rectifier diode.
+At 25°C: V_f = 0.72V at 2A. The diode heats to 110°C during operation.
+(a) V_f at 110°C
+(b) Power loss at 25°C
+(c) Power loss at 110°C
+(d) The thermal resistance junction-to-case θ_jc = 5°C/W. The heatsink has θ_sa = 8°C/W. Ambient = 35°C. Find the actual junction temperature at 110°C case temperature. Is it within the 150°C limit?
+(e) What maximum power can the diode dissipate while keeping junction below 150°C with this heatsink?
+Q5. A freewheeling diode in a boost converter: V_out = 24V, I_load = 3A, D = 0.5, f_s = 100kHz.
+(a) Average diode current = I_load (diode conducts during OFF period). With D = 0.5, diode conducts 50% of cycle. What is average diode current?
+(b) Peak diode current = peak inductor current. If ΔI_L = 0.6A and average inductor current = 6A, find peak diode current.
+(c) Power loss from forward conduction: P = V_f × I_avg. Use V_f = 0.7V.
+(d) Diode has t_rr = 30ns, I_RR = 1A. Find reverse recovery loss.
+(e) Total diode loss as percentage of output power.
