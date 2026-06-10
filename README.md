@@ -63,11 +63,10 @@ required for power electronics analysis.
 | 10 | Power in AC Circuits | 07_06/2026 | 5/5 | ✅️ |
 
 ---
-Complete Month 1 — all 10 topics, 57/57 problems solved. Begin Month 2.
+Complete Month 1 — all 10 topics, 57/57 problems solved. Begin 
 
-## Repository Structure
-
-## Month 2 — Semiconductor Devices
+  
+Month 2 — Semiconductor Devices
 
 **Objective:** Understand the physics and practical behaviour of every
 semiconductor device used in power electronics — from the PN junction
