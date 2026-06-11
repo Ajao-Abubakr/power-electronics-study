@@ -78,8 +78,8 @@ what is happening inside the device during switching.
 |---|-------|----------------|-----------------|--------|
 | 1 | PN Junction Physics | 8/06/2026 | 5/5 |  ✅️ |
 | 2 | Diode Characteristics & Ratings | 9/06/2026 | 5/5 | ✅️ |
-| 3 | Rectifier Circuits | 10/06/2026 | 0/5 |  🔄 |
-| 4 | Ripple Voltage & Filter Capacitors | — | 0/5 | ⬜ |
+| 3 | Rectifier Circuits | 10/06/2026 | 5/5 |  ✅️ |
+| 4 | Ripple Voltage & Filter Capacitors | — | 0/5 |  🔄 |
 | 5 | Zener Diodes — Voltage Regulation | — | 0/5 | ⬜ |
 | 6 | Schottky Diodes | — | 0/5 | ⬜ |
 | 7 | BJT Transistors | — | 0/5 | ⬜ |
