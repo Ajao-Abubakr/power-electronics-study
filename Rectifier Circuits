@@ -1,0 +1,35 @@
+Q1. Full-wave bridge rectifier: 9V RMS transformer, 50Hz, silicon diodes, C = 1000µF, I_load = 200mA.
+(a) V_m (subtract two diode drops)
+(b) Ripple voltage ΔV
+(c) DC output voltage V_DC
+(d) Ripple percentage
+(e) What capacitance would reduce ripple to 5%?
+Q2. Power supply design: need 15V DC, 2A output from 230V mains, ripple < 10%.
+(a) Required V_m (include two diode drops)
+(b) Required transformer secondary RMS voltage
+(c) Required capacitance
+(d) Capacitor voltage rating
+(e) Diode selection: PIV and current rating requirements
+Q3. Inrush current analysis: 230V mains, bridge rectifier, C = 4700µF (fully discharged), transformer winding resistance = 1.5Ω.
+(a) Peak inrush current at switch-on
+(b) The diodes used are 1N4007 (I_FSM = 30A for 8.3ms). Can they survive the inrush?
+(c) An NTC thermistor is added: cold resistance = 10Ω, hot resistance = 0.5Ω. Recalculate inrush current with NTC cold.
+(d) During normal operation the NTC is hot (0.5Ω). What is the voltage drop across it at I_load = 1A?
+(e) Why is the NTC placed before the rectifier and not after?
+Q4. Ripple voltage temperature dependence:
+An electrolytic capacitor has C = 3300µF at 25°C but capacitance drops to 2400µF at −20°C (cold start).
+Supply: full-wave bridge, I_load = 500mA, f_ripple = 100Hz.
+(a) Ripple at 25°C
+(b) Ripple at −20°C
+(c) If the circuit requires ripple < 2V for correct operation, does it work at both temperatures?
+(d) What capacitance is needed at the worst case temperature to keep ripple < 2V?
+(e) This is why capacitor datasheets specify capacitance over temperature. What other capacitor parameter also worsens at low temperature?
+Q5. Compare two power supply designs for 5V, 500mA output:
+Design A: Mains transformer (230V to 7V RMS) + bridge rectifier + 4700µF cap + LM7805 regulator
+Design B: Switching converter directly from mains (assume 85% efficiency)
+(a) For Design A: find V_DC after rectifier and filter
+(b) Voltage across LM7805 = V_DC − 5V. Power wasted in regulator = (V_DC − 5V) × I_load
+(c) Input power for Design A (assume transformer 90% efficient)
+(d) Overall efficiency of Design A
+(e) For Design B at 85% efficiency: input power for same 5V, 500mA output (P_out = 2.5W)
+(f) Which design wastes more power and why? This is the fundamental reason switching supplies replaced linear supplies.
