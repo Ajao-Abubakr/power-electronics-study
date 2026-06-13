@@ -1,0 +1,30 @@
+Practice Problems — Topic 6
+Q1. A buck converter freewheeling diode carries average current 6A. Compare:
+(a) Silicon PN diode V_f = 0.65V — conduction loss
+(b) Silicon Schottky V_f = 0.35V — conduction loss
+(c) Percentage reduction in conduction loss
+(d) If the converter output is 60W, what percentage point improvement in efficiency does (c) represent?
+Q2. Reverse recovery comparison at f_s = 500kHz, V_R = 40V, I_F = 5A:
+(a) Ultrafast PN diode: t_rr = 30ns, I_RR = 2.5A. Find P_rr.
+(b) Schottky diode: t_rr ≈ 0, but C_j = 50pF. Energy per cycle to charge C_j: E = ½CV². Find P_Cj = E × f_s.
+(c) Compare (a) and (b). Why is the Schottky still better even though it has some capacitive loss?
+Q3. Leakage current thermal analysis:
+A Schottky diode: V_R = 60V, I_R = 50µA at 25°C, doubles every 12°C.
+(a) I_R at 49°C (2 doublings)
+(b) I_R at 97°C (6 doublings)
+(c) Power dissipated by leakage at 97°C
+(d) If this diode also conducts 3A with V_f = 0.4V for 40% of the cycle, find the conduction loss
+(e) Total loss (conduction + leakage) at 97°C. What percentage of total loss is leakage?
+Q4. Diode selection for an EV onboard charger boost PFC stage: V_out = 400V DC bus, I_avg = 8A, f_s = 100kHz.
+(a) Can a silicon Schottky diode be used at 400V? Why or why not?
+(b) What diode technology would you select?
+(c) A SiC Schottky diode: V_f = 1.5V at 8A, t_rr ≈ 0. Find conduction loss.
+(d) An ultrafast silicon diode: V_f = 1.0V, t_rr = 25ns, I_RR = 4A. Find conduction loss and P_rr.
+(e) Compare total losses. Which is better here despite SiC having higher V_f?
+Q5. Design comparison — complete system:
+A 12V, 10A buck converter (P_out = 120W) at f_s = 300kHz, D = 0.4 (so diode conducts 60% of cycle, average diode current = 6A).
+(a) Silicon PN diode: V_f = 0.75V, t_rr = 60ns, I_RR = 5A. Find total diode loss.
+(b) Silicon Schottky: V_f = 0.45V, t_rr ≈ 0. Find total diode loss.
+(c) Efficiency improvement (percentage points) from switching diode types
+(d) If a synchronous rectifier (MOSFET instead of diode) with R_DS(on) = 0.008Ω is used instead: conduction loss = I²×R. Find this loss.
+(e) Why might synchronous rectification (covered in Topic 9) be even better than Schottky for this application?
