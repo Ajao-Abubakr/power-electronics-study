@@ -1,0 +1,31 @@
+Topic 5
+Q1. Zener diode: V_Z = 6.2V, P_Z = 500mW, I_ZK = 2mA, r_Z = 8Ω.
+(a) Maximum Zener current I_ZM
+(b) Circuit: V_in = 12V, R_s = 330Ω. Find I_R.
+(c) Maximum load current that maintains regulation
+(d) At I_load = 15mA, find I_Z and verify it is within safe limits
+(e) Power dissipated in R_s and in Zener at I_load = 15mA
+Q2. Design a 5.1V regulator for V_in = 9V, I_load = 0 to 30mA. Use a BZX55C5V1 Zener (V_Z = 5.1V, P_Z = 500mW, I_ZK = 1mA).
+(a) Maximum Zener current allowed
+(b) Choose R_s so that I_Z ≥ 5mA at full load (I_load = 30mA)
+(c) Verify Zener current at no load — is it within P_Z limit?
+(d) Power in R_s at no load
+(e) Efficiency at full load: η = P_load / P_input = (V_Z × I_load) / (V_in × I_R)
+Q3. Input voltage variation: V_Z = 12V, R_s = 560Ω, I_load = 20mA fixed.
+(a) Minimum V_in to maintain regulation (keep I_ZK = 2mA minimum)
+(b) At V_in = 18V: find I_Z and Zener power dissipation
+(c) At V_in = 24V: find I_Z and Zener power dissipation
+(d) Is a 1W Zener adequate for V_in up to 24V?
+(e) What R_s value would limit Zener power to 500mW maximum at V_in = 24V?
+Q4. Temperature effects: a 9.1V Zener has TC = +5mV/°C. Circuit operates from −20°C to +85°C.
+(a) V_Z at −20°C
+(b) V_Z at +85°C
+(c) Total variation in output voltage over the temperature range
+(d) For a 5V reference why would you choose a 5.1V Zener over a 4.7V Zener in a temperature-sensitive application?
+(e) The TL431 uses a bandgap reference with TC ≈ 50ppm/°C. Over the same −20°C to +85°C range, how much does a 5V TL431 reference change? Compare to the Zener.
+Q5. Zener in a converter feedback circuit: a flyback power supply uses a 2.5V Zener reference in the feedback divider. V_out = 12V. The feedback divider (R_top from V_out to feedback node, R_bot from feedback to ground) must produce 2.5V at the feedback node when V_out = 12V.
+(a) Design R_top and R_bot (choose R_bot = 10kΩ)
+(b) The Zener has TC = −2mV/°C. At 80°C, what does the reference become?
+(c) With the changed reference, what does the output voltage become?
+(d) This is why the TL431 (precision 2.495V reference, TC < 50ppm/°C) replaced discrete Zeners in most power supply feedback circuits. Calculate the output voltage change for a TL431 over the same temperature range.
+(e) Why does output voltage accuracy matter in a 12V power supply for electronic equipment?
