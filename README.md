@@ -1,4 +1,4 @@
-# power-electronics-study
+i# power-electronics-study
 Self-study notes and problems — Power Electronics
 
 
@@ -82,7 +82,7 @@ what is happening inside the device during switching.
 | 4 | Ripple Voltage & Filter Capacitors | 11/06/2026 | Q5 |  ✅️ |
 | 5 | Zener Diodes — Voltage Regulation | 12/06/2026 | 5/5 | ✅️ |
 | 6 | Schottky Diodes |13/06/2026 | 5/5 | ✅️ |
-| 7 | BJT Transistors | — | 0/5 |  🔄 |
-| 8 | MOSFETs — Structure & Characteristics | — | 0/5 | ⬜ |
-| 9 | MOSFET as a Switch — Gate Drive & Losses | — | 0/5 | ⬜ |
+| 7 | BJT Transistors | 14/06/2026 | 5/5 |  ✅️ |
+| 8 | MOSFETs — Structure & Characteristics | 16/06/2026 | 5/5 | ✅️ |
+| 9 | MOSFET as a Switch — Gate Drive & Losses | 17/06/2026 | 5/5 | ✅️ |
 | 10 | IGBTs — Structure, Behaviour & Selection | — | 0/5 | ⬜ |
