@@ -86,3 +86,22 @@ what is happening inside the device during switching.
 | 8 | MOSFETs — Structure & Characteristics | 16/06/2026 | 5/5 | ✅️ |
 | 9 | MOSFET as a Switch — Gate Drive & Losses | 17/06/2026 | 5/5 | ✅️ |
 | 10 | IGBTs — Structure, Behaviour & Selection | 19/06/2026| 5/5 | ✅️ |
+
+## Month 3 — AC Circuit Analysis & Magnetics
+
+**Objective:** Master AC resonant circuits and the complete theory of
+magnetics — from Ampere's Law through transformer and inductor design,
+including high-frequency effects and EMI filtering.
+
+| # | Topic | Date Completed | Problems Solved | Status |
+|---|-------|----------------|-----------------|--------|
+| 1 | Phasor Analysis (Advanced) | — | 0/5 | ⬜ |
+| 2 | Resonant Circuits — Series & Parallel LC | — | 0/5 | ⬜ |
+| 3 | Transformer Theory — Ideal & Practical | — | 0/5 | ⬜ |
+| 4 | Transformer Equivalent Circuit | — | 0/5 | ⬜ |
+| 5 | Magnetic Circuits — MMF, Reluctance, Ampere's Law | — | 0/5 | ⬜ |
+| 6 | Core Materials & Saturation | — | 0/5 | ⬜ |
+| 7 | Inductor Design — Core Selection & Winding | — | 0/5 | ⬜ |
+| 8 | Transformer Design for Power Electronics | — | 0/5 | ⬜ |
+| 9 | Skin Effect & Proximity Effect | — | 0/5 | ⬜ |
+| 10 | EMI Filtering — Common Mode & Differential Mode | — | 0/5 | ⬜ |
