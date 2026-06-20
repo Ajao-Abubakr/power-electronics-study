@@ -30,7 +30,7 @@ Nothing is copied — every solution is my own work.
 | Phase | Content | Status |
 |-------|---------|--------|
 | Month 1 | Electrical Foundations (Topics 1–10) | ✅️ Completed |
-| Month 2 | Semiconductor Devices |  🔄 In Progress |
+| Month 2 | Semiconductor Devices |  ✅️ Completed |
 | Month 3 | AC Circuit Analysis & Magnetics | ⬜ Not Started |
 | Month 4 | DC-DC Converters — Buck & Boost | ⬜ Not Started |
 | Month 5 | Isolated Converters — Flyback & Full Bridge | ⬜ Not Started |
@@ -85,4 +85,4 @@ what is happening inside the device during switching.
 | 7 | BJT Transistors | 14/06/2026 | 5/5 |  ✅️ |
 | 8 | MOSFETs — Structure & Characteristics | 16/06/2026 | 5/5 | ✅️ |
 | 9 | MOSFET as a Switch — Gate Drive & Losses | 17/06/2026 | 5/5 | ✅️ |
-| 10 | IGBTs — Structure, Behaviour & Selection | — | 0/5 | ⬜ |
+| 10 | IGBTs — Structure, Behaviour & Selection | 19/06/2026| 5/5 | ✅️ |
