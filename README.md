@@ -31,7 +31,7 @@ Nothing is copied — every solution is my own work.
 |-------|---------|--------|
 | Month 1 | Electrical Foundations (Topics 1–10) | ✅️ Completed |
 | Month 2 | Semiconductor Devices |  ✅️ Completed |
-| Month 3 | AC Circuit Analysis & Magnetics | ⬜ Not Started |
+| Month 3 | AC Circuit Analysis & Magnetics |  🔄 In Progress |
 | Month 4 | DC-DC Converters — Buck & Boost | ⬜ Not Started |
 | Month 5 | Isolated Converters — Flyback & Full Bridge | ⬜ Not Started |
 | Month 6 | PCB Design for Power Electronics | ⬜ Not Started |
@@ -95,9 +95,9 @@ including high-frequency effects and EMI filtering.
 
 | # | Topic | Date Completed | Problems Solved | Status |
 |---|-------|----------------|-----------------|--------|
-| 1 | Phasor Analysis (Advanced) | — | 0/5 | ⬜ |
-| 2 | Resonant Circuits — Series & Parallel LC | — | 0/5 | ⬜ |
-| 3 | Transformer Theory — Ideal & Practical | — | 0/5 | ⬜ |
+| 1 | Phasor Analysis (Advanced) | 20/06/2026| 5/5 | ✅️ |
+| 2 | Resonant Circuits — Series & Parallel LC | 21/06/2026 | 5/5 | ✅️ |
+| 3 | Transformer Theory — Ideal & Practical | 22/06/2026 | 5/5 | ✅️ |
 | 4 | Transformer Equivalent Circuit | — | 0/5 | ⬜ |
 | 5 | Magnetic Circuits — MMF, Reluctance, Ampere's Law | — | 0/5 | ⬜ |
 | 6 | Core Materials & Saturation | — | 0/5 | ⬜ |
