@@ -1,0 +1,29 @@
+Practice Problems — Topic 3
+Q1. A transformer: N1 = 1000, N2 = 100. V1 = 230V RMS, load R = 15Ω on secondary.
+(a) Turns ratio a
+(b) V2
+(c) I2
+(d) I1
+(e) Verify power balance P1 = P2
+Q2. Design problem: you need a transformer to step 12V down to 5V for a logic circuit drawing 2A.
+(a) Required turns ratio a (V1/V2)
+(b) If N2 = 20 turns, find required N1
+(c) Find I1 (primary current)
+(d) Find Z_load as seen from secondary side (Z = V2/I2)
+(e) Find the reflected impedance Z1' as seen from the primary
+Q3. Impedance matching: an audio amplifier has an internal output impedance of 8Ω and needs to drive a 600Ω transmission line for maximum power transfer (impedance matching requires equal impedances).
+(a) What turns ratio a is needed so that the 600Ω line appears as 8Ω to the amplifier? (use Z1' = a²×Z_L, solve for a)
+(b) If N2 (line side) = 100 turns, find N1 (amplifier side)
+(c) Is this a step-up or step-down transformer (in terms of turns, primary to secondary)?
+(d) If the amplifier delivers 2W into the matched 8Ω, what voltage and current appear at the primary?
+(e) What voltage and current appear at the secondary (line side)?
+Q4. Dot convention analysis: A transformer has primary dot at the top terminal, secondary dot at the bottom terminal (opposite physical positions, but representing the actual flux linkage).
+(a) If the primary top terminal is instantaneously at +10V (relative to primary bottom) due to an applied source, and a = N1/N2 = 4, find the magnitude of secondary voltage
+(b) Which secondary terminal (top or bottom) is positive at this instant, given the dot positions described?
+(c) In a flyback converter, explain in your own words (referring to Worked Example 4) why the diode orientation on the secondary, combined with dot convention, determines whether the converter is a flyback (energy storage then release) or would instead behave like a forward converter (direct energy transfer) if the dots were reversed.
+(d) Why would reversing the secondary winding direction (effectively flipping the dot) on a flyback transformer, without also flipping the diode, cause the converter to fail or behave destructively?
+Q5. Multi-winding transformer (preview of flyback design): a flyback transformer has three windings: primary N1 = 40 turns, secondary N2 = 10 turns (main output), and auxiliary N3 = 8 turns (for powering the control IC).
+(a) If primary voltage during the OFF period (when energy transfers) is reflected as V2 = 12V at the main secondary, find the turns ratio N1:N2 and verify V1(reflected) using this ratio
+(b) Find the auxiliary winding voltage V3, given N3 = 8 turns and the same flux linking all windings
+(c) If the auxiliary winding needs to supply 15mA to power the control IC, and operates with the same voltage relationship, what does this tell you about how multi-output flyback transformers work?
+(d) Why might a designer choose N3 = 8 instead of, say, N3 = 10 (matching the main output)? (Hint: consider what voltage the control IC actually needs versus what the main output needs)
