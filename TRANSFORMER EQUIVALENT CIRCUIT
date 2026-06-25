@@ -1,0 +1,33 @@
+Q1. Transformer: N1=300, N2=60 (a=5), R1=0.3Ω, R2=0.01Ω, L1=1.5mH, L2=0.06mH.
+(a) Find R2' (referred to primary)
+(b) Find R_eq
+(c) Find L2' (referred to primary)
+(d) Find L_eq
+(e) At 50Hz, find X_eq and the magnitude of Z_eq
+Q2. Voltage regulation: using the transformer from Q1, V1=400V, I1=3A at 0.85 PF lagging, 50Hz.
+(a) Find φ (power factor angle)
+(b) Using V_drop_approx ≈ I1×R_eq×cosφ + I1×X_eq×sinφ, calculate the approximate voltage drop
+(c) Find voltage regulation percentage
+(d) If the power factor improves to 0.95 lagging (same I1 magnitude), recalculate voltage drop and regulation. Did regulation improve or worsen?
+(e) Why does power factor affect voltage regulation even though I1 magnitude is unchanged?
+Q3. Efficiency at different loads: a transformer has R_eq = 0.8Ω (primary referred), core loss = 20W (constant), a = 4, V2 = 50V (assume constant for simplicity).
+(a) At I2 = 10A (so I1 = 2.5A), PF = 1.0: find P_out, P_cu, total loss, and efficiency
+(b) At I2 = 20A (I1 = 5A), PF = 1.0: find P_out, P_cu, total loss, and efficiency
+(c) At I2 = 5A (I1 = 1.25A), PF = 1.0: find P_out, P_cu, total loss, and efficiency
+(d) At which of these three loads is efficiency highest?
+(e) Find the load current I1 at which P_cu exactly equals P_core (the theoretical maximum efficiency point), using P_cu = I1²×R_eq = P_core
+Q4. No-load and short-circuit test interpretation (how these parameters are actually measured in practice):
+A no-load test on a transformer (secondary open, rated voltage applied to primary) measures: V1=230V, I1=0.15A, P1=18W.
+(a) This input power at no-load is approximately equal to which loss component? Why is copper loss negligible in this test? (Hint: what is I1 compared to rated full-load current, say 5A?)
+(b) Find an approximate value for R_c using R_c = V1²/P1 (since at no load, nearly all current flows through the magnetizing branch, and P1 ≈ core loss = V1²/R_c)
+(c) A short-circuit test (secondary shorted, reduced voltage applied to primary until rated current flows) measures: V1_sc=12V, I1_sc=5A (rated), P1_sc=40W.
+Why does this test give you R_eq directly? (Hint: with secondary shorted, the magnetizing branch can be ignored because nearly all current flows through the low-impedance short-circuit path through R_eq and X_eq, not through the much higher impedance R_c||L_m branch)
+(d) Find R_eq using R_eq = P1_sc/I1_sc²
+(e) Find |Z_eq| using |Z_eq| = V1_sc/I1_sc, then find X_eq using X_eq = √(|Z_eq|² − R_eq²)
+Q5. Complete design analysis — connecting to your flyback capstone:
+A flyback transformer for your Year 1 capstone (30W power supply) will have: N1=60 turns, N2=20 turns (a=3), measured R1=0.8Ω, R2=0.15Ω (already accounting for any turns ratio in measurement), L1=8µH leakage, L2=1.2µH leakage (these are typically much smaller percentage-wise in flyback transformers due to gapped cores — full details in Topic 8).
+(a) Find R2' and R_eq
+(b) Find L2' and L_eq
+(c) At a switching frequency of 100kHz (not 50Hz — flyback transformers operate at switching frequency, not mains frequency), find X_eq = ωL_eq
+(d) If the flyback delivers I1(average, simplified) = 1.5A during the relevant conduction period, estimate copper loss P_cu = I1²×R_eq
+(e) For a 30W design, what percentage of output power does this copper loss represent? Is this acceptable for an 85%+ efficiency target (consider that core loss and switching losses in the MOSFET/diode also consume part of your loss budget)?
