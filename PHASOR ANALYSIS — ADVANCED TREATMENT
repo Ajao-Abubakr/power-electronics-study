@@ -1,0 +1,31 @@
+Q1. Convert to polar form, including correct quadrant:
+(a) Z = 6 + j8
+(b) Z = −5 + j5
+(c) Z = −4 − j3
+(d) Z = 7 − j7
+(e) For each, verify your answer by converting back to rectangular
+Q2. Phasor arithmetic: Z1 = 8∠50°, Z2 = 3∠−20°
+(a) Z1 × Z2
+(b) Z1 / Z2
+(c) Z1 + Z2 (convert to rectangular first)
+(d) Z1 − Z2
+(e) Z2² (square it)
+Q3. Complex power calculation: V = 415∠0° V, I = 25∠−42° A (both RMS).
+(a) Find S using S = V×I*
+(b) Extract P and Q from S
+(c) Find power factor and state lagging or leading
+(d) Verify P using P = VIcos(φ)
+(e) If this represents a 3-phase load, total apparent power = √3 × V_line × I_line. If V_line = 415V (line-to-line) and the I you used is line current, is your S calculation already the 3-phase total or per-phase? Explain.
+Q4. Parallel RLC admittance analysis: R = 100Ω, L = 50mH, C = 10µF, ω = 2000 rad/s, V = 50∠0° V.
+(a) Find Y_R, Y_L, Y_C individually
+(b) Find Y_total (rectangular then polar)
+(c) Find I_total
+(d) Find Z_total
+(e) Is this circuit inductive or capacitive overall at this frequency? How do you know from the sign of the imaginary part of Y_total?
+Q5. Frequency response conceptual analysis:
+A parallel RLC circuit: R = 200Ω, L = 25mH, C = 100nF.
+(a) At ω = 100 rad/s, is Y_L or Y_C larger in magnitude? (calculate both)
+(b) At ω = 100,000 rad/s, is Y_L or Y_C larger in magnitude?
+(c) Based on (a) and (b), describe in words how the circuit's overall behaviour changes from low to high frequency
+(d) Estimate (without precise calculation) the approximate frequency where |Y_L| = |Y_C| — this is the resonant frequency, covered fully in Topic 2
+(e) Why might an engineer care about finding this specific frequency in a real circuit?
