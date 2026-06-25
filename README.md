@@ -99,7 +99,7 @@ including high-frequency effects and EMI filtering.
 | 2 | Resonant Circuits — Series & Parallel LC | 21/06/2026 | 5/5 | ✅️ |
 | 3 | Transformer Theory — Ideal & Practical | 22/06/2026 | 5/5 | ✅️ |
 | 4 | Transformer Equivalent Circuit | 24/06/2026 | 5/5 | ✅️ |
-| 5 | Magnetic Circuits — MMF, Reluctance, Ampere's Law | — | 0/5 | ⬜ |
+| 5 | Magnetic Circuits — MMF, Reluctance, Ampere's Law | 25/06/2026 | 5/5 | ✅️ |
 | 6 | Core Materials & Saturation | — | 0/5 | ⬜ |
 | 7 | Inductor Design — Core Selection & Winding | — | 0/5 | ⬜ |
 | 8 | Transformer Design for Power Electronics | — | 0/5 | ⬜ |
