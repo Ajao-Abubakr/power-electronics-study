@@ -98,7 +98,7 @@ including high-frequency effects and EMI filtering.
 | 1 | Phasor Analysis (Advanced) | 20/06/2026| 5/5 | ✅️ |
 | 2 | Resonant Circuits — Series & Parallel LC | 21/06/2026 | 5/5 | ✅️ |
 | 3 | Transformer Theory — Ideal & Practical | 22/06/2026 | 5/5 | ✅️ |
-| 4 | Transformer Equivalent Circuit | — | 0/5 | ⬜ |
+| 4 | Transformer Equivalent Circuit | 24/06/2026 | 5/5 | ✅️ |
 | 5 | Magnetic Circuits — MMF, Reluctance, Ampere's Law | — | 0/5 | ⬜ |
 | 6 | Core Materials & Saturation | — | 0/5 | ⬜ |
 | 7 | Inductor Design — Core Selection & Winding | — | 0/5 | ⬜ |
