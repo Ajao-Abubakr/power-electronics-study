@@ -1,0 +1,36 @@
+Practice Problems — Topic 10
+Q1. IGBT vs MOSFET crossover analysis:
+A 1200V MOSFET has R_DS(on) = 1.2Ω. A 1200V IGBT has V_CE(sat) = 2.2V (assume constant with current for simplicity).
+(a) Find the crossover current
+(b) At I = 10A, which device has lower conduction loss and by how much?
+(c) At I = 30A, which device has lower conduction loss and by how much?
+(d) This 1200V class is typical for which applications (refer to the decision framework table)?
+(e) Given typical operating currents for those applications, which device type would usually be preferred based on conduction loss alone?
+Q2. Tail current and frequency limits:
+An IGBT: E_off(tail) = 800µJ at 25A, 600V.
+(a) P_tail at f_s = 5kHz
+(b) P_tail at f_s = 20kHz
+(c) If the IGBT's total power dissipation budget (from thermal design) is 80W, and conduction loss at 25A with V_CE(sat)=1.8V and D=0.5 is fixed at a certain value, calculate that conduction loss first
+(d) Subtract conduction loss from 80W to find the remaining budget for switching/tail loss
+(e) What is the maximum switching frequency this IGBT can operate at while staying within the 80W budget (using only P_tail, ignoring E_on for simplicity)?
+Q3. Complete module loss budget — design problem:
+A 690V industrial drive, IGBT module: I_C = 100A, V_CE(sat) = 1.9V, total switching energy (on+off) = 8mJ, f_s = 4kHz, D = 0.5. Co-packaged diode: V_f = 2.0V, Q_rr = 5µC.
+(a) IGBT conduction loss
+(b) IGBT switching loss
+(c) Diode conduction loss (assume same D for simplicity — diode conducts (1-D) fraction)
+(d) Diode reverse recovery loss
+(e) Total module loss. If this module is one of six in a three-phase inverter (2 per phase — high side and low side), estimate total semiconductor loss for the inverter.
+Q4. Application matching:
+For each application below, state whether IGBT or MOSFET (silicon) would traditionally be preferred, and justify with ONE key factor from the decision framework:
+(a) A 12V, 500kHz point-of-load converter for a CPU (output 1.8V, 40A)
+(b) A 480V, 4kHz industrial pump motor drive (50kW)
+(c) A 48V, 250kHz EV onboard charger DC-DC stage
+(d) A 1000V, 2kHz traction inverter for an electric train
+(e) A 24V, 1MHz DC-DC converter for a telecom power supply
+Q5. SiC MOSFET disruption — conceptual analysis:
+A 650V SiC MOSFET has R_DS(on) = 50mΩ (much lower than an equivalent-rated silicon MOSFET would have, due to SiC's superior material properties allowing thinner drift regions for the same voltage rating) and can switch at MOSFET-like speeds (negligible tail current, low Q_gd).
+(a) At I = 20A, find conduction loss for this SiC MOSFET
+(b) Compare to a 650V silicon IGBT with V_CE(sat) = 2.0V at the same current
+(c) The SiC device can switch at f_s = 100kHz (vs the IGBT's typical 10-20kHz limit due to tail current). If switching loss for the SiC device at 100kHz is 8W, and for the IGBT at 20kHz is 12W (lower frequency, but worse tail current per event), compare total losses (conduction + switching) for both
+(d) Beyond raw loss numbers, what system-level benefit comes from the SiC device's ability to operate at 100kHz vs the IGBT's 20kHz? (Think about magnetic component sizes — relate to L_min formula from Month 1 Topic 7: L_min ∝ 1/f_s)
+(e) Given (a) through (d), explain in your own words why SiC MOSFETs are described as "disrupting" the traditional IGBT-dominated high-voltage power electronics market.
