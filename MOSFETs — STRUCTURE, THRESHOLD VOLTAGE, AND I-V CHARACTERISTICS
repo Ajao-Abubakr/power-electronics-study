@@ -1,0 +1,36 @@
+Practice Problems — Topic 8
+Q1. A MOSFET has V_GS(th) = 3V (typical), with a range of 2V to 4V across manufacturing tolerance.
+(a) If driven with V_GS = 2.5V, will every unit of this MOSFET turn on? Explain.
+(b) If driven with V_GS = 5V, will every unit turn on? Will R_DS(on) be the same for all units at this V_GS?
+(c) The datasheet specifies R_DS(on) at V_GS = 10V. Why does the manufacturer choose this test condition rather than V_GS(th)?
+(d) For reliable operation across manufacturing variation, what V_GS would you choose to drive this MOSFET?
+Q2. R_DS(on) and power loss across temperature:
+A MOSFET: R_DS(on) = 12mΩ at 25°C, 20mΩ at 125°C. Load current = 15A constant.
+(a) Power loss at 25°C
+(b) Power loss at 125°C
+(c) Percentage increase in loss
+(d) If a heatsink limits the MOSFET to 100°C maximum, and R_DS(on) at 100°C ≈ 17.5mΩ, what is the actual operating power loss?
+(e) Design a thermal system: if θ_ja (junction to ambient with heatsink) = 3°C/W and ambient = 40°C, what is the actual junction temperature at the power loss from (d)? Is this self-consistent (does it match the assumed 100°C)?
+Q3. MOSFET region identification:
+A MOSFET has V_GS(th) = 3V, and is biased at V_GS = 8V.
+(a) If V_DS = 0.5V, is the MOSFET in triode or saturation? (Compare V_DS to V_GS − V_GS(th) = 5V)
+(b) If V_DS = 8V, is the MOSFET in triode or saturation?
+(c) For a power converter switch operating with V_DS up to 24V and V_GS = 10V (V_GS(th) = 3V, so V_GS−V_GS(th) = 7V), is the MOSFET ever in saturation during normal switch-ON operation? What does this mean for R_DS(on) being well-defined?
+(d) During the brief switching transition (V_DS sweeping from 0 to 24V as the MOSFET turns off), does the MOSFET pass through saturation? What happens to power dissipation during this transition?
+Q4. Body diode analysis:
+A synchronous buck converter has a low-side MOSFET. During the dead-time (brief period when both high-side and low-side gate signals are off, to prevent shoot-through), the inductor current must flow through the low-side MOSFET's body diode.
+(a) The body diode has V_f ≈ 0.9V (typical for a MOSFET body diode — higher than a dedicated diode). Inductor current = 5A during dead-time of 50ns, at f_s = 500kHz (period = 2µs). Find the energy lost per cycle due to body diode conduction: E = V_f × I × t_deadtime.
+(b) Find the power loss: P = E × f_s
+(c) The body diode also has t_rr ≈ 200ns. When the high-side MOSFET turns on after dead-time, this reverse recovery current flows through both MOSFETs momentarily. If I_RR = 3A and V_R = 12V (input voltage), find Q_rr and P_rr.
+(d) Total loss from body diode effects (conduction + recovery)
+(e) Why do designers minimise dead-time as much as possible while still preventing shoot-through?
+Q5. Comparative analysis — voltage rating vs R_DS(on):
+Three MOSFETs from the same manufacturer, similar die size:
+30V rated: R_DS(on) = 3mΩ
+60V rated: R_DS(on) = 3mΩ × 60^2.5/30^2.5 (use the scaling rule R_DS(on) ∝ V^2.5)
+100V rated: R_DS(on) = 3mΩ × 100^2.5/30^2.5
+(a) Calculate R_DS(on) for the 60V and 100V devices
+(b) A converter with V_in = 24V needs a MOSFET with V_DS rating ≥ 24/0.8 = 30V minimum (80% derating rule from earlier). At I_load = 10A, find conduction loss for the 30V device.
+(c) If a designer over-specifies and uses the 100V device "to be safe" for the same 24V application, find the conduction loss.
+(d) Calculate the efficiency penalty (extra power loss) from over-specifying voltage rating
+(e) What is the correct engineering approach — always use the highest voltage rating "for safety," or match the rating closely to the application? Justify using your calculations.
