@@ -1,0 +1,31 @@
+Q1. Series RLC: R = 15Ω, L = 80mH, C = 5µF.
+(a) Resonant frequency ω₀ and f₀
+(b) Quality factor Q
+(c) Bandwidth in rad/s and Hz
+(d) If V_source = 30V RMS at resonance, find I, V_L, V_C
+(e) At what two frequencies (approximately) does the current drop to 70.7% of its resonant value?
+Q2. Design problem: design a series RLC circuit resonant at exactly 100kHz with Q = 8, using a fixed inductor L = 47µH.
+(a) Find required C for resonance at 100kHz
+(b) Find required R for Q = 8
+(c) At resonance with V_source = 12V, find I, V_L, V_C
+(d) What voltage rating would you need for the capacitor, given V_C at resonance?
+(e) Find the bandwidth of this circuit
+Q3. Parallel RLC: R = 5kΩ, L = 2mH, C = 50nF, I_source = 2mA.
+(a) Resonant frequency
+(b) Quality factor
+(c) Voltage across the parallel combination at resonance
+(d) Circulating current through L at resonance
+(e) Circulating current through C at resonance (should match (d) — verify)
+Q4. Parasitic ringing diagnosis: a converter shows 8MHz ringing on the switch node. Estimated parasitic capacitance (MOSFET output capacitance) = 150pF.
+(a) Find the parasitic loop inductance causing this ringing
+(b) If the PCB layout is improved and the loop area is reduced by half (inductance roughly proportional to loop area for a simple loop), estimate the new parasitic inductance
+(c) Find the new ringing frequency with this improved layout
+(d) A snubber capacitor of 1nF is added in parallel with the parasitic 150pF. Find the new ringing frequency with C_total = 1150pF (using original inductance from (a))
+(e) Explain in your own words why adding the snubber capacitor both reduces the ringing frequency AND reduces the peak ringing voltage amplitude (refer back to the snubber discussion if needed)
+Q5. LLC converter resonant tank preview (conceptual, connects to Month 14):
+An LLC resonant converter's series resonant tank uses L_r = 15µH and C_r = 47nF.
+(a) Find the series resonant frequency f_r
+(b) If the converter switches at exactly this frequency, what is special about the tank's impedance (refer to series resonance behaviour)?
+(c) The tank also has a parallel magnetizing inductance L_m = 60µH (much larger than L_r) which creates a SECOND resonant frequency with C_r when L_m is included: f_p = 1/(2π√((L_r+L_m)×C_r)). Calculate f_p.
+(d) An LLC converter operates between f_p and f_r to achieve voltage gain control. Is f_p higher or lower than f_r? (calculate both and compare)
+(e) This dual-resonant behaviour is why the topology is called "LLC" (two inductors, one capacitor). Based on what you now understand about resonance, why might operating near resonance (rather than far from it) be beneficial for reducing switching losses? (Hint: think about what happens to the impedance phase angle near resonance, and how this relates to when current and voltage cross zero relative to switch transitions.)
