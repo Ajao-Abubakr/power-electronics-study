@@ -1,0 +1,41 @@
+Q1. MOSFET gate charge analysis:
+Q_gs = 8nC, Q_gd = 12nC, Q_g(total) = 30nC (remaining 10nC is final charging phase).
+Gate driver supplies constant I_g = 0.5A throughout turn-on.
+(a) Time for phase 1 (Q_gs)
+(b) Time for phase 2 (Miller plateau, Q_gd) — this is t_on
+(c) Time for phase 3
+(d) Total turn-on time
+(e) If V_in = 36V, I_load = 8A, f_s = 150kHz, and t_off = t_on, find P_sw
+Q2. Total loss budget and frequency scaling:
+MOSFET: R_DS(on) = 10mΩ, Q_gd = 20nC, gate driver I_g = 0.8A. V_in = 24V, I_load = 12A, D = 0.4 (conducts 40% of cycle).
+(a) t_on = t_off = Q_gd/I_g
+(b) Conduction loss: P_cond = I²×R×D
+(c) Switching loss at f_s = 100kHz
+(d) Total loss at 100kHz
+(e) Find f_s at which P_sw = P_cond (the "crossover frequency"). Above this frequency switching loss dominates.
+Q3. Bootstrap capacitor design:
+High-side MOSFET Q_g = 40nC. Switching frequency = 250kHz. Bootstrap supply = 15V, allowed droop = 0.5V.
+(a) Minimum C_boot
+(b) Using the rule of thumb C_boot = 100×C_iss, and C_iss = 1500pF for this MOSFET, what C_boot does this give? Compare to (a).
+(c) The bootstrap capacitor recharges every cycle when the low-side MOSFET is on. If the low-side ON time is 2µs (at 250kHz with D=0.5, period=4µs, so OFF time for high side = ON time for low side = 2µs), is there enough time to recharge C_boot through D_boot? (Assume D_boot and charging path resistance ≈ 5Ω; find τ = R×C_boot using your answer from (b) and compare to 2µs)
+(d) What happens if C_boot is too small relative to Q_g — describe the failure mode for the high-side MOSFET gate drive
+(e) What happens if the duty cycle becomes very high (D → 0.95, so low-side ON time becomes very short)? Why is bootstrap gate drive problematic at extreme duty cycles?
+Q4. Synchronous rectification design decision:
+A 5V, 20A buck converter (P_out = 100W). Compare diode rectification vs synchronous rectification for the freewheeling element.
+Diode option: V_f = 0.45V (Schottky), conducts for (1-D) of the cycle. D = 5/12 = 0.417 (assuming V_in=12V), so diode conducts 58.3% of cycle. Average diode current ≈ 20A × 0.583 ≈ 11.67A (simplified — using average load current as approximation for this problem)
+Synchronous MOSFET option: R_DS(on) = 4mΩ, same conduction duty.
+(a) Diode conduction loss: P = V_f × I_avg
+(b) Synchronous MOSFET conduction loss: P = I_avg² × R_DS(on)
+(c) Power saved by synchronous rectification
+(d) As a percentage of 100W output power, how significant is this saving?
+(e) The synchronous MOSFET needs its own gate driver and control timing — adding cost and complexity. At what output power level do you think this complexity becomes "worth it"? Justify your reasoning based on the percentage calculated in (d) and how it would scale at lower output power (e.g., 20W) vs higher (500W).
+Q5. EMI vs switching loss trade-off:
+A designer has two gate driver options for the same MOSFET (Q_gd = 18nC):
+Driver A: I_g = 0.3A → slower switching, less EMI
+Driver B: I_g = 1.5A → faster switching, more EMI
+V_in = 60V, I_load = 6A, f_s = 300kHz.
+(a) t_on for Driver A and Driver B
+(b) P_sw for Driver A and Driver B
+(c) Power difference between the two options
+(d) dV/dt for Driver A: dV/dt = V_in / t_on. Repeat for Driver B.
+(e) Driver B has roughly 5× the dV/dt of Driver A. In a real PCB with parasitic inductance L_par = 10nH in the switching loop, voltage overshoot ≈ L_par × dI/dt. If dI/dt also scales similarly with driver speed, which driver causes more voltage overshoot on the MOSFET drain? What design decision would resolve this conflict (hint: relates to Topic on snubbers from earlier)?
