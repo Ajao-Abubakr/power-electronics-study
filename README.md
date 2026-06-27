@@ -2,9 +2,9 @@ i# power-electronics-study
 Self-study notes and problems — Power Electronics
 
 
-Name: Abubakr Abubakr 
+Name: Ajao Abubakr 
 University: University of Lagos  
-Programme: Electrical & Computer Engineering  
+Programme: Electrical & Electronics Engineering  
 Start Date: May 2026  
 Goal:International career + Postgraduate research (MSc/PhD) in Power Electronics
 
