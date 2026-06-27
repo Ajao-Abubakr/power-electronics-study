@@ -1,0 +1,35 @@
+Q1. A boost converter needs an inductor: V_in=12V, V_out=24V, I_load=3A, f_s=200kHz, ΔI_L target=20% of average inductor current. Average inductor current = I_load/(1-D).
+(a) Find D, average inductor current I_avg, ΔI_L, I_peak, I_rms≈I_avg
+(b) Find required L using L=(V_in×D)/(ΔI_L×f_s) (voltage across inductor during ON = V_in for boost)
+(c) Choose core material for 200kHz
+(d) Using B_max=0.20T, J=4A/mm², K_u=0.4, calculate minimum A_p
+(e) From this table, select appropriate core: EE19 (A_p=800mm⁴), EE25 (A_p=2480mm⁴), EE30 (A_p=6600mm⁴), EE40 (A_p=15,600mm⁴)
+Q2. Complete the design from Q1 using the selected core (assume EE25: A_e=40mm², A_w=62mm², l_e=52mm, MLT=46mm, V_e=2130mm³).
+(a) Calculate N from saturation constraint
+(b) Calculate air gap length
+(c) Calculate wire gauge (choose from 18AWG=0.823mm², 20AWG=0.519mm², 22AWG=0.326mm²)
+(d) Verify winding fits in window
+(e) Calculate copper loss at 100°C (use ρ=2.176×10⁻⁸ Ω·m)
+Q3. Design an inductor for a buck converter with these specs: L=100µH, I_peak=8A, I_rms=7A, f_s=50kHz.
+(a) Calculate A_p_min using B_max=0.25T (lower frequency allows higher B), J=3.5A/mm², K_u=0.4
+(b) Select core from the same table in Q1
+(c) Using selected core A_e, find N
+(d) Calculate gap length
+(e) Using Steinmetz parameters k=0.04, α=1.4, β=2.5, find core loss. Compare to a 200kHz design at the same B_peak — how much lower is core loss at 50kHz?
+Q4. Wire gauge and winding verification:
+A designed inductor has N=45 turns, A_w=85mm², K_u=0.4, I_rms=4A, J=4A/mm².
+(a) Required wire cross-section
+(b) Choose wire gauge from the table in the notes
+(c) Total winding area required (including insulation and packing losses via K_u)
+(d) Does it fit? If not, what are two options?
+(e) The wire (20AWG) has resistance of 33.3mΩ/m at 20°C. MLT=48mm. Find copper loss at I_rms=4A.
+Q5. Complete design verification and comparison:
+Two inductor designs both targeting L=47µH, I_peak=6A, I_rms=5.5A, f_s=150kHz:
+Design A: EE25 core, N=20 turns, 1.2mm gap, 18AWG wire
+Design B: EE30 core, N=28 turns, 0.8mm gap, 20AWG wire
+For both designs, use: A_e(EE25)=40mm², A_e(EE30)=60mm², MLT(EE25)=46mm, MLT(EE30)=54mm, ρ=2.176×10⁻⁸ Ω·m at 100°C, A_wire(18AWG)=0.823mm², A_wire(20AWG)=0.519mm².
+(a) Verify actual inductance of each design using L=µ₀×N²×A_e/l_gap
+(b) Verify B_peak for each design using B=µ₀×N×I_peak/l_gap
+(c) Calculate copper loss for each design
+(d) Which design has lower copper loss and why?
+(e) Considering both copper loss and physical size, which design would you choose for a commercial product and why?
