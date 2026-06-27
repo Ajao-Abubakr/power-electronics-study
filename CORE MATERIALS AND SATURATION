@@ -1,0 +1,39 @@
+Practice Problems — Topic 6
+Q1. B-H curve interpretation:
+A ferrite core's B-H curve shows:
+At H = 50 A/m: B = 0.05T
+At H = 200 A/m: B = 0.25T
+At H = 1000 A/m: B = 0.38T
+At H = 5000 A/m: B = 0.40T (approximately flat — saturation)
+(a) Calculate the incremental permeability (µ = ΔB/ΔH) between each pair of consecutive points
+(b) At which H level has the material clearly entered saturation? Justify using your permeability calculations.
+(c) What is B_sat for this material based on this data?
+(d) An inductor using this core operates at H_peak = 800 A/m. Is this safe? What is B at this operating point?
+(e) If the inductor current doubles (H_peak = 1600 A/m), what happens to inductance? Explain quantitatively using your permeability values.
+Q2. Core loss calculation using Steinmetz equation:
+A MnZn ferrite core: k = 0.025, α = 1.5, β = 2.7, V_core = 5500mm³ = 5.5×10⁻⁶ m³.
+(a) Core loss at f = 100kHz, B_peak = 0.20T
+(b) Core loss at f = 100kHz, B_peak = 0.30T
+(c) Core loss at f = 200kHz, B_peak = 0.20T
+(d) From (a), (b), and (c): how does halving B_peak affect core loss compared to halving frequency? Which is more effective?
+(e) If the core temperature must stay below 100°C and the thermal resistance from core to ambient is 15°C/W, what maximum core loss is allowed? Does your answer from (a) stay within this limit?
+Q3. Saturation checking — converter design:
+A boost converter inductor: V_in = 24V, D = 0.583 (for V_out = 48V from V_out=V_in/(1-D) → D=1-24/48=0.5 — wait, recalculate: D=1−24/48=0.5, use D=0.5), f_s = 150kHz, N = 25 turns, A_e = 0.95cm² = 0.95×10⁻⁴ m², ferrite core B_sat = 0.40T at 25°C, 0.30T at 100°C.
+(a) Calculate T = 1/f_s
+(b) Correct the duty cycle: for boost, V_out=V_in/(1−D)=48V with V_in=24V → D=0.5. Apply voltage during ON time = V_in = 24V. Calculate B_peak = V_in × D × T / (N × A_e)
+(c) Check B_peak against the 25°C saturation limit with 30% margin
+(d) Check B_peak against the 100°C saturation limit with 30% margin
+(e) Is the design safe at both temperatures? If not, what are two ways to fix it?
+Q4. Core material selection — justify your choice for each application:
+(a) A 50Hz, 5kVA isolation transformer for a laboratory
+(b) A 200kHz flyback transformer in a phone charger (5W)
+(c) A PFC boost inductor operating at 100kHz, carrying 10A DC with 2A ripple
+(d) A common-mode choke on a USB cable for EMI suppression
+(e) A 1MHz resonant tank inductor in a GaN-based converter
+Q5. Temperature derating and design margin:
+A ferrite core has B_sat = 0.45T at 25°C. The B_sat vs temperature characteristic is approximately linear, dropping to 0.28T at 125°C.
+(a) Find the temperature coefficient of B_sat in T/°C
+(b) Find B_sat at 85°C (typical maximum operating temperature for consumer electronics)
+(c) A converter inductor is designed with B_peak = 0.20T at 25°C. What safety margin (as percentage of B_sat) does this give at 25°C?
+(d) At 85°C operating temperature, what safety margin remains?
+(e) If the safety margin at 85°C is considered insufficient (less than 20% is risky), what B_peak should you design to at 25°C to ensure at least 30% margin at 85°C?
