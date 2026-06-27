@@ -1,0 +1,34 @@
+Q1. A toroidal core: l = 8cm, A = 0.8cm², µ_r = 1800, N = 40 turns, I = 0.5A.
+(a) MMF
+(b) H
+(c) µ (absolute permeability)
+(d) B (check: is this below a typical 0.35T saturation limit for ferrite?)
+(e) Reluctance and inductance
+Q2. Gapped core design: ferrite path l_core = 6cm, A = 1.2cm², µ_r = 2200. An air gap of l_gap = 0.5mm is added (same A).
+(a) Reluctance of ferrite section alone
+(b) Reluctance of air gap
+(c) Total reluctance
+(d) What percentage of total reluctance comes from the air gap alone?
+(e) With N = 35 turns, find L
+Q3. Comparing gap sizes — design trade-off:
+Same core as Q2 (ferrite l=6cm, A=1.2cm², µ_r=2200), N=35 turns fixed.
+(a) Find L with gap = 0.25mm
+(b) Find L with gap = 0.5mm (from Q2 part e)
+(c) Find L with gap = 1.0mm
+(d) Find L with gap = 2.0mm
+(e) Plot the trend (describe in words): as gap increases, what happens to inductance? Does it change linearly, or does the relationship flatten out at some point? (Hint: consider what happens to total reluctance when gap reluctance becomes much, much larger than the ferrite's fixed reluctance)
+Q4. Working backward — design for a target inductance:
+You need L = 100µH using a core with l_core = 5cm, A = 1cm², µ_r = 2500, and you will choose both N and the gap length.
+(a) First, try WITHOUT a gap: find R_m (ferrite only) and then find N required for L=100µH using L=N²/R_m (solve for N, round to nearest whole turn)
+(b) Using this N, find the resulting MMF at a design current of I=3A, and the resulting H and B. Is B realistic (under ~0.35T) or does it indicate saturation risk?
+(c) Now try WITH a gap: choose a gap length such that R_m_gap = 9× R_m_ferrite (gap dominates). Find total R_m.
+(d) Find N required for L=100µH with this total R_m
+(e) Using this new N, find B at I=3A. Compare to part (b) — does the gapped design allow higher current before saturation, for the same target inductance? Explain why in terms of how MMF is distributed between the ferrite and the gap.
+Q5. Connecting to inductor design (preview of Topic 7):
+A buck converter inductor (from your Month 1 Topic 7 calculations) needs L = 22µH and must handle a peak current of 9A without saturating. Available core: ferrite toroid, l = 4cm, A = 0.6cm², µ_r = 2300, B_sat = 0.35T (typical power ferrite limit).
+(a) First check: without any gap, find R_m and the N required for L=22µH
+(b) At I_peak=9A with this N, find MMF, H, and B. Does this exceed B_sat?
+(c) Since (b) likely shows saturation, redesign with a gap. Choose a gap such that B at I_peak=9A equals exactly B_sat=0.35T (the maximum safe design point).
+Work backward: at saturation, H_sat_effective (combining the effect of gap) relates to B_sat via B_sat=µ₀×H_gap (since the gap, with µ_r=1, typically dominates H at this point — a useful approximation for gapped cores). Find the implied H_gap, then MMF=N×I_peak, then estimate required total reluctance from MMF/Φ where Φ=B_sat×A.
+(d) Find the resulting N from L=22µH and your calculated R_m_total
+(e) This worked-backward process is exactly what real inductor design involves — explain in your own words why simply choosing "more turns for more inductance" without checking saturation current is a critical design mistake that a beginner might make.
