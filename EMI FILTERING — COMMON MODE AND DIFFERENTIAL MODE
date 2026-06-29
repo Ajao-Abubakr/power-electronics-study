@@ -1,0 +1,35 @@
+Practice Problems — Topic 10
+Q1. Noise type identification: classify each of the following as differential mode, common mode, or both:
+(a) The 100kHz switching frequency ripple current at the input of a buck converter
+(b) Current flowing from the switching node to the chassis through a 10pF parasitic capacitance
+(c) A 50Hz mains current flowing through a live wire (normal power delivery)
+(d) A lightning transient that pushes both Live and Neutral conductors simultaneously positive relative to Earth
+(e) The 3rd harmonic of the switching frequency (300kHz) appearing as a ripple on the input current waveform
+Q2. Common mode choke analysis:
+A CM choke has L_CM = 15mH per winding, wound on a nanocrystalline toroid. Rated DM current = 5A.
+(a) The choke is designed so DM fluxes cancel in the core. Why does this mean the core never saturates from the load current, regardless of how large the DM current is? (Answer in terms of what flux the core actually sees)
+(b) A DM current of 5A flows and a CM noise current of 10mA simultaneously. Which current saturates the core — the 5A DM or the 10mA CM? Why?
+(c) At what frequency does the CM choke present an impedance of 1kΩ to CM noise? (Z = 2πf×L_CM)
+(d) A Y capacitor of C_Y = 3.3nF is used with this choke. Find the CM filter corner frequency.
+(e) Calculate CM attenuation at 1MHz using the corner frequency from (d).
+Q3. DM filter design:
+A 150W power supply at f_s = 65kHz requires 50dB attenuation of DM noise at the fundamental switching frequency.
+(a) Find the required filter corner frequency f_c
+(b) Choose C_X = 0.47µF (X2-rated). Find required L_DM.
+(c) Verify the corner frequency with your chosen L_DM value
+(d) The DM inductors also carry the full load current. At 230V input and 150W output with PF=0.95 and η=88%: find the input RMS current. This is the current the DM inductor must carry.
+(e) This DM inductor must not saturate at the peak of the mains current. If the mains is 230V RMS, peak mains current = √2 × I_rms. For a DM inductor with a ferrite core: the DC/AC bias current at the peak of the mains cycle must not exceed the inductor's saturation current rating. If I_sat = 3×I_rms is typical for well-designed DM inductors — verify whether your DM inductors need to handle saturation concerns for this 150W converter.
+Q4. Y capacitor safety calculation:
+A Class I (earthed) product uses Y2 capacitors from each line (Live and Neutral) to the earthed chassis.
+(a) With C_Y = 4.7nF on each line, calculate the impedance of each Y capacitor at 50Hz
+(b) Total earth leakage current: I_leak = V_line/(Z_Y1 + Z_Y2 in series? No — they are both from the same node to earth, so effectively in parallel for the leakage path. Use: I_leak = V_mains × 2πf × (C_Y1 + C_Y2) where V_mains=230V)
+(c) Safety standard EN 60950 limits earth leakage to 3.5mA for IT equipment. Does your design comply?
+(d) If the designer increases C_Y to 10nF each to improve CM attenuation, recalculate earth leakage. Does it comply?
+(e) Given the constraint from (c) and (d), propose an alternative way to improve CM attenuation without increasing C_Y — what other component or layout change could help?
+Q5. Complete EMI filter design for your Month 2 project power supply:
+Your regulated DC power supply (12V RMS transformer, bridge rectifier, filter capacitor, Zener regulator). This operates at mains frequency (50Hz) — but now consider it connected to a downstream switching converter (hypothetically) that generates 200kHz noise back into the mains. Design a simple two-element LC filter to protect the mains from this hypothetical switching noise.
+(a) Required attenuation at 200kHz: 40dB. Find required corner frequency.
+(b) Choose C_X = 0.1µF. Find L_DM.
+(c) The filter must pass 50Hz mains current without significant voltage drop. Find the impedance of your chosen L_DM at 50Hz. If mains current is 0.5A, find the voltage drop across the DM inductor at 50Hz. Is this acceptable (less than 1% of 230V)?
+(d) Sketch the complete filter schematic showing L_DM (in both Live and Neutral lines), C_X (across L-N), and two Y capacitors (L to earth and N to earth, each 2.2nF). Label each component with its function (DM or CM filtering).
+(e) This exercise illustrates why real power supplies need EMI filters even at mains frequency — switching converters connected to the same mains network pollute it with high-frequency noise. How does this concept connect to your understanding of the IEC 61000-4 standards and why they exist?
