@@ -1,0 +1,36 @@
+Topic 8
+Q1. Flyback transformer specification analysis: V_in=12V, V_out=5V, I_out=2A, f_s=150kHz, target D=0.45, η=82%.
+(a) Output power and input power
+(b) V_or (reflected output voltage, assume V_f=0.5V for secondary diode)
+(c) Verify volt-second balance: V_in×D vs V_or×(1−D). Are they equal?
+(d) Required turns ratio N1/N2
+(e) If N2=6 turns, find N1 (round to nearest integer and re-verify balance with rounded values)
+Q2. Core selection and primary turns for the transformer in Q1:
+(a) Calculate A_p_min using P_out=10W, K_u=0.4, J=3A/mm², B_max=0.18T, f_s=150,000Hz, K_f=4.0
+(b) From the table: EE19(800mm⁴), EE25(2480mm⁴), EE30(6600mm⁴) — select appropriate core
+(c) Using selected core A_e, calculate N1 from N1=V_in×D/(B_max×A_e×f_s)
+(d) Recalculate N2 from the turns ratio
+(e) Verify B_peak with final N1: B=V_in×D×T/(N1×A_e). Is it within 0.7×B_max limit?
+Q3. Winding design and loss calculation for the transformer in Q1 and Q2:
+V_in=12V, D=0.45, I_out=2A, η=82%.
+Using: I_peak_primary = 2×P_in/(V_in×D), I1_rms = I_peak×√(D/3), I_peak_secondary = I_peak_primary×(N1/N2), I2_rms = I_peak_secondary×√((1-D)/3):
+(a) Calculate I_peak_primary and I1_rms
+(b) Calculate I_peak_secondary and I2_rms
+(c) Select wire gauges for primary and secondary (use J=3A/mm²)
+(d) Calculate copper loss for each winding (use ρ=2.176×10⁻⁸ Ω·m at 100°C, MLT=46mm for EE25)
+(e) Total copper loss as percentage of output power. Is this acceptable for an 82% efficiency target?
+Q4. Volt-second balance and flux reset — conceptual and quantitative:
+A flyback transformer is running with V_in=24V, D=0.45, N1=20, N2=10, V_out=10V.
+(a) Calculate V_or = V_out × N1/N2 (neglect diode drop)
+(b) Volt-seconds during ON: V_in × D × T (at f_s=100kHz)
+(c) Volt-seconds during OFF: V_or × (1-D) × T
+(d) Are (b) and (c) equal? If not, the flux will walk in one direction — which direction and what will eventually happen?
+(e) Redesign: find D that achieves exact volt-second balance with V_in=24V, N1/N2=2, V_out=10V (neglect diode drop). Show your working.
+Q5. Multi-output flyback transformer — your capstone preview:
+The flyback transformer for your Year 1 capstone project:
+V_in=24V, V_out1=12V (main, 2A), V_out2=5V (logic supply, 0.5A), f_s=100kHz, D=0.40, η=85%.
+(a) Total output power P_out_total = V_out1×I_out1 + V_out2×I_out2
+(b) Input power P_in
+(c) Turns ratio for winding 1: N1/N2_1 (use V_in×D=V_or1×(1-D) where V_or1=V_out1+0.5V)
+(d) If N1=15 turns, find N2_1 for the 12V output
+(e) Find N2_2 for the 5V output using N2_2 = N1 × V_out2/(V_in×D/(1-D)). This is the fundamental multi-output flyback design equation showing how all secondary voltages are determined by their respective turns count relative to the primary.
