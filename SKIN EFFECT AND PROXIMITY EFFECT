@@ -1,0 +1,37 @@
+Practice Problems — Topic 9
+Q1. Skin depth calculations and wire selection:
+(a) Calculate δ for copper at 50kHz, 200kHz, 500kHz, 1MHz, 5MHz
+(b) For each frequency, what is the maximum wire diameter that can be used before skin effect becomes significant (defined as d > 2δ)?
+(c) An engineer uses 22AWG wire (d=0.644mm) in a 150kHz converter. Calculate δ at 150kHz and the ratio d/2δ. Is skin effect significant?
+(d) For the same 150kHz application, what is the maximum AWG wire diameter before skin effect becomes significant?
+(e) If this 22AWG wire has R_DC=52.9mΩ/m at 20°C, estimate R_AC at 150kHz using R_AC/R_DC ≈ d/(4δ) (valid for d >> δ). What is the AC resistance per metre?
+Q2. Litz wire design:
+(a) Design Litz wire for a 300kHz converter: find maximum strand diameter
+(b) The inductor needs to carry I_rms=8A. At J=4A/mm², what total copper cross-section is needed?
+(c) How many strands of your chosen strand diameter (round down to nearest AWG that meets the criterion from (a)) would you need to achieve this cross-section?
+(d) Write the Litz wire specification in the standard format (number of strands / AWG)
+(e) Compare the outer diameter of this Litz wire to a single solid wire of the same total copper cross-section. Which is larger? Why does this matter for fitting in a core window?
+Q3. Proximity effect in transformer windings:
+A transformer at f=100kHz has a primary with m=5 layers, using 0.5mm wire (d=0.5mm).
+(a) Calculate δ at 100kHz
+(b) Calculate Q = d/δ
+(c) For single layer (m=1) with Q=1.5: F_R ≈ 1.02 (from simplified Dowell — skin effect only, proximity term is zero). What is the AC resistance ratio?
+(d) For m=5 layers at the same Q, a published Dowell curve gives F_R ≈ 50. How many times worse is the 5-layer winding compared to single layer?
+(e) Propose two design changes (one related to winding structure, one related to wire type) that could reduce the 5-layer winding's AC resistance factor. Explain how each works physically.
+Q4. Interleaving to reduce proximity effect:
+A transformer winding arrangement:
+Arrangement A (non-interleaved): [P P P P | S S S S] (4 primary layers then 4 secondary layers)
+Arrangement B (interleaved): [P P | S S | P P | S S] (alternating pairs)
+Arrangement C (fully interleaved): [P | S | P | S | P | S | P | S]
+(a) In Arrangement A, the primary layers see the MMF built up by all 4 primary layers — the outermost primary layer experiences 4× the field of the innermost. Explain why this means m_effective=4 for the proximity effect calculation.
+(b) In Arrangement B, each primary group of 2 layers sees only the field from its own 2 layers at the interface boundary. What is m_effective for the proximity effect calculation?
+(c) In Arrangement C, each primary layer sees only the field from 1 primary layer. What is m_effective?
+(d) F_R scales approximately as m² in the proximity-dominated regime. If F_R(m=4)=50, estimate F_R for m=2 and m=1. How much loss reduction does full interleaving give?
+(e) Why can't you always use full interleaving (Arrangement C)? What is the practical constraint, particularly relevant to safety-isolated power supplies?
+Q5. Planar magnetics design decision:
+A converter operates at f_s=2MHz. The transformer must fit within 5mm height and carry I_rms=10A in the primary, 30A in the secondary (step-down, 3A:9A... wait, let us set this up properly: primary 10A, secondary = primary × turns ratio, let turns ratio = 3:1 so secondary = 3.33A, but let us use the given 10A and 30A as a 1:3 step-up for the secondary current).
+(a) Calculate skin depth at 2MHz
+(b) For conventional wound wire: what strand diameter is needed for Litz wire at 2MHz?
+(c) At such small strand diameters, the Litz wire for 10A RMS (requiring large cross-section from many thin strands) would have a very large outer diameter due to insulation overhead. This is a practical manufacturing and cost problem. What alternative technology solves this?
+(d) For a planar transformer using 2oz copper PCB traces (thickness = 70µm): is 70µm greater or less than 2δ at 2MHz? What does this tell you about skin effect in PCB trace windings at this frequency?
+(e) The 5mm height constraint eliminates wound conventional transformers easily. Planar cores (like the ER11 or ELP series) achieve sub-5mm profiles. What other system-level advantages does a planar transformer offer in a commercial power converter product?
