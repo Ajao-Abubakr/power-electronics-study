@@ -31,8 +31,8 @@ Nothing is copied — every solution is my own work.
 |-------|---------|--------|
 | Month 1 | Electrical Foundations (Topics 1–10) | ✅️ Completed |
 | Month 2 | Semiconductor Devices |  ✅️ Completed |
-| Month 3 | AC Circuit Analysis & Magnetics |  🔄 In Progress |
-| Month 4 | DC-DC Converters — Buck & Boost | ⬜ Not Started |
+| Month 3 | AC Circuit Analysis & Magnetics |  ✅️ In Progress |
+| Month 4 | DC-DC Converters — Buck & Boost |  🔄 Not Started |
 | Month 5 | Isolated Converters — Flyback & Full Bridge | ⬜ Not Started |
 | Month 6 | PCB Design for Power Electronics | ⬜ Not Started |
 | Month 7 | Solar PV Systems & MPPT | ⬜ Not Started |
@@ -79,7 +79,7 @@ what is happening inside the device during switching.
 | 1 | PN Junction Physics | 8/06/2026 | 5/5 |  ✅️ |
 | 2 | Diode Characteristics & Ratings | 9/06/2026 | 5/5 | ✅️ |
 | 3 | Rectifier Circuits | 10/06/2026 | 5/5 |  ✅️ |
-| 4 | Ripple Voltage & Filter Capacitors | 11/06/2026 | Q5 |  ✅️ |
+| 4 | Ripple Voltage & Filter Capacitors | 11/06/2026 | 5/5 |  ✅️ |
 | 5 | Zener Diodes — Voltage Regulation | 12/06/2026 | 5/5 | ✅️ |
 | 6 | Schottky Diodes |13/06/2026 | 5/5 | ✅️ |
 | 7 | BJT Transistors | 14/06/2026 | 5/5 |  ✅️ |
@@ -102,6 +102,6 @@ including high-frequency effects and EMI filtering.
 | 5 | Magnetic Circuits — MMF, Reluctance, Ampere's Law | 25/06/2026 | 5/5 | ✅️ |
 | 6 | Core Materials & Saturation | 26/06/2026 | 5/5 | ✅️ |
 | 7 | Inductor Design — Core Selection & Winding | 26/06/2026 | 5/5 | ✅️ |
-| 8 | Transformer Design for Power Electronics | 26/06/2026 | 5/5 |  🔄 |
-| 9 | Skin Effect & Proximity Effect | — | 0/5 |   |
-| 10 | EMI Filtering — Common Mode & Differential Mode | — | 0/5 | ⬜ |
+| 8 | Transformer Design for Power Electronics | 27/06/2026 | 5/5 |  ✅️ |
+| 9 | Skin Effect & Proximity Effect | 28/06/2026 | 5/5 |   |
+| 10 | EMI Filtering — Common Mode & Differential Mode | 29/06 2026 | 5/5 | ✅️ |
