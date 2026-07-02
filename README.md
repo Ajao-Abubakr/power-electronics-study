@@ -105,3 +105,21 @@ including high-frequency effects and EMI filtering.
 | 8 | Transformer Design for Power Electronics | 27/06/2026 | 5/5 |  ✅️ |
 | 9 | Skin Effect & Proximity Effect | 28/06/2026 | 5/5 |   |
 | 10 | EMI Filtering — Common Mode & Differential Mode | 29/06 2026 | 5/5 | ✅️ |
+
+
+## Month 4 — DC-DC Converters & Control
+
+**Objective:** Master the analysis, design, control, and practical implementation of DC-DC power converters, including converter topologies, operating modes, efficiency optimization, stability analysis, and simulation techniques used in modern power electronics.
+
+| # | Topic | Date Completed | Problems Solved | Status |
+|---|-----------------------------------------------|----------------|-----------------|--------|
+| 1 | Buck Converter — Complete Analysis | 30/06/2026 | 5/5 | ✅️ |
+| 2 | Boost Converter — Complete Analysis | 01/07/2026 | 5/5 | ✅️ |
+| 3 | Buck-Boost Converter | 01/07/2026 | 5/5 | ✅️ |
+| 4 | Ćuk Converter | 02/07/2026 | 5/5 | ✅️ |
+| 5 | Converter Efficiency and Loss Budget | 02/07/2026 | 5/5 | ✅️ |
+| 6 | CCM vs DCM — Boundary Analysis | 02/07/2026 | 5/5 | ✅️ |
+| 7 | Small Signal Modelling | | | ⬜ |
+| 8 | Feedback and Stability — Bode Plots | | | ⬜ |
+| 9 | Practical Converter Design | | | ⬜ |
+| 10 | Simulation and Verification | | | ⬜ |
