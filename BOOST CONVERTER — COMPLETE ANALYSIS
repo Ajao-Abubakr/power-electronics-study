@@ -1,0 +1,33 @@
+Q1. Boost converter fundamentals: V_in=5V, V_out=15V, I_load=1A, f_s=200kHz.
+(a) Duty cycle D
+(b) Average inductor current I_L_avg
+(c) Inductor voltage during ON and OFF periods
+(d) Verify volt-second balance numerically
+(e) Average switch current and average diode current
+Q2. Ripple design: V_in=24V, V_out=48V, I_load=3A, f_s=150kHz, target ΔI_L=15% of I_L_avg.
+(a) D and I_L_avg
+(b) Target ΔI_L and minimum L
+(c) Choose from: 33µH, 47µH, 68µH, 100µH
+(d) Verify ripple and find I_peak, I_valley
+(e) Required I_sat with 20% margin
+Q3. Output capacitor and component ratings: same converter as Q2.
+(a) Output voltage ripple with C=220µF: ΔV_out = I_load×D/(C×f_s)
+(b) Minimum capacitor voltage rating (with 20% margin above V_out)
+(c) Minimum MOSFET voltage rating (V_out/0.8)
+(d) Minimum diode PIV rating (V_out × 2 for safety margin)
+(e) Why does a boost converter require higher voltage-rated components than a buck converter with the same input and output power?
+Q4. Loss budget: V_in=12V, V_out=24V, I_load=4A, f_s=250kHz.
+MOSFET: R_DS(on)=30mΩ, Q_gd=6nC, I_gate=1A, V_gate=10V, Q_g=15nC.
+Schottky diode: V_f=0.4V.
+Inductor: R_L=25mΩ. D=0.5, I_L_avg=8A.
+(a) I_SW_rms = I_L_avg×√D. MOSFET conduction loss.
+(b) Switching loss (note: MOSFET switches against V_out=24V in boost)
+(c) Diode conduction loss (P=V_f×I_load)
+(d) Inductor copper loss (P=I_L_avg²×R_L)
+(e) Total loss, output power, efficiency
+Q5. PFC boost conceptual design: mains input 230V RMS, 50Hz. Target output: 400V DC. I_load_DC=0.5A (200W output).
+(a) Peak mains voltage V_m
+(b) At the peak of the mains cycle (v_in=V_m=325.3V), find D(t) at that instant
+(c) At the zero-crossing of the mains cycle (v_in→0), what happens to D? What does this imply about the switch being ON nearly 100% of the time near the zero-crossing?
+(d) Average input current = P_in/(V_rms) assuming PF=1. If P_in=200W/η where η=95%, find average input current.
+(e) Why must the PFC output capacitor be rated for 400V, and what happens to the converter if the output voltage rises above 400V (answer in terms of what the duty cycle controller must do to prevent this)?
