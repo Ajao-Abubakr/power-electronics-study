@@ -1,0 +1,46 @@
+Practice Problems — Topic 5
+Q1. Individual loss calculations: V_in=24V, V_out=12V, I_load=8A, f_s=100kHz, D=0.5.
+MOSFET: R_DS(on)=20mΩ, Q_gd=15nC, Q_g=35nC, V_gate=10V, I_gate=1.5A.
+(a) I_SW_rms and MOSFET conduction loss
+(b) Switching transition time t_sw and switching loss
+(c) Gate drive power loss
+(d) If a Schottky diode (V_f=0.45V) is used: average diode current and diode conduction loss
+(e) If a synchronous MOSFET (same R_DS(on)=20mΩ) replaces the diode: synchronous rectifier conduction loss. How much is saved vs the Schottky diode?
+Q2. Inductor loss calculation:
+Buck converter inductor: L=47µH, I_load=8A, ΔI_L=1.5A, f_s=100kHz.
+Inductor parameters: R_DC=12mΩ, R_AC=25mΩ (at 100kHz, accounting for skin/proximity effects), Steinmetz k=0.04, α=1.4, β=2.5, V_core=4000mm³, B_peak=0.18T.
+(a) DC copper loss: I_load²×R_DC
+(b) AC copper loss: (ΔI_L/(2√3))²×R_AC
+(c) Total copper loss
+(d) Core loss using Steinmetz equation
+(e) Total inductor loss and ratio of core to copper loss. Is the inductor design copper-loss dominated or core-loss dominated at this frequency?
+Q3. Complete loss budget for a boost converter: V_in=12V, V_out=24V, I_load=3A, f_s=200kHz, D=0.5, I_L_avg=6A.
+MOSFET: R_DS(on)=35mΩ, Q_gd=8nC, I_gate=1A, Q_g=20nC, V_gate=12V.
+Schottky diode: V_f=0.45V.
+Inductor: R_L=20mΩ, core loss=80mW.
+Output cap: ESR=20mΩ, C=100µF.
+(a) MOSFET conduction loss (note: use I_SW_rms=I_L_avg×√D for boost)
+(b) Switching loss (note: MOSFET switches against V_out=24V in boost)
+(c) Gate drive loss
+(d) Diode conduction loss (average diode current = I_load for boost)
+(e) Inductor copper loss and core loss
+(f) Capacitor loss: I_C_rms ≈ I_load×√(D/(1-D)) for boost. Find P_C.
+(g) Total loss, output power, efficiency
+Q4. Thermal design:
+From Q3: total MOSFET loss = P_SW_cond + P_SW_sw. MOSFET is in a TO-220 package: θ_JC=4°C/W. Heatsink: θ_CS=0.8°C/W (with thermal compound). Ambient temperature=45°C. Target T_J≤125°C.
+(a) Total MOSFET power dissipation
+(b) Required total thermal resistance θ_JA
+(c) Required heatsink thermal resistance θ_SA = θ_JA − θ_JC − θ_CS
+(d) A heatsink is found with θ_SA=15°C/W. What is the actual junction temperature?
+(e) The diode in Q3 dissipates a similar amount. If it uses the same heatsink (shared heatsink, thermally in parallel — effective θ_SA halved because two components share it): recalculate T_J for each device. Is thermal sharing always beneficial?
+Q5. Efficiency optimisation trade-off study:
+A 50W, 100kHz buck converter (V_in=48V, V_out=12V, I_load=4.167A, D=0.25) is being optimised. Current design uses:
+Option A MOSFET: R_DS(on)=15mΩ, Q_gd=20nC (fast but resistive)
+Option B MOSFET: R_DS(on)=40mΩ, Q_gd=5nC (slow but low conduction loss)
+Option C MOSFET: R_DS(on)=25mΩ, Q_gd=10nC (balanced)
+For all options: I_gate=1A, V_in=48V, I_load=4.167A, D=0.25.
+(a) For each MOSFET option: calculate conduction loss (I_SW_rms=I_load×√D) and switching loss (t_sw=Q_gd/I_gate, use P_sw=½×V_in×I_load×2×t_sw×f_s)
+(b) Total MOSFET loss for each option
+(c) Which MOSFET minimises total MOSFET loss at f_s=100kHz?
+(d) Repeat the comparison at f_s=500kHz. Does the optimal choice change?
+(e) Find the crossover frequency (approximately) at which Option A and Option B have equal total loss. This is the frequency below which Option A is better (lower conduction loss matters more) and above which Option B is better (lower switching loss matters more). This illustrates why converter switching frequency directly determines which MOSFET parameter is most important to optimise.
