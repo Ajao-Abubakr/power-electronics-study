@@ -1,0 +1,37 @@
+Practice Problems — Topic 1
+Q1. Buck converter fundamentals: V_in=48V, V_out=15V, I_load=6A, f_s=150kHz.
+(a) Duty cycle D
+(b) ON time and OFF time
+(c) Inductor voltage during ON and OFF
+(d) Verify volt-second balance: show V_L_on × D = V_L_off × (1-D) numerically
+(e) Average inductor current and confirm it equals I_load
+Q2. Ripple design: same converter as Q1, target ΔI_L = 25% of I_load.
+(a) Target ΔI_L in Amperes
+(b) Minimum inductance L_min
+(c) Choose from: 22µH, 33µH, 47µH, 68µH, 100µH
+(d) Verify actual ripple with chosen value
+(e) Peak and valley inductor currents. Required I_sat with 20% margin.
+Q3. Output capacitor design: using the converter and inductor from Q2, target total output ripple ΔV_out ≤ 30mV. Available capacitors: 100µF/ESR=50mΩ, 220µF/ESR=25mΩ, 470µF/ESR=15mΩ, 1000µF/ESR=8mΩ.
+(a) Required capacitance for the capacitance-only ripple component ≤ 15mV
+(b) For each available capacitor, calculate ΔV_ESR
+(c) For each available capacitor, calculate total ripple ΔV_total
+(d) Which capacitor(s) meet the 30mV specification?
+(e) If two 220µF capacitors are placed in parallel, what is the combined ESR and total ripple? Is this better than a single 470µF?
+Q4. CCM/DCM boundary analysis: using L=47µH from Q2, V_out=15V, D=0.3125, f_s=150kHz.
+(a) Find L_crit at I_load=6A. Is the converter in CCM?
+(b) Find the minimum load current I_load_min below which the converter enters DCM (find I_load where L=L_crit=47µH)
+(c) At I_load=0.5A (light load): find ΔI_L and check if I_valley > 0. Is this CCM or DCM?
+(d) In DCM the peak inductor current is not determined by average current ± ripple/2. Instead, all the energy to supply load in one cycle comes from the peak: P_out = ½×L×I_peak²×f_s. Find I_peak at I_load=0.5A in DCM.
+(e) Why does the output voltage tend to rise above V_out_target in DCM if the duty cycle is not reduced by the control loop?
+Q5. Complete loss budget and efficiency: V_in=24V, V_out=5V, I_load=8A, f_s=300kHz.
+MOSFET: R_DS(on)=8mΩ, Q_gd=8nC, gate driver I_gate=1.5A, V_gate=10V, Q_g_total=20nC.
+Schottky diode: V_f=0.4V, t_rr≈0.
+Inductor: L=10µH, R_L=8mΩ.
+Output cap: C=100µF, ESR=5mΩ.
+(a) D, t_ON, t_OFF
+(b) ΔI_L, I_peak, I_valley
+(c) MOSFET: conduction loss + switching loss
+(d) Diode: conduction loss
+(e) Inductor copper loss, gate drive loss, output ripple ΔV_total
+(f) Total loss, output power, efficiency
+(g) If the diode is replaced with a synchronous MOSFET (same R_DS(on)=8mΩ), what is the new efficiency?
