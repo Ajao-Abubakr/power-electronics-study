@@ -1,0 +1,35 @@
+Practice Problems — Topic 6
+Q1. CCM/DCM boundary for buck converter: V_in=48V, V_out=12V, f_s=200kHz, L=15µH.
+(a) D and ΔI_L
+(b) I_load_boundary
+(c) K at I_load=5A. Is this CCM or DCM?
+(d) K at I_load=0.3A. Is this CCM or DCM?
+(e) What inductance would move the CCM/DCM boundary to I_load=0.1A (allowing DCM only at very light loads)?
+Q2. Boost converter boundary: V_in=15V, V_out=30V, f_s=100kHz, L=68µH.
+(a) D and K_crit_boost(D)
+(b) Load resistance at the CCM/DCM boundary
+(c) Load current at the boundary
+(d) ΔI_L and I_peak at the boundary
+(e) The converter supplies a load that varies from 0.1A to 3A. For what range of load current is it in CCM, and for what range in DCM?
+Q3. DCM analysis for buck converter: V_in=24V, V_out=9V, f_s=100kHz, L=30µH, I_load=0.2A.
+(a) D (from CCM formula — used as starting point for control loop)
+(b) ΔI_L and I_load_boundary — confirm this is DCM
+(c) I_peak in DCM (assume D=V_out/V_in still approximately applies as set by control — use the switch ON voltage V_in-V_out during switch ON time)
+(d) D₂ from I_load = ½×I_peak×D₂
+(e) Is D₁+D₂ < 1? Calculate the duration of the third interval as a fraction of T.
+Q4. BCM PFC boost converter:
+A BCM PFC boost operates with V_in varying as |230×sin(2π×50×t)| and V_out=400V fixed.
+(a) At the peak of the mains cycle (v_in=325V): find D(t) = 1-v_in/V_out
+(b) At a mid-point of the mains cycle (v_in=163V, halfway up): find D(t)
+(c) Near zero crossing (v_in=32.5V, 10% of peak): find D(t)
+(d) BCM means the inductor current always starts from zero. If the peak current I_peak = 2×I_avg at each instant, and average input current follows sin(wt) for unity PF, explain why the switching frequency must vary with the mains angle in BCM. Does f_s increase or decrease as v_in approaches zero?
+(e) Why is variable switching frequency acceptable for a PFC application but problematic for a standard DC-DC converter powering sensitive electronics?
+Q5. Design decision — CCM vs DCM:
+A 12V, 3A (36W) buck converter from 24V at 300kHz. You have two inductor choices:
+Inductor A: L=10µH (small, cheap, but lower L)
+Inductor B: L=47µH (larger, more expensive, higher L)
+(a) For each inductor: find I_load_boundary. Which inductor keeps the converter in CCM down to lighter loads?
+(b) If the load varies from 0.1A to 3A: for what portions of the load range is each inductor in CCM vs DCM?
+(c) Switching loss with L=10µH: the higher ΔI_L means higher I_peak means higher switching loss. Find I_peak at full load for each inductor.
+(d) Core loss with L=47µH: lower ΔI_L means lower B_peak. If B_peak ∝ ΔI_L and core loss ∝ B^2.5: compare core loss for the two inductors (use ratio only — no absolute numbers needed).
+(e) Considering all these trade-offs, which inductor would you choose for a product that operates under light load for 80% of its operating time? Justify using specific numbers from (a) through (d).
