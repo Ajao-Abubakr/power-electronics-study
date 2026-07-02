@@ -1,0 +1,33 @@
+Practice Problems — Topic 4
+Q1. Ćuk fundamentals: V_in=20V, |V_out|=15V, I_load=2A, f_s=150kHz.
+(a) Duty cycle D
+(b) C1 voltage V_C1 = V_in + |V_out| — verify using V_C1 = V_in/(1-D)
+(c) Average L1 current and L2 current
+(d) Switch and diode voltage stress
+(e) How does the Ćuk converter differ from the buck-boost converter in terms of input and output current waveforms? Why does this matter?
+Q2. Ripple design: same converter as Q1, L1=L2=68µH.
+(a) ΔI_L1 = V_in×D/(L1×f_s)
+(b) ΔI_L2
+(c) Peak current in L1 and L2 separately
+(d) I_sat requirements for L1 and L2 (with 20% margin)
+(e) Why do L1 and L2 have the same ripple formula despite having different average currents?
+Q3. C1 design: for the converter in Q1 and Q2.
+(a) C1 must withstand V_C1 with 20% margin — what voltage rating is needed?
+(b) The ripple current through C1 is approximately equal to I_L1_peak — why must C1 have low ESR?
+(c) Why is an electrolytic capacitor unsuitable for C1, while it is acceptable for C2 (output filter)?
+(d) A film capacitor with C1=2.2µF is used. If V_C1 ripple must be below 0.5V, is 2.2µF sufficient? (Use ΔV_C1 ≈ I_L1_avg×D/(C1×f_s) as approximation)
+(e) What happens to converter operation if C1 is too small and its voltage ripple becomes large?
+Q4. Topology comparison at the same operating point:
+V_in=12V, required |V_out|=15V, I_load=2A. Compare buck-boost vs Ćuk:
+(a) D for both (should be identical)
+(b) Switch and diode voltage stress for both (should be identical)
+(c) For buck-boost: is input current continuous or pulsating? What is the peak input current?
+(d) For Ćuk: is input current continuous? What are average and peak input currents (through L1)?
+(e) For EMI-sensitive applications (medical equipment, measurement instruments), which topology is preferred? Why?
+Q5. The coupled-inductor advantage — conceptual:
+A Ćuk converter uses coupled inductors (L1 and L2 wound on the same core with coupling coefficient k=1, perfect coupling).
+(a) With perfect coupling, the mutual inductance cancels the ripple current completely in one winding. Which winding benefits from zero ripple — L1 (input side) or L2 (output side), or can the designer choose?
+(b) What is the practical benefit of zero input current ripple in a battery-powered application?
+(c) What is the practical benefit of zero output current ripple in a precision power supply or LED driver application?
+(d) If zero ripple is achievable with a Ćuk converter, why is it not universally used instead of buck or boost converters?
+(e) Name one converter topology (not covered in this course yet but that you might research) that achieves positive output polarity (like Ćuk without the inversion) with non-pulsating input and output currents.
