@@ -32,7 +32,7 @@ Nothing is copied — every solution is my own work.
 | Month 1 | Electrical Foundations (Topics 1–10) | ✅️ Completed |
 | Month 2 | Semiconductor Devices |  ✅️ Completed |
 | Month 3 | AC Circuit Analysis & Magnetics |  ✅️ Completed |
-| Month 4 | DC-DC Converters — Buck & Boost |  🔄 in progress|
+| Month 4 | DC-DC Converters — Buck & Boost |  ✅️ Completed |
 | Month 5 | Isolated Converters — Flyback & Full Bridge | ⬜ Not Started |
 | Month 6 | PCB Design for Power Electronics | ⬜ Not Started |
 | Month 7 | Solar PV Systems & MPPT | ⬜ Not Started |
@@ -119,7 +119,7 @@ including high-frequency effects and EMI filtering.
 | 4 | Ćuk Converter | 02/07/2026 | 5/5 | ✅️ |
 | 5 | Converter Efficiency and Loss Budget | 02/07/2026 | 5/5 | ✅️ |
 | 6 | CCM vs DCM — Boundary Analysis | 02/07/2026 | 5/5 | ✅️ |
-| 7 | Small Signal Modelling | | | ⬜ |
-| 8 | Feedback and Stability — Bode Plots | | | ⬜ |
-| 9 | Practical Converter Design | | | ⬜ |
-| 10 | Simulation and Verification | | | ⬜ |
+| 7 | Small Signal Modelling | 03/07/2026 | 5/5 | ✅️ |
+| 8 | Feedback and Stability — Bode Plots | 04/07/2026| 5/5 | ✅️ |
+| 9 | Practical Converter Design | 05/07/2026|5/5 | ✅️ |
+| 10 | Simulation and Verification |05/07/2026 | |  🔄 |
