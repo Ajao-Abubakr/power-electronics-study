@@ -1,0 +1,36 @@
+Practice Problems — Topic 1
+Q1. Isolation classification:
+For each product, determine: (i) isolation class, (ii) minimum insulation type required, (iii) whether output is SELV.
+(a) A 230V mains to 12V/5A desktop power supply with metal enclosure and earth pin
+(b) A USB phone charger with plastic enclosure, 230V input, 5V/2A output, no earth
+(c) A 48V PoE (Power over Ethernet) injector, powered from 230V mains, plastic enclosure
+(d) A battery-powered glucose meter (12V battery input, 3.3V output to sensor)
+(e) A defibrillator power supply (230V mains to 5kV output for charging capacitor — patient connected)
+Q2. Creepage and clearance:
+A flyback transformer for a 230V mains-input, 12V output, Class II product. Bobbin width = 25mm. Required creepage for reinforced insulation = 6.4mm.
+(a) What is the effective winding width available after subtracting margins on both sides?
+(b) If the primary winding needs 8mm width and the secondary 5mm width: do both fit with an interlayer tape barrier of 0.5mm between them?
+(c) If triple insulated wire is used on the secondary, what is the minimum creepage now needed between primary conductors and secondary conductors? (With TIW, the wire's own insulation provides the creepage — essentially no margin needed on the bobbin)
+(d) How does using TIW change the available winding width? How many more turns could fit?
+(e) Why do higher-power transformers (larger physical size) have an easier time meeting creepage requirements than small transformers?
+Q3. Optocoupler feedback loop:
+A flyback converter uses a TL431 on the secondary and a PC817 optocoupler to feed back to the primary UC3842 controller.
+(a) The TL431 has a 2.5V reference. The output is 12V. Design a voltage divider (R1 from V_out to TL431 cathode, R2 from TL431 cathode to ground) that sets the feedback point to 2.5V. Choose R2 = 10kΩ.
+(b) The PC817 optocoupler has a current transfer ratio (CTR) of 100% at 5mA LED current. If the primary-side controller needs 1mA into its feedback pin to reduce duty cycle: what LED current is needed? Is 5mA LED current sufficient?
+(c) The optocoupler LED is driven through a resistor R_LED from V_out = 12V. At V_LED = 1.2V (forward voltage) and I_LED = 5mA: find R_LED.
+(d) The optocoupler introduces a pole in the feedback loop at approximately f_pole = 1/(2π × CTR × R_feedback × C_opto) where R_feedback = 10kΩ and C_opto = 100pF. Find f_pole.
+(e) This optocoupler pole adds phase lag to the feedback loop. If the desired crossover frequency is 5kHz, does this pole significantly affect the phase margin? (Calculate the phase contribution: −arctan(f_c/f_pole))
+Q4. Safety standards comparison:
+A medical device company wants to use the same 10W isolated power supply design for three products: a smartphone app accessory (no patient contact), a blood pressure monitor (touches patient skin — BF type), and an ECG machine with chest electrodes (CF type).
+(a) Maximum allowable leakage current for each product
+(b) Which products can use the same transformer design? Which requires a redesign?
+(c) The transformer has a measured parasitic capacitance between primary and secondary of 50pF. At 50Hz mains with V_in = 230V: leakage current through this capacitance = V×ω×C. Calculate the leakage current. Which products does this design qualify for?
+(d) To reduce capacitive leakage, a Faraday shield (grounded copper foil between primary and secondary windings) is added. This divides the primary-secondary capacitance into two series capacitances: C1 (primary to shield) and C2 (shield to secondary), each approximately 30pF. The shield is earthed. Calculate the new leakage current through C2 to the output. Does this now qualify for CF type?
+(e) What other design changes besides the Faraday shield could further reduce leakage current?
+Q5. Topology selection based on isolation requirements:
+Match each application to the most appropriate isolated topology (flyback, forward, push-pull, half-bridge, full-bridge) and justify with the key selection criterion:
+(a) A 5W USB phone charger from 230V mains — cost is critical, single output
+(b) A 500W server power supply from 230V mains — high efficiency at moderate cost
+(c) A 2kW EV onboard charger from 230V mains — maximum efficiency and power density
+(d) A 50W DC-DC converter in an EV from a 12V battery bus — low input voltage
+(e) A 100W isolated DC-DC converter in a telecom system from 48V bus — medium power, high reliability
