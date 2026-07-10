@@ -133,7 +133,7 @@ and complete the foundation for the Year 1 flyback capstone project.
 | # | Topic | Date Completed | Problems Solved | Status |
 |---|-------|----------------|-----------------|--------|
 | 1 | Why Isolation — Safety Standards & Requirements | 6/ 07/2026| 5/5 | ✅️ |
-| 2 | Flyback Converter — Complete Analysis | 07/07/2026| 5/5 |  |
+| 2 | Flyback Converter — Complete Analysis | 07/07/2026| 5/5 | ✅️ |
 | 3 | Flyback Converter — Complete Design Example | — | 0/5 | ⬜ |
 | 4 | Forward Converter — Analysis & Design | — | 0/5 | ⬜ |
 | 5 | Push-Pull Converter | — | 0/5 | ⬜ |
