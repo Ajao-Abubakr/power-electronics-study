@@ -1,0 +1,31 @@
+Practice Problems — Topic 2
+Q1. Flyback conversion ratio: Np=50, Ns=8, D=0.40, V_in=48V.
+(a) Turns ratio n = Ns/Np
+(b) Output voltage V_out
+(c) If D changes to 0.35, what is the new V_out?
+(d) What D is needed to produce V_out=12V from V_in=48V with this turns ratio?
+(e) What turns ratio would produce V_out=5V from V_in=24V at D=0.45?
+Q2. Voltage stress on components: flyback converter, V_in=24V, V_out=12V, Np=30, Ns=15, RCD clamp voltage = 30V above V_in+reflected_voltage.
+(a) Reflected output voltage (Np/Ns × V_out)
+(b) MOSFET drain voltage during OFF (without clamp)
+(c) MOSFET drain voltage with clamp
+(d) Required MOSFET voltage rating with 20% derating
+(e) Secondary diode reverse voltage during switch ON. Required diode voltage rating with 50% margin.
+Q3. Energy storage and transfer: flyback, V_in=12V, L_m=200µH (primary magnetising inductance), D=0.5, f_s=150kHz, Np=20, Ns=10.
+(a) Peak magnetising current I_m_peak = V_in×D/(L_m×f_s)
+(b) Energy stored in L_m at peak: E = ½×L_m×I_m_peak²
+(c) This energy must transfer to the secondary during OFF period. Secondary peak current = I_m_peak×(Np/Ns)
+(d) Average secondary current = ½×I_s_peak×D₂ where in DCM, D₂ = I_m_peak×(Np/Ns)×L_m×f_s/V_out. Find D₂ and average secondary current. Does this match the expected load current?
+(e) Verify volt-second balance: V_in×D = V_out×(Np/Ns)×D₂. Are they equal?
+Q4. CCM vs DCM determination: flyback, V_in=24V, V_out=5V, n=0.25, f_s=100kHz, I_load=0.5A.
+(a) From V_out = V_in×n×D/(1-D): solve for D
+(b) L_m_crit for CCM/DCM boundary: at boundary I_m_valley=0, so I_m_peak = 2×I_load/((1-D)×n). Find I_m_peak at boundary.
+(c) L_m_crit = V_in×D/(I_m_peak×f_s). Find L_m_crit.
+(d) If L_m=300µH > L_m_crit: is the converter in CCM or DCM?
+(e) If L_m=100µH < L_m_crit: is the converter in CCM or DCM? What changes in the control behaviour?
+Q5. RCD clamp design: flyback, V_in=24V, V_out=12V, Np/Ns=2, L_leakage=2µH (primary leakage inductance), I_peak=2A, f_s=100kHz.
+(a) Without clamp: drain voltage spike from leakage = V_in + V_out×(Np/Ns) + √(L_leakage/C_oss)×I_peak. With C_oss=200pF, find the unclamped spike.
+(b) Design an RCD clamp for V_clamp=10V above the flyback voltage (V_in + reflected V_out): find V_clamp_total
+(c) Total MOSFET drain voltage = V_in + V_out×(Np/Ns) + V_clamp. Find V_DS_max.
+(d) MOSFET rating with 20% derating
+(e) Power dissipated in RCD clamp resistor = ½×L_leakage×I_peak²×f_s. Find clamp resistor power and choose appropriate rating.
