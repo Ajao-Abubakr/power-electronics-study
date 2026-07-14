@@ -1,0 +1,31 @@
+Q1. Input stage design for a flyback converter: V_in_AC = 85V to 264V, P_out = 20W, η = 80%.
+(a) V_DC_min and V_DC_max after bridge rectifier (include 2 diode drops)
+(b) Input power P_in
+(c) Bulk capacitor using 2µF/W rule
+(d) Actual V_DC_min with your chosen capacitor (ΔV = I_in × 0.010 / C, where I_in = P_in/V_DC_min)
+(e) Input bridge diode selection: PIV and current rating
+Q2. Turns ratio and duty cycle design: V_in_min=90V, V_out=15V, D_max=0.45, f_s=80kHz.
+(a) Required turns ratio n = Ns/Np from n = V_out×(1-D_max)/(V_in_min×D_max)
+(b) Choose Np=36 turns. Find Ns (round to nearest integer).
+(c) With rounded Ns, what is V_out at V_in_min and D=0.45?
+(d) At V_in_max=373V, what D is needed to maintain V_out=15V?
+(e) Is this D range (D_min to D_max) reasonable for a UC3842-controlled converter?
+Q3. Magnetising inductance and peak current: V_in_min=90V, D_max=0.45, P_out=20W, η=80%, f_s=80kHz.
+(a) L_m for DCM operation at worst case: L_m = V_in_min²×D_max²/(2×P_in×f_s)
+(b) I_m_peak = V_in_min×D_max/(L_m×f_s)
+(c) Verify energy per cycle: E = ½×L_m×I_m_peak². Does P = E×f_s ≥ P_in?
+(d) Current sense resistor for UC3842 (trips at 1V): R_sense = 1/I_m_peak
+(e) Power in R_sense: P = I_p_rms²×R_sense where I_p_rms = I_m_peak×√(D_max/3)
+Q4. Component voltage ratings: V_in_max=373V, V_out=15V, Np=36, Ns=6, V_clamp=60V.
+(a) Reflected output voltage: V_reflected = V_out×(Np/Ns)
+(b) MOSFET V_DS_max = V_in_max + V_reflected + V_clamp
+(c) MOSFET voltage rating with 20% derating
+(d) Secondary diode PIV = V_out + V_in_max×(Ns/Np)
+(e) Secondary diode voltage rating with 50% margin. Why is a 50% margin used for diodes here rather than 20%? (Hint: diode reverse recovery spikes)
+Q5. UC3842 component calculation for your capstone project:
+f_s_target = 100kHz, V_out = 12V, feedback reference = 2.5V, V_out_aux = 5V.
+(a) R_t with C_t=1nF: R_t = 1.72/(f_s×C_t). Choose nearest standard value.
+(b) Actual f_s with your chosen R_t
+(c) Feedback divider: choose R_bot=12kΩ, find R_top for V_fb=2.5V from V_out=12V
+(d) Optocoupler LED current through R_LED from V_out=12V: if V_LED=1.2V and I_LED=3mA, find R_LED
+(e) The UC3842 has a maximum duty cycle of 48%. Why does this protect against transformer saturation in a flyback converter? (Think about what would happen if D approached 1.0)
