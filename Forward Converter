@@ -1,0 +1,30 @@
+Q1. Forward converter fundamentals: V_in=36V, V_out=5V, I_load=8A, f_s=300kHz, D=0.40, Nreset=Np.
+(a) Required turns ratio Ns/Np
+(b) Choose Np=20. Find Ns (round to nearest integer). Verify actual V_out with rounded Ns and find adjusted D.
+(c) Secondary voltage V_secondary = V_in×Ns/Np
+(d) MOSFET V_DS_max
+(e) Maximum duty cycle with Nreset=Np. Is D=0.40 within this limit?
+Q2. Output inductor design: V_in=36V, V_secondary=9V (from Q1), V_out=5V, I_load=8A, f_s=300kHz, D=0.40. Target ripple = 20% of I_load.
+(a) ΔI_L target
+(b) L_out_min = (V_secondary − V_out)×D/(ΔI_L×f_s)
+(c) Choose standard inductor value
+(d) Verify ripple with chosen value
+(e) Peak and valley inductor currents. Required I_sat.
+Q3. Diode selection: V_in=36V, Ns/Np=0.25, V_out=5V, I_load=8A, D=0.40.
+(a) Forward diode D1 reverse voltage and average current. Choose rating.
+(b) Freewheeling diode D2 reverse voltage and average current. Choose rating.
+(c) Why is D2 average current higher than D1 average current at D=0.40?
+(d) Both diodes must handle the peak inductor current as their peak current. With I_peak from Q2(e), do your chosen diodes have sufficient I_FSM rating?
+(e) At 300kHz: is t_rr of the diode critical? Should Schottky or ultrafast diodes be used?
+Q4. Transformer core design: V_in=36V, D=0.40, f_s=300kHz, Np=20, A_e=23mm² (EE19 core), B_max=0.21T.
+(a) Minimum primary turns from volt-second balance: Np_min = V_in×D/(B_max×A_e×f_s)
+(b) Does Np=20 satisfy Np≥Np_min?
+(c) B_peak with Np=20: B = V_in×D/(Np×A_e×f_s). Is it within B_max?
+(d) Unlike flyback, the forward transformer should have HIGH magnetising inductance L_m (to minimise magnetising current, since magnetising current is wasted). For Np=20, A_e=23mm², l_e=39mm, µ_r=2500 (no gap): calculate L_m = µ₀×µ_r×Np²×A_e/l_e. What is the magnetising current at peak (I_mag = V_in×D/(L_m×f_s))?
+(e) As percentage of load current reflected to primary (I_load×Ns/Np), is magnetising current significant? This illustrates why forward converter transformers are ungapped (unlike flyback) — high L_m keeps magnetising current small.
+Q5. Comparison with flyback: same 60W output from 48V input. Compare forward vs flyback for:
+(a) MOSFET voltage rating (forward: 2×V_in; flyback: V_in + V_out×Np/Ns + clamp — assume flyback has n=0.3, V_clamp=40V)
+(b) Output capacitor size: forward has L_out providing ripple control, flyback relies entirely on C_out. If both target ΔV_out=50mV at 200kHz with I_load=5A: find C_out needed for flyback (ΔV=I_load×D/(C×f_s)) vs C_out for forward with L_out=22µH (ΔV=ΔI_L/(8×f_s×C)).
+(c) Secondary peak current: flyback secondary peak current = I_m_peak×Np/Ns (all energy delivered in short pulse); forward secondary peak current ≈ I_load + ΔI_L/2 (continuous). Calculate both for the 60W, 5A case.
+(d) Which topology is better suited for 5A continuous output? Why?
+(e) At what output power level would you switch from flyback to forward topology? Justify your answer using the trade-offs identified in (a) through (d).
