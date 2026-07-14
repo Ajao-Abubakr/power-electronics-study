@@ -1,0 +1,33 @@
+Practice Problems — Topic 5
+Q1. Push-pull fundamentals: V_in=24V (automotive), V_out=12V, I_load=10A, f_switch=150kHz (output ripple at 300kHz), D=0.35.
+(a) Effective turns ratio 2Ns/Np
+(b) Choose Np/2=8 turns per half (total Np=16). Find Ns.
+(c) Secondary voltage during conduction
+(d) MOSFET V_DS_max (include automotive max of 16V: 2×16V)
+(e) Output inductor: L_out = (V_secondary − V_out)×D/(ΔI_L×2×f_switch) for ΔI_L=20% of I_load
+Q2. Flux walking analysis:
+A push-pull converter has switch S1 turning on for exactly 3µs each cycle, and S2 turning on for 3.2µs due to gate drive propagation delay mismatch.
+(a) Net volt-second imbalance per cycle: ΔVt = V_in × (t_S1 − t_S2) = 24 × (3.0−3.2)×10⁻⁶
+(b) This imbalance accumulates each cycle. After 100 cycles, what is the total net volt-second applied to the core?
+(c) The magnetising inductance L_m = 50µH. The corresponding flux imbalance current after 100 cycles: ΔI_m = ΣΔVt / L_m. Find ΔI_m.
+(d) If the core saturates at I_m_sat = 0.5A: how many cycles until saturation occurs?
+(e) Current mode control checks peak current every cycle and limits S1 or S2 conduction to maintain equal peak currents. How does this prevent the accumulation calculated in (b)?
+Q3. Secondary diode design: V_in=24V, 2Ns/Np=2, V_secondary=48V during conduction, I_load=10A, f_switch=150kHz.
+(a) Reverse voltage each secondary diode must withstand
+(b) Average current per diode (each conducts for D of each half-period = D×T/2... total = D×T/T = D fraction of full period per diode. But with centre-tap full-wave, each diode conducts for D fraction of the full period). Average I_diode = D × I_load. With D=0.35: find I_diode_avg.
+(c) Peak diode current = I_load + ΔI_L/2. With ΔI_L=2A (from Q1): find I_diode_peak.
+(d) At 300kHz output ripple, t_rr of diodes must be << 1/(2×f_output_ripple). Find maximum t_rr. Can standard rectifier diodes be used? What type is needed?
+(e) If Schottky diodes rated 60V/10A are used: verify all ratings (PIV, I_avg, I_peak) are met.
+Q4. Transformer core design: V_in=24V, Np/2=8 turns per half (Np=16 total), f_switch=150kHz, B_max=0.20T, A_e=40mm² (EE25).
+(a) Minimum turns per half from: Np_min/2 = V_in×D/(2×B_max×A_e×f_switch)
+(b) Does Np/2=8 satisfy the minimum turns requirement?
+(c) B_peak with Np/2=8: B = V_in×D/(2×(Np/2)×A_e×f_switch). Within B_max?
+(d) The push-pull transformer is ungapped (like a forward transformer). With l_e=52mm, µ_r=2500, A_e=40mm², Np=16: find L_m. Find magnetising current I_m = V_in×D/(L_m×f_switch).
+(e) As percentage of primary current (reflected load = I_load×Ns/(Np/2) = 10×50/8... wait, let's use I_load=10A and Ns/Np_half ratio from Q1): find I_m as percentage of primary reflected current. Is it acceptable (<5%)?
+Q5. Push-pull vs forward vs flyback — complete comparison at 96W:
+V_in=12V, V_out=48V, I_load=2A, f_s=100kHz.
+(a) Forward converter: MOSFET V_DS_max, required turns ratio Ns/Np for D=0.40
+(b) Push-pull converter: MOSFET V_DS_max, required 2Ns/Np for D=0.40
+(c) Flyback converter: MOSFET V_DS_max (= V_in + V_out×Np/Ns with n=4, D=0.80 — note: at low V_in stepping up 4× the flyback operates at very high D — problematic). Why is the flyback impractical for stepping from 12V up to 48V?
+(d) Core utilisation: forward uses ΔB = B_max (unipolar), push-pull uses ΔB = 2×B_max (bipolar). For the same core (A_e=40mm²) and same Np, which topology can transfer more power per cycle?
+(e) Conclusion: for a 12V to 48V, 96W isolated converter — which topology (forward or push-pull) is the better choice and why? Support your answer with at least three specific technical reasons from your calculations above.
