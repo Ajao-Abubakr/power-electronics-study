@@ -1,0 +1,36 @@
+Practice Problems — Topic 1
+Q1. Trace resistance calculation:
+A 2oz copper (T=70µm) PCB trace on your flyback converter carries 5A continuous. Trace length = 30mm, width = 2mm. ρ_Cu at 80°C = 2.1×10⁻⁸ Ω·m.
+(a) Cross-sectional area A = W × T
+(b) DC resistance R = ρ×L/A
+(c) Voltage drop V = I×R
+(d) Power dissipated P = I²×R
+(e) Temperature rise: using ΔT = P/(surface_area × h) where surface area = 2×(L×W) (top and bottom of trace) and h = 10 W/(m²·K) for natural convection. Is this acceptable (< 20°C rise)?
+Q2. Parasitic inductance and its effect:
+A switching loop (MOSFET + capacitor + diode) has traces totalling 25mm in length.
+(a) Estimated loop inductance using 1nH/mm rule
+(b) At turn-off with dI/dt = 100A/µs (10A switching off in 100ns): voltage spike V = L×dI/dt
+(c) MOSFET rated 60V, V_in=24V: drain voltage during spike = V_in + V_spike. Does the MOSFET survive?
+(d) If trace length is reduced to 8mm: recalculate spike. Does MOSFET survive now?
+(e) This illustrates why minimising switching loop area is critical. Name two PCB layout techniques to minimise switching loop area.
+Q3. Trace width design for a 12V, 8A buck converter:
+Current-carrying paths: high-side MOSFET to inductor (I_rms = I_load×√D = 8×√0.5 = 5.66A), inductor to output capacitor (8A continuous), gate drive trace (peak 2A, short duration).
+(a) Using IPC-2221 table, minimum width for 5.66A at 10°C rise, 2oz copper (divide table width by 1.4)
+(b) Minimum width for 8A continuous at 20°C rise, 2oz copper
+(c) Gate drive trace width (2A, short duration — use 0.5A RMS estimate): minimum width at 10°C rise
+(d) What happens thermally if you use the minimum width from (b) for the 8A trace but copper is at 85°C ambient?
+(e) For the 8A continuous output trace, would you use a routed trace or a copper pour? Justify.
+Q4. PCB stack-up decision:
+You are designing a 400W half-bridge converter PCB. Primary bus voltage 390V. Secondary output 12V/33A.
+(a) Is a 2-layer or 4-layer PCB more appropriate? Give two specific reasons.
+(b) For a 4-layer PCB, propose a layer stack-up. Which layer should be ground plane and why?
+(c) The 33A secondary output trace needs what minimum width on 2oz copper? (Use IPC-2221 at 20°C rise — extrapolate from table)
+(d) At 390V primary voltage, what is the minimum creepage distance between primary copper and secondary copper on the PCB? (Refer to Topic 1 of this month)
+(e) The transformer sits at the boundary between primary and secondary. How do you handle the 6.4mm creepage requirement at the transformer mounting footprint on the PCB?
+Q5. PCB specification exercise:
+Write the complete manufacturing specification for your Year 1 flyback capstone PCB (30W, 230V mains input, 12V/2A output). Include:
+(a) All standard manufacturing parameters (layers, thickness, copper weight, surface finish, soldermask)
+(b) Minimum trace and space requirements
+(c) Isolation requirement between primary and secondary copper
+(d) Any special requirements for the high-voltage primary side (creepage slots, primary-to-secondary spacing)
+(e) Estimated cost from an online PCB manufacturer for 5 prototype boards (research JLCPCB or PCBWay pricing for these specifications)
