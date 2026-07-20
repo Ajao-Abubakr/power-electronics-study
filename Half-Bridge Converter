@@ -1,0 +1,33 @@
+Q1. Half-bridge fundamentals: V_DC=400V, V_out=24V, I_load=5A, f_s=100kHz, D=0.40.
+(a) Required turns ratio n = Ns/Np
+(b) Choose Np=40. Find Ns (round to nearest integer). Verify actual V_out.
+(c) MOSFET V_DS_max and required voltage rating with 20% derating
+(d) Secondary voltage V_secondary = (V_DC/2)×n during conduction
+(e) Compare MOSFET voltage requirement if this were a push-pull (2×V_DC). What R_DS_on improvement does the half-bridge provide? (Use R_DS_on ∝ V^2.5 scaling)
+Q2. Output inductor and capacitor design: V_secondary=30V, V_out=24V, I_load=5A, f_s=100kHz, D=0.40.
+(a) Output ripple frequency (2×f_s)
+(b) ΔI_L target = 25% of I_load
+(c) L_out from inductor formula (use 2×f_s as ripple frequency)
+(d) Choose standard L_out value. Verify ripple. Find I_peak and I_valley.
+(e) Output capacitor for ΔV_out ≤ 50mV. Include ESR check.
+Q3. Split capacitor design: V_DC=400V, f_s=100kHz, I_primary_peak=1.5A, D=0.40.
+(a) Voltage across each split capacitor
+(b) Minimum voltage rating for each capacitor (with 20% margin)
+(c) Capacitor value for voltage ripple ΔV_C ≤ 2% of V_DC/2: C = I_primary_peak×D×T/(ΔV_C)
+(d) Why must both capacitors be exactly equal? What happens if C1 ≠ C2?
+(e) A DC blocking capacitor C_b is added in series with the primary. If I_primary_peak=1.5A and maximum allowed ripple voltage on C_b = 5V: find C_b_min.
+Q4. Gate drive design for half-bridge:
+High-side MOSFET S1: Q_g=20nC, V_gate=12V. Gate driver: IR2110 (peak output 2A). Bootstrap capacitor.
+(a) Minimum bootstrap capacitor: C_boot ≥ Q_g/ΔV where ΔV=0.5V
+(b) Bootstrap capacitor charges through bootstrap diode when S2 is ON. If S2 minimum ON time = 2µs and bootstrap charging resistance R_boot=10Ω: find τ_boot=R_boot×C_boot. Is there enough time to charge C_boot to within 5% (5τ) before S1 turns on?
+(c) At D=0.48 (near maximum): S2 ON time = (0.5−0.48)×T = 0.02×10µs = 0.2µs. Is there sufficient time to recharge C_boot? What happens to high-side drive at extreme duty cycles?
+(d) The IR2110 has under-voltage lockout (UVLO) at V_bootstrap < 8.6V. If C_boot=100nF loses charge through MOSFET gate leakage (I_leak=1µA) over the maximum S1 ON time: calculate voltage droop. Is UVLO a concern?
+(e) Why does the half-bridge topology REQUIRE a bootstrap or isolated gate drive for the high-side MOSFET, while the low-side MOSFET can be driven directly from a ground-referenced signal?
+Q5. Complete loss budget: V_DC=380V, V_out=12V, I_load=10A, f_s=100kHz, D=0.40, n=3/38.
+MOSFET: R_DS_on=0.8Ω at 150°C, Q_gd=8nC, I_gate=1.5A, Q_g=20nC, V_gate=12V.
+Secondary Schottky: V_f=0.5V. L_out=3.3µH, R_L=5mΩ.
+(a) Primary RMS current: I_p_rms = I_load × n × √(2D)
+(b) MOSFET conduction loss (both MOSFETs): P_cond = 2 × I_p_rms² × R_DS_on
+(c) MOSFET switching loss: t_sw = Q_gd/I_gate, P_sw = 2 × (V_DC/2) × I_p_peak × t_sw × f_s (each MOSFET switches against V_DC/2)
+(d) Secondary diode conduction loss: P_D = V_f × I_load
+(e) Total loss, output power, efficiency. Is this topology achieving better efficiency than the flyback at this power level?
