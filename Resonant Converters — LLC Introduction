@@ -1,0 +1,33 @@
+Practice Problems — Topic 8
+Q1. Resonant frequency calculation: L_r=15µH, C_r=47nF, L_m=90µH.
+(a) Series resonant frequency f_r
+(b) Parallel resonant frequency f_p
+(c) Inductance ratio k = L_m/L_r
+(d) At what switching frequency does the LLC operate at nominal output voltage? (f_sw = f_r)
+(e) If input voltage drops by 15% requiring voltage gain M=1.15: should f_sw increase or decrease from f_r? Why?
+Q2. LLC turns ratio and operating point: V_DC=390V (half-bridge LLC), V_out=19V (laptop output), I_load=4.7A (90W), f_r=300kHz.
+(a) Turns ratio n at nominal (M=1, f_sw=f_r): n = V_out/(V_DC/2)
+(b) Choose integer turns: Np=20 turns. Find Ns.
+(c) Verify actual V_out at nominal with rounded turns
+(d) At V_DC_min=350V: what gain M is needed? Is this achievable (M>1 requires f_sw<f_r)?
+(e) At V_DC_max=410V: what gain M is needed? At what frequency would this require operating?
+Q3. Component design: f_r=300kHz, L_r=10µH, k=4.
+(a) C_r for f_r=300kHz with L_r=10µH
+(b) L_m = k × L_r
+(c) f_p with these values
+(d) Operating frequency range: minimum f_sw (stay above f_p with 20% margin) and maximum f_sw (assume 1.3×f_r maximum)
+(e) At f_sw=f_r with V_DC=390V and load R=4Ω (from V_out and I_load): quality factor Q = (1/R)×√(L_r/C_r)×(1/n²) using n from Q2(a). Is Q in the typical range 0.3 to 0.5 for good LLC operation?
+Q4. ZVS analysis: V_DC=390V, L_m=40µH, C_oss=150pF (per MOSFET, 4 total in half-bridge: 2 per leg), dead time=150ns, f_r=300kHz.
+(a) Magnetising current peak: I_m_peak = V_DC/(2×4×L_m×f_r)
+(b) Required ZVS current: I_req = V_DC × 2 × C_oss / t_dead (factor 2 for half-bridge: two capacitors being charged/discharged)
+(c) Is ZVS achieved? Safety margin in dB: 20×log10(I_m_peak/I_req)
+(d) At 10% load, primary current I_p is mostly magnetising (load component is small). Does ZVS remain? This is the LLC advantage over phase-shift full-bridge — explain why.
+(e) If dead time is reduced to 50ns (to improve efficiency by reducing freewheeling losses): recalculate required ZVS current. Is ZVS still achieved?
+Q5. LLC vs hard-switching comparison at 90W, 300kHz:
+Hard-switching half-bridge: MOSFET R_DS_on=0.8Ω, Q_gd=8nC, I_gate=1.5A, V_DC=390V, I_p_rms=0.5A.
+LLC half-bridge: same MOSFETs, ZVS achieved (zero turn-on loss), same R_DS_on.
+(a) Hard-switching MOSFET conduction loss (both MOSFETs): P_cond = 2×I_p_rms²×R_DS_on
+(b) Hard-switching turn-on loss: t_sw=Q_gd/I_gate, P_sw_on = 2×(V_DC/2)×I_p_peak×t_sw×f_s (I_p_peak≈1.4×I_p_rms for sinusoidal)
+(c) Hard-switching turn-off loss (approximately equal to turn-on): P_sw_off = P_sw_on
+(d) LLC MOSFET conduction loss (same as (a) — ZVS only eliminates switching loss not conduction loss). LLC total MOSFET loss.
+(e) Total hard-switching MOSFET loss vs LLC MOSFET loss. As percentage of 90W output, how much does LLC improve efficiency just from MOSFET switching loss elimination?
