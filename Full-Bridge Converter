@@ -1,0 +1,32 @@
+Practice Problems — Topic 7
+Q1. Full-bridge fundamentals: V_DC=400V, V_out=48V, I_load=15A, f_s=150kHz, D=0.38.
+(a) Required turns ratio n
+(b) Choose Np=22. Find Ns (round). Verify actual V_out and D needed.
+(c) MOSFET V_DS_max and minimum voltage rating
+(d) Secondary voltage during conduction
+(e) Compare turns ratio to a half-bridge doing the same job. Which has more secondary turns?
+Q2. Full-bridge vs half-bridge at 960W:
+Both from V_DC=390V, same V_out=48V, I_load=20A, f_s=100kHz, D=0.40.
+(a) Turns ratio for full-bridge: n_FB = V_out/(V_DC×D)
+(b) Turns ratio for half-bridge: n_HB = V_out/((V_DC/2)×D) — note the V_DC/2
+(c) Primary peak current for full-bridge: I_p = I_load × n_FB
+(d) Primary peak current for half-bridge: I_p = I_load × n_HB
+(e) With same MOSFET (R_DS_on=0.5Ω), calculate total conduction loss for full-bridge (2 switches conducting, 2 off) and half-bridge (2 switches always). Which is more efficient at this power level?
+Q3. ZVS analysis: V_DC=390V, L_r=8µH (leakage inductance), C_oss=200pF per MOSFET.
+(a) ZVS condition: L_r × I_p_min² ≥ 4 × C_oss × V_DC² (4 capacitors total — 2 per leg being charged/discharged). Find minimum I_p for ZVS.
+(b) At full load I_p=6A: is ZVS achieved?
+(c) At 10% load I_p=0.6A: is ZVS achieved?
+(d) Below I_p_min: the converter loses ZVS and switches hard. How does the switching loss change? Calculate hard-switching loss at 10% load (use P_sw = 2 × ½ × V_DC × I_p × t_sw × f_s with t_sw=30ns, 2 transitions per cycle).
+(e) This light-load efficiency degradation is a known weakness of phase-shift ZVS. Name two techniques used to maintain ZVS at light load (research hint: look up "ZVS full-bridge light load" and "variable frequency control").
+Q4. Transformer design for full-bridge: V_DC=400V, D=0.40, f_s=150kHz, Np=22, A_e=100mm² (ETD39).
+(a) Minimum primary turns: Np_min = V_DC×D/(2×B_max×A_e×f_s) with B_max=0.20T. The factor 2 accounts for bipolar flux swing.
+(b) Does Np=22 satisfy this requirement?
+(c) Peak flux density B_peak with Np=22: B = V_DC×D/(2×Np×A_e×f_s). Within B_max?
+(d) For ZVS operation, some leakage inductance is actually beneficial. Why? What is the minimum leakage inductance needed for ZVS at I_p_min=2A with C_oss=200pF and V_DC=400V?
+(e) Too much leakage inductance causes excessive duty cycle loss (the energy stored in L_r reduces effective D). If L_r=20µH and I_p=6A: energy stored = ½×L_r×I_p². Time to discharge this into the C_oss: t_resonant = π/2×√(L_r×C_oss_total). Calculate t_resonant and compare to dead time budget at 150kHz.
+Q5. EV onboard charger design: a 7.2kW EV onboard charger uses a full-bridge DC-DC stage. V_DC=800V (800V EV architecture), V_out=300V to 430V (battery charging, variable), I_out_max=20A, f_s=80kHz.
+(a) At V_out=400V, I_out=18A (full power ≈ 7.2kW): find required turns ratio for D=0.40.
+(b) MOSFET voltage rating requirement and what semiconductor technology would you specify (silicon or SiC)? Justify.
+(c) At 800V DC bus: ZVS is particularly important. With L_r=15µH and C_oss=100pF (SiC MOSFET has much lower C_oss): find minimum I_p for ZVS at 800V.
+(d) Primary RMS current at full power: I_p_rms = I_out × n × √(2D). Calculate conduction loss with SiC MOSFET R_DS_on=0.080Ω (typical 1200V SiC at 150°C).
+(e) Why is this application (800V, 7.2kW, variable output) essentially impossible to implement efficiently with a flyback or forward converter? State at least three specific technical reasons.
