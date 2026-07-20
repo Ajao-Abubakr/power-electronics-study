@@ -1,0 +1,37 @@
+Practice Problems — Topic 9
+Q1. Topology identification: for each application, identify the most appropriate isolated topology and give the primary reason:
+(a) 5W wireless charging receiver, Li-ion battery output (3.7-4.2V), USB 5V input
+(b) 3kW solar inverter DC-DC stage, V_PV=300-600V input, V_DC_bus=800V output
+(c) 200W 48V telecom to 12V/16.7A converter
+(d) 15W isolated auxiliary supply for a motor drive control board, 540V DC bus input, 15V output
+(e) 100kW EV fast charger DC-DC stage, V_in=800V grid-tied DC bus, V_out=200-1000V (variable battery)
+Q2. Quantitative comparison — flyback vs forward at 80W:
+V_in=48V DC, V_out=12V, I_load=6.67A, f_s=200kHz.
+For flyback: n=0.3, D=0.43, L_m=150µH, I_peak=4.8A (primary), I_s_peak=16A (secondary).
+For forward: Ns/Np=0.3, D=0.40, V_secondary=14.4V, output inductor.
+(a) Flyback secondary peak current vs forward secondary peak current (I_forward_s_peak ≈ I_load + ΔI_L/2 = 7A). Why is flyback secondary peak current so much higher?
+(b) Secondary diode average current: flyback (I_D_avg = I_load = 6.67A) vs forward (I_D1_avg = D×I_load, I_D2_avg = (1-D)×I_load). What is peak diode current for each?
+(c) Output capacitor ripple: flyback (C_out must supply all load during ON period — ΔV = I_load×D/(C×f_s)) vs forward (ΔV = ΔI_L/(8×f_s×C) with L_out=22µH). For C=220µF, ΔI_L=1.5A: calculate ΔV for each topology.
+(d) Which output capacitor value would be needed for flyback to achieve the same 50mV ripple as the forward converter with its 220µF cap?
+(e) Conclusion: at 80W with 48V input, which topology is more appropriate for a product requiring tight 12V output regulation? Justify with your calculations.
+Q3. Power level boundaries — when to upgrade topology:
+A product family uses flyback converters throughout. Engineering is asked whether each new product should use flyback or switch topology.
+(a) 120W version: peak primary current with flyback at V_in=100V, D=0.45: I_peak = 2×P_in/(V_in×D) where P_in=120/0.80. Is this achievable with standard MOSFETs?
+(b) 200W version: same calculation. At what peak current does the flyback become impractical (hint: consider transformer size and MOSFET I_FSM ratings)?
+(c) For the 200W version: calculate what D and peak current a forward converter would use (same V_in=100V, V_out=12V, assume D=0.40). Compare to flyback.
+(d) Cost trade-off: flyback at 200W requires 1 MOSFET, 1 diode, no output inductor. Forward requires 1 MOSFET, 2 diodes (D1+D2), 1 output inductor, 1 reset winding. At what power level does the efficiency improvement of forward converter justify the extra component cost?
+(e) A rule of thumb used in industry is "flyback below 100W, forward above 100W for single-output offline converters." Does your analysis support this rule? What factors might cause a designer to deviate from it?
+Q4. LLC vs phase-shift full-bridge selection:
+A 1kW, 48V output power supply from a 390V DC bus (post-PFC). Target efficiency ≥ 96% at 50% load.
+LLC option: f_r=200kHz, ZVS and ZCS, estimated efficiency 97% at 50% load, narrow input range ±15%.
+Phase-shift full-bridge: f_s=100kHz, ZVS at full load (loses ZVS below 30% load), estimated efficiency 95.5% at 50% load, handles ±30% input variation.
+(a) Both achieve ≥ 96% target — which additional criterion would determine the choice?
+(b) If the application requires the converter to regulate over a ±25% input voltage range: which topology is more suitable?
+(c) At 10% load (100W): LLC uses burst mode (switching stops periodically). Phase-shift full-bridge loses ZVS. Which has better light-load efficiency and why?
+(d) EMI comparison: LLC switches at variable frequency 150-300kHz (frequency dithering inherent). Phase-shift full-bridge switches at fixed 100kHz. Which is easier to pass conducted EMI limits? Why?
+(e) Final decision: for a server power supply where efficiency at 50% load is paramount and input voltage variation is only ±10% (from a well-regulated PFC stage): which topology would you choose? Justify with at least three specific reasons from (a)-(d).
+Q5. Complete topology selection and justification report:
+You are the lead power electronics engineer at a company designing three new products simultaneously. For each product, state: (1) topology chosen, (2) three specific technical reasons, (3) one key challenge to address in the design.
+(a) Product 1: IoT sensor node power supply. V_in=5V USB, V_out=3.3V/100mA isolated (for noise immunity). P_out=330mW. Cost budget extremely tight (< $0.50 for power stage components).
+(b) Product 2: Industrial motor drive auxiliary supply. V_in=540V DC bus, V_out=24V/2A (48W) for control board. Must survive V_in surges to 800V. High reliability required.
+(c) Product 3: Data centre server power supply unit. V_in=90-264V AC, V_out=12V/125A (1500W). Must achieve 80 PLUS Titanium (>91% at 50% load, >94% at 100% load). High volume production.
