@@ -1,0 +1,36 @@
+Practice Problems — Topic 2
+Q1. Current loop identification:
+Draw the two primary current loops for a boost converter (V_in, L, MOSFET, D, C_out, load). For each loop:
+(a) Which components are in the high-frequency switching loop?
+(b) Which components are in the output loop?
+(c) Which loop has faster dI/dt and why?
+(d) Where should the input capacitor be placed relative to the MOSFET? Why?
+(e) Where should the output capacitor be placed? Why?
+Q2. Component placement for a synchronous buck converter:
+Components: L1 (inductor), C_in (input cap), C_out (output capacitor), Q1 (high-side MOSFET), Q2 (low-side MOSFET), U1 (gate driver IC), U2 (PWM controller), R_fb1, R_fb2 (feedback divider), C_comp (compensation capacitor).
+(a) List the components in the order they should be placed (most critical first)
+(b) Q1 and Q2 drains are connected at the switching node. Should this node be a large copper pour or a minimal trace? Why?
+(c) The gate drive traces from U1 to Q1 and Q2 gates carry brief high-current pulses. Should they be long or short? Why?
+(d) R_fb1 and R_fb2 sense the output voltage and feed back to U2. Should they be placed near V_out or near U2? Does it matter?
+(e) C_in must be placed to minimise switching loop area. If Q1 drain is at position (0,0) and Q2 source is at (0,3mm), where exactly should C_in be placed?
+Q3. Switching node copper area analysis:
+A student designs a buck converter PCB where the switching node is connected to the gate driver IC via a long copper trace 30mm long and 2mm wide, forming a large polygon area.
+(a) Approximate area of this copper polygon
+(b) Capacitance of this copper area to the ground plane below (use C = ε₀×εᵣ×A/h with εᵣ=4.5, h=0.1mm for 4-layer PCB)
+(c) At f_s=500kHz with V_in=24V (the switching node swings 0-24V): current into ground plane = C×dV/dt where dV/dt=24V/50ns. Calculate this noise current.
+(d) This noise current flows through the ground plane and into the output circuit, appearing as voltage noise on V_out. If ground plane impedance = 1mΩ: noise voltage = I_noise × R_ground. Calculate noise voltage.
+(e) The specification requires output ripple < 10mV. Is this noise current a problem? How would you fix the layout?
+Q4. Thermal via array design:
+A synchronous buck converter MOSFET (TO-252 D2PAK package) has exposed pad area 8mm × 5.5mm = 44mm². MOSFET dissipates 2.5W total. Junction-to-case thermal resistance θ_JC = 2°C/W. Target junction temperature < 100°C at 50°C ambient.
+(a) Required total thermal resistance θ_JA = (T_J_max − T_ambient)/P = ?
+(b) Required θ_CA (case to ambient) = θ_JA − θ_JC = ?
+(c) Each thermal via provides approximately 60°C/W. How many vias in parallel are needed to achieve θ_CA?
+(d) Via diameter 0.4mm, pitch 1.0mm. How many vias fit in the 44mm² pad area?
+(e) Does the available via count from (d) meet the requirement from (c)? If not, what are two options?
+Q5. Complete placement plan for the flyback capstone:
+Create a written placement plan (as if briefing a PCB layout engineer) for your 30W flyback converter. Include:
+(a) Board dimensions estimate (calculate based on component count and sizes)
+(b) Primary side component positions and sequence
+(c) Transformer placement and isolation boundary
+(d) Secondary side component positions
+(e) Control circuit placement (UC3842, TL431, optocoupler) relative to power components
