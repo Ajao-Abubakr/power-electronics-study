@@ -142,3 +142,21 @@ and complete the foundation for the Year 1 flyback capstone project.
 | 8 | Resonant Converters — LLC Introduction | 15/07/2026 | 5/5 | ✅️ |
 | 9 | Isolated Converter Comparison & Selection | 15/07/2026 | 5/5 | ✅️ |
 | 10 | Simulation & Verification of Isolated Converters | — | 0/5 |  🔄 |
+
+## Month 6 — PCB Design for Power Electronics
+
+**Objective:** Master PCB design for power electronics, including layout optimization, thermal management, EMI reduction, PCB design workflow, manufacturing preparation, assembly, and board bring-up to produce reliable, manufacturable high-performance power converter PCBs.
+
+| # | Topic | Date Completed | Problems Solved | Status |
+|---|-------|----------------|-----------------|--------|
+| 1 | PCB Fundamentals for Power Electronics | 17/07/2026 | 5/5 | ✅️ |
+| 2 | Layout Fundamentals — Current Loops and Placement | 18/07/2026 | 5/5 | ✅️ |
+| 3 | Grounding Strategies | 18/07/2026 | 5/5 | ✅️ |
+| 4 | Thermal Management | 18/07/2026 | 5/5 | ✅️ |
+| 5 | EMI Reduction Through PCB Layout | 19/07/2026 | 5/5 | ✅️ |
+| 6 | KiCad — PCB Design Software | — | 0/5 | ⬜ |
+| 7 | Designing Your First Power Electronics PCB | — | 0/5 | ⬜ |
+| 8 | Design Rule Check and Manufacturing Preparation | — | 0/5 | ⬜ |
+| 9 | PCB Assembly and Soldering Techniques | — | 0/5 | ⬜ |
+| 10 | Board Bring-Up and Debug Procedure | — | 0/5 | ⬜ |
+
