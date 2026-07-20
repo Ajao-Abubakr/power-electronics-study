@@ -1,0 +1,38 @@
+Practice Problems — Topic 3
+Q1. Ground bounce calculation:
+A buck converter has a 20mm GND trace shared between the low-side MOSFET source (carrying 6A switching current) and the PWM controller GND pin.
+(a) Trace inductance (use 1nH/mm)
+(b) At turn-off with dI/dt = 6A/50ns: voltage bounce on controller GND
+(c) The feedback voltage divider produces 0.8V at the controller's feedback input. If the controller references this to a bouncing GND: effective noise-to-signal ratio
+(d) Would this cause instability? What control behaviour would you expect?
+(e) Redesign: describe the corrected GND routing to eliminate this problem
+Q2. Split ground plane design:
+For a 12V, 5A buck converter, identify which components connect to PGND and which connect to SGND:
+(a) Input capacitor negative terminal
+(b) Low-side MOSFET source
+(c) PWM controller IC GND pin
+(d) Feedback voltage divider lower resistor
+(e) Output capacitor negative terminal
+Then: where is the single connection point between PGND and SGND? Why is this the correct location?
+Q3. Ground plane effectiveness:
+A 2-layer PCB has no ground plane — all GND connections are made with routed traces. A 4-layer PCB has a solid ground plane on Layer 2.
+For a 10mm long, 1mm wide GND trace on the 2-layer board vs a 10mm × 10mm ground plane section on the 4-layer board:
+(a) Inductance of the 2-layer GND trace (use 1nH/mm)
+(b) Inductance of the 4-layer ground plane section: L_plane ≈ µ₀×h/W where h=0.1mm (prepreg) and W=10mm. Calculate L_plane = 4π×10⁻⁷ × 0.1×10⁻³ / 10×10⁻³.
+(c) Compare the two inductances. How many times lower is the ground plane inductance?
+(d) At dI/dt = 5×10⁸ A/s: compare GND bounce voltage for each case.
+(e) This quantitatively explains why a ground plane reduces EMI. Express the improvement in dB: 20×log10(L_trace/L_plane).
+Q4. Isolated converter grounding:
+Your flyback capstone has primary GND (PGND) and secondary GND (SGND).
+(a) Can PGND and SGND ever be directly connected on the PCB? When would this be acceptable and when would it violate safety requirements?
+(b) The optocoupler has pins on both the primary (PGND) side and secondary (SGND) side. Draw the optocoupler connection and identify which pins connect to PGND and which to SGND.
+(c) Y capacitors in the EMI filter connect from primary-side nodes to earth (protective ground). How does the earth connection relate to PGND and SGND in your design?
+(d) A chassis ground (metal enclosure, connected to earth) is used for the power supply. Should PGND, SGND, or both connect to chassis ground? What are the safety and EMI implications of each option?
+(e) In an ungrounded (Class II, no earth) power supply: where does the common mode noise current flow if there are no Y capacitors? How does this affect the EMI characteristics?
+Q5. Via stitching design:
+A 4-layer buck converter PCB has Layer 1 (top) for signal routing and Layer 2 for ground plane. A power trace carrying 8A transitions from Layer 1 to Layer 4 via a single 0.5mm via.
+(a) Without stitching vias: the return current in the ground plane must travel from the Layer 2 plane, around the layer transition, to the Layer 4 plane. Estimate the detour length as 10mm. What is the inductance of this detour path (use 1nH/mm)?
+(b) With a stitching via placed 1mm from the power via: the return current path is approximately 2mm. New detour inductance.
+(c) At switching frequency 300kHz and dI/dt = 8A/30ns (switching transition): compare the GND bounce for both cases.
+(d) In KiCad: where in the PCB design workflow do you place stitching vias? (After routing, during routing, or as a separate step?)
+(e) Why is via stitching especially important around the perimeter of a ground plane cutout or slot?
