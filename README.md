@@ -137,8 +137,8 @@ and complete the foundation for the Year 1 flyback capstone project.
 | 3 | Flyback Converter — Complete Design Example | 11/07/2026 | 5/5 | ✅️ |
 | 4 | Forward Converter — Analysis & Design | 13/07/2026 | 5/5 | ✅️ |
 | 5 | Push-Pull Converter | 13/07/2026 | 5/5 | ✅️ |
-| 6 | Half-Bridge Converter | — | 0/5 | ⬜ |
-| 7 | Full-Bridge Converter | — | 0/5 | ⬜ |
-| 8 | Resonant Converters — LLC Introduction | — | 0/5 | ⬜ |
-| 9 | Isolated Converter Comparison & Selection | — | 0/5 | ⬜ |
-| 10 | Simulation & Verification of Isolated Converters | — | 0/5 | ⬜ |
+| 6 | Half-Bridge Converter | 14/07/2026 | 5/5 | ✅️ |
+| 7 | Full-Bridge Converter | 14/07/2026 | 5/5 | ✅️ |
+| 8 | Resonant Converters — LLC Introduction | 15/07/2026 | 5/5 | ✅️ |
+| 9 | Isolated Converter Comparison & Selection | 15/07/2026 | 5/5 | ✅️ |
+| 10 | Simulation & Verification of Isolated Converters | — | 0/5 |  🔄 |
