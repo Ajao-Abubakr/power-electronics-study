@@ -1,0 +1,35 @@
+Practice Problems — Topic 5
+Q1. Common mode noise calculation:
+A half-bridge converter: V_DC=390V, t_rise=15ns (SiC MOSFETs), f_s=200kHz. Switching node copper area = 5cm². 4-layer PCB, prepreg thickness h=0.1mm, εᵣ=4.5.
+(a) dV/dt at the switching node
+(b) Capacitance C_sw_to_gnd
+(c) Peak common mode noise current
+(d) If switching node copper is reduced to 0.5cm²: new I_cm and improvement in dB
+(e) The EMI standard requires conducted emissions below 40dBµA at 200kHz. If I_cm creates a conducted current of 10×I_cm (due to impedance mismatch in the EMI filter): what level of filter attenuation is needed for both cases?
+Q2. Decoupling capacitor placement:
+A buck converter gate driver IC (U1) needs decoupling on its VCC pin. Two placement options are proposed:
+Option A: 100nF capacitor placed 25mm from U1 VCC pin, connected via a 25mm trace to VCC and a 25mm trace to GND.
+Option B: 100nF capacitor placed 1mm from U1 VCC pin, connected to VCC with 1mm trace and to GND plane via direct via.
+(a) Inductance of the decoupling path for Option A: L = 2 × 25mm × 1nH/mm (forward + return path)
+(b) Inductance for Option B: L = 2 × 1mm × 1nH/mm
+(c) Resonant frequency of the decoupling capacitor with its path inductance: f_res = 1/(2π√(L×C)) for each option
+(d) For a switching frequency of 500kHz: which option provides effective decoupling at this frequency and why? (A capacitor only decouples effectively below its self-resonant frequency)
+(e) Above the resonant frequency, a capacitor becomes inductive (impedance increases with frequency). What additional capacitor would you add to Option A to provide decoupling at 500kHz? What value and why?
+Q3. Switching loop area minimisation:
+A boost converter MOSFET is placed at position (0,0). The input capacitor can be placed at:
+Option A: (0, 20mm) — 20mm away vertically
+Option B: (0, 5mm) — 5mm away vertically
+Option C: Directly under MOSFET on opposite PCB side (0, 0) effectively — 0mm horizontal distance, 1.6mm PCB thickness separating them
+For each option, estimate the switching loop area (model as a rectangle: width = component width ≈ 5mm, height = separation distance):
+(a) Loop area for each option
+(b) Loop inductance (1nH/mm rule — use perimeter/4 as effective length for rough estimate)
+(c) Drain voltage spike for each option at I=3A, dI/dt = 3A/30ns
+(d) MOSFET rated 100V. Which option(s) are safe?
+(e) Option C (capacitor directly under MOSFET on opposite layer) is the optimal approach. Explain why placing forward and return current paths directly above each other reduces inductance even further than the area suggests (hint: magnetic field cancellation).
+Q4. EMI layout audit:
+A student submits a PCB for your review. You identify these layout issues. For each, explain the EMI consequence and the correct solution:
+(a) The switching node is connected to a large copper pour covering 8cm² on Layer 1 (student explanation: "I made it wide for current carrying capacity")
+(b) The ground plane has a 15mm slot cut across it to "separate analog and digital sections" (below the critical buck converter switching loop)
+(c) The feedback voltage divider traces run parallel to the inductor current sense trace for 20mm
+(d) The gate drive trace makes two 90° bends before reaching the MOSFET gate, total length 45mm
+(e) The input electrolytic capacitor (100µF) is placed at the board input connector, 60mm from the MOSFET. No ceramic decoupling capacitors are placed near the MOSFET.
