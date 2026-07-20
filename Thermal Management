@@ -1,0 +1,38 @@
+Practice Problems — Topic 4
+Q1. Thermal resistance calculation chain:
+A MOSFET dissipates 3W. Package: D2PAK. Datasheet: θ_JC = 5°C/W. Thermal pad: θ_CS = 0.8°C/W. PCB copper pour 150mm²: θ_SA = 30/1.5 = 20°C/W. Ambient = 40°C.
+(a) θ_JA total
+(b) T_junction
+(c) Is T_J within limits (T_J_max = 150°C)? What is the margin?
+(d) If ambient rises to 70°C (hot enclosure): recalculate T_J. Still within limits?
+(e) To maintain T_J < 125°C (with 25°C safety margin) at 70°C ambient: what maximum θ_JA is allowed? What change to the layout achieves this? (Increase copper area or add heatsink)
+Q2. Thermal via array sizing:
+A DPAK MOSFET has 4mm × 6mm = 24mm² exposed pad. Dissipates 4W. Via parameters: diameter 0.4mm, plating thickness 25µm, PCB thickness 1.6mm, k_Cu = 400 W/(m·K).
+(a) Thermal resistance per single via: R_via = t_PCB/(k_Cu × A_copper) where A_copper = π × d × t_plating
+(b) Maximum vias fitting in 24mm² at 1.0mm pitch (square array)
+(c) R_via_array with maximum vias
+(d) If heat must travel from pad to opposite layer (bottom copper), and then spread over 100mm² bottom copper (θ_spreading = 30/1.0 = 30°C/W): total θ from junction to ambient = θ_JC + R_via_array + θ_spreading + θ_TIM. Find total and resulting T_J at T_ambient=40°C.
+(e) Is a separate heatsink needed? What is the remaining margin to 150°C T_J_max?
+Q3. Heatsink selection:
+A forward converter has four secondary diodes, each dissipating 2W (total 8W). Diodes are in TO-220 packages. θ_JC = 3°C/W each. θ_CS (with pad) = 1.5°C/W. T_ambient = 50°C, T_J_max = 150°C.
+(a) Required θ_JA per diode
+(b) Required θ_SA per diode
+(c) If all four diodes share one common heatsink and each adds thermal resistance in parallel (total heat = 8W, θ_SA_heatsink needed for total power): required heatsink θ_SA
+(d) Required heatsink surface area for natural convection
+(e) A standard heatsink (25mm × 50mm × 15mm tall, with fins) has approximately 80cm² surface area. Calculate its θ_SA. Is it adequate?
+Q4. Transformer thermal management:
+Your flyback capstone transformer (EE30 core) has P_Cu = 0.290W and P_core = 0.046W. Ambient inside enclosure = 50°C.
+(a) Total transformer loss
+(b) The transformer sits on the PCB bobbin pins. The thermal path from core to PCB is approximately θ_transformer_to_PCB = 30°C/W (poor thermal contact through bobbin pins). Find transformer temperature rise above PCB.
+(c) If PCB is at 60°C (above ambient due to other component heating): transformer temperature
+(d) At what total transformer loss would the transformer exceed 100°C (typical ferrite safe operating temperature)? Is your design within this limit?
+(e) If you wanted to reduce transformer temperature, name three design changes (one related to core material, one related to wire choice, one related to mechanical arrangement on the PCB).
+Q5. Complete thermal design review for your capstone:
+Compile a thermal analysis table for all major components in your 30W flyback converter.
+Assume: T_ambient = 50°C, PCB copper provides θ_SA where applicable.
+For each component, calculate T_J or T_surface:
+(a) MOSFET (STD5NK60Z, DPAK): P=2.482W, θ_JC=10°C/W, 12 vias + 250mm² copper pour (θ_SA ≈ 12°C/W), θ_TIM=0.5°C/W
+(b) Secondary diode (MBRS4200T3G, SMB package): P=1.0W, θ_JC=15°C/W, PCB copper 80mm² (θ_SA ≈ 37.5°C/W)
+(c) RCD clamp resistor (2.2kΩ, through-hole 2W rated): P=1.116W. A through-hole resistor relies entirely on its own body for heat dissipation. θ_JA ≈ 80°C/W for a 2W axial resistor. Find T_body.
+(d) Transformer: P_total = 0.336W, θ_transformer_to_PCB = 30°C/W. T_transformer surface.
+(e) Which component has the highest temperature? Is any component outside its safe operating range? What action would you take?
