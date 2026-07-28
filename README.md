@@ -160,3 +160,23 @@ and complete the foundation for the Year 1 flyback capstone project.
 | 9 | PCB Assembly and Soldering Techniques | 23/07/2026 | 5/5 | ✅️ |
 | 10 | Board Bring-Up and Debug Procedure | 24/07/2026 | 5/5 | ✅️ |
 
+
+## Month 7 — Solar Energy Systems & Photovoltaics
+
+**Objective:** Master photovoltaic energy conversion, PV system design, battery integration, grid-connected solar systems, protection techniques, and simulation of real-world solar power systems.
+
+| # | Topic | Date Completed | Problems Solved | Status |
+|---|----------------------------------------------------|----------------|-----------------|--------|
+| 1 | Photovoltaic Cell Physics | 25/07/2026 | 5/5 | ✅️ |
+| 2 | The I-V Characteristic Curve | 26/07/2026 | 5/5 | ✅️ |
+| 3 | Maximum Power Point Tracking — Algorithms | | | ⬜ |
+| 4 | Boost Converter Design for PV Systems | | | ⬜ |
+| 5 | Battery Charging from Solar | | | ⬜ |
+| 6 | Grid-Tied Inverter Fundamentals | | | ⬜ |
+| 7 | PV System Design — Standalone | | | ⬜ |
+| 8 | PV System Design — Grid-Tied | | | ⬜ |
+| 9 | Protection, Monitoring, and Safety | | | ⬜ |
+| 10 | Simulation and Real System Analysis | | | ⬜ |
+
+
+
