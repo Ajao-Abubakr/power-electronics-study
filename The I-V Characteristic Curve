@@ -1,0 +1,55 @@
+Practice Problems — Topic 2
+Q1. Series-parallel array design:
+Available panel: 330W, V_mp=32.5V, I_mp=10.15A, V_oc=39.8V, I_sc=10.72A.
+Inverter specifications: MPPT range 200-800V, max input current 18A, max input power 10kW.
+(a) Maximum panels in series before exceeding 800V MPPT limit
+(b) Check V_oc_array at T=10°C (use β_Voc=−0.34%/°C) for your chosen N_s. Does it exceed 800V?
+(c) For a 6.6kW system: how many panels total? What is the N_s × N_p configuration that satisfies both the voltage and current limits?
+(d) Total array P_max, V_array_mpp, I_array_mpp for your chosen configuration
+(e) Energy generated per day at 5.5 peak sun hours with 80% system efficiency
+Q2. P-V curve analysis:
+A 72-cell panel: I_sc=10.2A, V_oc=45.6V, I_mp=9.5A, V_mp=37.8V.
+(a) P_max and fill factor
+(b) Power at V = 0.8 × V_mp (is it still close to P_max?)
+(c) Power at V = 1.1 × V_mp
+(d) Power at V = 0.5 × V_mp
+(e) Sketch (describe in words) the shape of the P-V curve, identifying where P=0, where P=P_max, and how quickly power falls on each side of the peak
+Q3. Partial shading analysis:
+A string of 5 panels in series (each 300W, V_mp=30V, I_mp=10A). Each panel has one bypass diode.
+(a) Normal (no shading): V_string, I_string, P_string
+(b) One panel completely shaded (bypass diode activates): V_string, I_string, P_string
+(c) Two adjacent panels shaded to 30% irradiance (bypass diodes NOT activated, assuming mismatch current forces them to operate at reduced current): I_string ≈ 0.3 × 10 = 3A, V_string ≈ 5 × 30 = 150V (approximately, since V_mp barely changes). P_string.
+(d) Compare (b) and (c): which shading scenario is worse for power output?
+(e) Describe two methods to mitigate partial shading losses in a rooftop PV system. (Hint: consider panel orientation and power electronics solutions)
+Q4. Array configuration for Nigerian off-grid system:
+A rural health clinic in Kano needs a solar system to power: refrigerator (150W continuous), LED lighting (300W for 6 hours/night), medical equipment (500W for 4 hours/day), phone charging (100W for 8 hours/day). Battery bank: 48V nominal, capacity sized for 2 days autonomy. Available panel: 250W, V_mp=30.5V, I_mp=8.2A.
+(a) Total daily energy demand (Wh/day)
+(b) With 6 peak sun hours and 75% system efficiency: required solar array capacity (Wp)
+(c) Number of 250W panels required
+(d) For a 48V battery system: charge controller input should accept array voltage. Design the array configuration (N_s × N_p) for a MPPT charge controller with input range 60-150V
+(e) Total array cost estimate if panels cost ₦65,000 each, plus 30% for mounting, wiring, and installation
+Q5. Temperature and irradiance combined effects:
+A monitoring system records these conditions for a panel (STC: 300W, V_mp=32V, I_mp=9.38A, γ_P=−0.45%/°C):
+Time
+Irradiance (W/m²)
+Cell temp (°C)
+7:00 AM
+200
+28
+9:00 AM
+600
+45
+12:00 PM
+1000
+72
+3:00 PM
+800
+65
+5:00 PM
+300
+38
+(a) For each time: P_max adjusted for both irradiance (P ∝ G/1000) and temperature (P(T) = P_STC × [1 + γ_P × (T−25)])
+(b) Apply both corrections simultaneously: P(G,T) = P_STC × (G/1000) × [1 + γ_P × (T−25)]
+(c) At which time is power output highest? Is it midday (highest irradiance) or another time?
+(d) Energy generated during these 5 measurement intervals (use trapezoidal approximation between consecutive measurements, each interval is 2 hours wide)
+(e) Compare to simple estimate: P_STC × peak sun hours × (1 + γ_P × (avg_temp−25)). What is the percentage error of this simplified approach?
