@@ -1,0 +1,52 @@
+Key Points — Topic 1
+PV cell is a large-area p-n junction that converts photon energy to electrical energy through the photovoltaic effect
+The p-n junction's built-in electric field separates photogenerated electron-hole pairs — electrons to n-side, holes to p-side
+Single-diode model: I = I_ph − I_0×(e^((V+I×R_s)/(n×V_T))−1) − (V+I×R_s)/R_sh
+I_sc ≈ I_ph ∝ irradiance G. V_oc = n×V_T×ln(I_ph/I_0) — increases logarithmically with G
+Fill factor FF = P_max/(V_oc×I_sc) — measure of I-V curve quality. Typical 0.70-0.83 for silicon
+Temperature effects: I_sc increases slightly, V_oc and P_max decrease significantly with temperature
+Power temperature coefficient ≈ −0.45%/°C for silicon — at 70°C cell temperature: 20% power loss vs STC
+V_oc temperature coefficient ≈ −0.34%/°C — V_mp tracks V_oc — MPPT must track this change
+Monocrystalline silicon: 20-24% efficiency, best for space-limited Nigerian rooftop installations
+Nigerian irradiance: 5.5-7.5 peak sun hours/day — among the best in the world
+Practice Problems — Topic 1
+Q1. Solar cell I-V curve analysis:
+A monocrystalline silicon cell at STC: I_sc=9.8A, V_oc=0.638V, I_mp=9.1A, V_mp=0.521V.
+(a) Short circuit current density J_sc if cell area = 243.36cm² (156mm × 156mm)
+(b) Fill factor FF
+(c) Maximum power P_max
+(d) Cell efficiency η (G=1000 W/m²)
+(e) What series resistance R_s would account for a 3% reduction in FF compared to an ideal cell? (Use simplified estimate: FF_actual = FF_ideal × (1 − R_s × I_mp/V_mp))
+Q2. Temperature effects on a 60-cell panel:
+Panel STC parameters: V_oc=37.8V, I_sc=9.8A, V_mp=30.8V, I_mp=9.2A, P_max=283.4W.
+Temperature coefficients: α_Isc=+0.06%/°C, β_Voc=−0.34%/°C, γ_Pmax=−0.44%/°C.
+(a) Panel parameters at T=60°C (cell temperature, not ambient)
+(b) Panel parameters at T=15°C (cold morning in harmattan season)
+(c) Power difference between 60°C and 15°C operation for this panel
+(d) For a 10-panel array, total energy lost per day due to temperature (assume 6 hours at 60°C average vs 6 hours at 25°C)
+(e) A Nigerian engineer argues for mounting panels with a 15° tilt instead of 30° to improve airflow and cooling. If cooling reduces average cell temperature from 70°C to 55°C: calculate power improvement per panel. Is this worth the slight reduction in irradiance capture from the non-optimal tilt?
+Q3. Irradiance effects on I-V curve:
+A cell has I_sc=9.5A and V_oc=0.635V at G=1000 W/m². I_0=1×10⁻¹⁰A, n=1.3.
+(a) I_sc at G=500 W/m² (heavy cloud)
+(b) I_sc at G=200 W/m² (overcast)
+(c) V_oc at G=500 W/m²: use V_oc = n×V_T×ln(I_ph/I_0) where I_ph(500) = I_sc(500)
+(d) V_oc at G=200 W/m²
+(e) P_max at each irradiance (assume FF stays approximately constant at 0.775): P_max = FF × V_oc × I_sc. Compare ratio of P_max(500)/P_max(1000) and P_max(200)/P_max(1000). Does power scale linearly with irradiance?
+Q4. Single diode model calculation:
+A solar cell: I_ph=8.5A, I_0=5×10⁻¹⁰A, n=1.2, R_s=0.008Ω, R_sh=200Ω, T=35°C.
+(a) V_T at 35°C: V_T = kT/q = (1.381×10⁻²³ × 308.15) / 1.602×10⁻¹⁹
+(b) V_oc (set I=0 in the diode equation and solve): V_oc ≈ n×V_T×ln(I_ph/I_0)
+(c) Terminal current I at V=0.45V (iterate twice from I=I_ph starting point)
+(d) Terminal current I at V=0.55V
+(e) Estimate P at both operating points. Which is closer to the maximum power point?
+Q5. Technology selection for Nigerian application:
+A school in Abuja wants to install a rooftop solar system. Available roof area: 50m². Average irradiance: 6 peak sun hours/day. Target: maximum daily energy generation. Compare three panel options:
+Option A: Monocrystalline, 21% efficiency, 380W/panel, 2.0m×1.0m, ₦85,000/panel
+Option B: Polycrystalline, 17.5% efficiency, 315W/panel, 2.0m×1.0m, ₦65,000/panel
+Option C: Thin film CIGS, 15% efficiency, flexible, 270W/panel, 2.0m×0.9m, ₦75,000/panel
+For each option:
+(a) Number of panels that fit on 50m² roof
+(b) Total installed capacity (W)
+(c) Daily energy generation (Wh) at 6 peak sun hours and applying 20% system losses
+(d) Total panel cost
+(e) Cost per daily Wh generated (₦ per Wh/day). Which technology gives the best value?
