@@ -1,0 +1,46 @@
+Practice Problems — Topic 6
+Q1. KiCad workflow sequencing:
+Put these steps in the correct order for going from a circuit design to a manufactured PCB:
+Run DRC
+Generate Gerber files
+Assign footprints to schematic symbols
+Draw schematic in Eeschema
+Fill copper zones
+Route traces in Pcbnew
+Place components in Pcbnew
+Run ERC
+Update PCB from schematic
+Review Gerbers in GerbView
+Q2. Schematic symbol vs footprint:
+Explain the difference between a schematic symbol and a PCB footprint. For each component below, name one key difference between the symbol and the footprint:
+(a) UC3842 DIP-8
+(b) SMD ceramic capacitor 0805
+(c) TO-252 DPAK MOSFET
+(d) EE30 flyback transformer
+(e) Why must a designer verify the footprint dimensions against the actual component datasheet before ordering PCBs?
+Q3. Net class isolation rules:
+Your flyback PCB has these nets. Classify each as Primary or Secondary net class:
+(a) VIN (bulk capacitor positive, 83-373V DC)
+(b) VOUT (12V regulated output)
+(c) PGND (primary ground)
+(d) SGND (secondary ground)
+(e) GATE (UC3842 output to MOSFET gate)
+(f) FB (TL431 to optocoupler LED)
+(g) ISENSE (current sense resistor to UC3842 pin 3)
+(h) OPTO_OUT (optocoupler transistor collector to UC3842 feedback pin)
+(i) VREF (UC3842 5V reference output)
+(j) Why must OPTO_OUT be routed with special care — which net class does it technically belong to and where does it physically travel?
+Q4. Copper zone configuration for flyback:
+Describe in detail (as if writing KiCad instructions) how to set up the ground planes for your flyback PCB:
+(a) What zone properties for the primary ground (net, layer, clearance)?
+(b) What zone properties for the secondary ground?
+(c) Where should the 6.4mm isolation gap between the two zones be located on the PCB?
+(d) After filling zones (pressing B), the DRC reports a clearance violation between PGND and SGND zones near the transformer. What are two ways to resolve this?
+(e) After filling zones, some component pads on the primary side are not connected to the PGND zone (they show as isolated pads). What is the most likely cause and how do you fix it?
+Q5. Design rule configuration:
+For your 30W flyback PCB on a 2oz copper, 2-layer board, set up the following in KiCad Board Setup:
+(a) What minimum track width would you set and why?
+(b) What minimum clearance between traces of the same net class (Primary-Primary or Secondary-Secondary)?
+(c) What clearance between Primary and Secondary net classes?
+(d) What minimum via size (diameter and drill) for a 2A signal via?
+(e) The high-current secondary trace (6A RMS) needs a wider minimum width. How do you set a different minimum width for just this net rather than globally?
