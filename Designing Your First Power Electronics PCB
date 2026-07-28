@@ -1,0 +1,37 @@
+Practice Problems — Topic 7
+Q1. Board sizing calculation:
+For a 12V, 5A synchronous buck converter with these components: two MOSFETs (DPAK, 10×8mm each), inductor (12×12mm SMD), two input ceramics (0805), three output ceramics (0805), gate driver IC (SO-8), PWM controller (DFN-8), feedback resistors (0402), output connector (5mm pitch, 2-pin), input connector (5mm pitch, 2-pin).
+(a) Estimate minimum board area needed based on component footprints
+(b) Suggest a standard board size (round up to standard dimensions like 50×30, 60×40, 80×50mm)
+(c) Where do you place the input connector and output connector on the board?
+(d) Suggest the location of the two MOSFETs relative to each other and to the input capacitors
+(e) How does the board size affect PCB manufacturing cost at JLCPCB? (Research or estimate based on area pricing)
+Q2. Trace width specification for flyback:
+For each trace in your 30W flyback, specify the correct width and justify it:
+(a) Primary switching node trace (Q1 drain to transformer pin 1): maximum peak current = 2.490A, duration = 45% of each cycle
+(b) Secondary output trace (secondary diode to output capacitor): average current = 2A continuous
+(c) Gate drive trace (UC3842 output to Q1 gate): peak current = 0.5A, duration = 10ns
+(d) Current sense trace (R_sense to UC3842 pin 3): signal level = 0-1V, current = negligible
+(e) Secondary ground return trace (output capacitor negative to secondary winding return): same as (b) — 2A continuous. Should this be a trace or a copper pour? Why?
+Q3. Transformer footprint creation:
+Your EE30 flyback transformer has: primary winding pins on one side (4 pins: 2 for primary winding, 1 for shield, 1 spare), secondary winding pins on other side (3 pins: 2 for main secondary, 1 for auxiliary).
+(a) Describe the footprint pin layout (primary pins on left, secondary pins on right, isolation gap in the middle)
+(b) Typical EE30 bobbin pin spacing: 2.54mm pitch, 3 pins per row, rows separated by 10mm. Draw the pin positions as coordinates.
+(c) What silkscreen marking is essential on this footprint to show the primary-secondary boundary?
+(d) How much clearance must the footprint maintain between the leftmost secondary pin pad and the rightmost primary pin pad on the PCB?
+(e) The transformer body is 35mm × 30mm. How do you add this as a courtyard boundary in KiCad to prevent other components from overlapping the transformer?
+Q4. Copper zone configuration for complete flyback PCB:
+After routing all traces on your 100mm × 80mm board:
+(a) Define the exact coordinates of the PGND zone boundary (state as a polygon with x,y corners)
+(b) Define the exact coordinates of the SGND zone boundary
+(c) The gap between zones: what is the gap width in your design? Is it adequate?
+(d) After pressing B to fill zones, some areas on the primary side show unconnected "thermal relief" patterns around component pads. Explain what thermal relief is and when you would turn it off (for power components that need maximum thermal connection to the plane)
+(e) You notice the copper fill does not reach some pads — there are unconnected "islands" of copper not connected to PGND. What causes this and how do you fix it?
+Q5. Complete placement review:
+Draw a top-down sketch of your flyback PCB (on paper, not in KiCad) showing all component positions. Include:
+(a) Board outline with dimensions (100mm × 80mm)
+(b) All major components with approximate positions (x,y coordinates from left-bottom corner)
+(c) The isolation boundary between primary and secondary regions
+(d) The estimated switching loop area (the critical loop from Topic 2)
+(e) Location of all 8 test points
+Evaluate your sketch against the EMI checklist from Topic 5. How many items does your placement satisfy?
