@@ -1,0 +1,33 @@
+Practice Problems — Topic 10
+Q1. Pre-power checklist construction:
+Create a complete 20-item pre-power checklist for your flyback capstone. For each item include: (1) what you check, (2) how you check it (visual / multimeter setting / calculation), (3) the pass criterion (what value or observation means it is correct).
+Your 20 items must include at minimum: isolation resistance test, short circuit check, all polarised component orientation checks, all critical component value verifications, and mechanical integrity checks.
+Q2. Bring-up phase sequencing:
+A student builds their flyback converter and immediately connects it to the mains on first assembly. It immediately blows the fuse and the MOSFET is destroyed.
+(a) What is the correct bring-up procedure the student should have followed?
+(b) List five possible causes of immediate MOSFET failure on first mains application
+(c) How does a series current-limiting bulb protect against MOSFET destruction during bring-up?
+(d) How does a variable bench supply (bypassing the bridge rectifier initially) allow safer diagnosis?
+(e) What minimum equipment does a student need to safely bring up a mains-powered converter? Rank in priority order.
+Q3. Fault diagnosis exercises:
+For each symptom, describe your diagnostic procedure (what you measure, in what order) and the most likely cause:
+(a) UC3842 VCC pin is at 0V, no gate drive signal
+(b) Gate drive frequency is 47kHz instead of 96kHz
+(c) Output voltage is 6V instead of 12V at full load but 12V at no load
+(d) Output voltage oscillates slowly between 10V and 14V (feedback instability)
+(e) Converter works at no load and 0.5A but MOSFET overheats at 1A load
+Q4. Efficiency measurement and analysis:
+You measure the following at V_in = 120V DC (bench supply), I_load = 2A:
+V_out = 11.93V, I_in measured = 0.248A.
+(a) Calculate P_in and P_out
+(b) Calculate measured efficiency
+(c) Your theoretical prediction was η = 83.8%. What is the discrepancy and is it concerning?
+(d) The 0.248A input current seems high. At η = 83.8% and V_in = 120V: I_in_theoretical = P_in/(V_in) = (P_out/0.838)/120. Calculate expected I_in and compare to measured.
+(e) List four factors that could cause measured efficiency to be lower than theoretical prediction.
+Q5. Complete bring-up report:
+Write a brief bring-up report for your flyback capstone project in the format you would upload to GitHub. The report should cover:
+(a) Summary of pre-power checks (all 20 items from Q1 — state which passed and which required correction)
+(b) Phase 1 results: first power application observations (describe what you expect to see in each measurement)
+(c) Phase 2 waveform verification: describe the expected waveforms at each test point and what deviations would indicate problems
+(d) Phase 3 load sweep: create a blank table with the correct columns that you would fill in during bring-up
+(e) Lessons learned section: write three specific technical lessons you would document for a future engineer building the same converter, based on the most likely problems you might encounter (from your understanding of the design and the common failures discussed in this topic)
