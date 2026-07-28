@@ -1,0 +1,31 @@
+Practice Problems — Topic 8
+Q1. DRC error interpretation:
+A student runs DRC on their flyback PCB and gets these errors. For each, explain what went wrong and how to fix it:
+(a) "Track on F.Cu at (23.4, 15.2) too close to pad on B.Cu at (23.4, 14.9) — clearance 0.08mm, minimum 0.2mm"
+(b) "No connection between pad 3 of C1 and pad 1 of C2 (PGND net)"
+(c) "Via drill size 0.2mm smaller than minimum 0.3mm at (45.0, 30.0)"
+(d) "Courtyard overlap between U1 and C5"
+(e) "Clearance between net PGND and net SGND: 3.2mm, required 6.4mm at (57.0, 40.0)"
+Q2. Gerber file verification checklist:
+You upload your flyback Gerber files to a free online viewer. Describe what you should verify in each file:
+(a) Top copper layer (F.Cu)
+(b) Bottom copper layer (B.Cu) — specifically what does the primary-secondary gap look like?
+(c) Top silkscreen (F.Silkscreen)
+(d) Top soldermask (F.Mask) — what should you look for around the MOSFET DPAK pad?
+(e) Drill file — how many holes should appear and what sizes?
+Q3. Manufacturing specification verification:
+Before submitting your flyback PCB to JLCPCB, verify these parameters match your design:
+(a) Your narrowest trace is 0.3mm. JLCPCB standard process minimum is 0.127mm (5mil). Is your design within capability?
+(b) Your smallest via drill is 0.3mm. JLCPCB minimum is 0.2mm. Is your design within capability?
+(c) You specified 2oz copper. JLCPCB standard is 1oz — you must select 2oz from the dropdown (additional cost). What is the approximate cost difference for 5 boards?
+(d) The board has a primary-to-secondary slot (a physical gap cut through the board). This requires a special routing operation. How do you add a board slot in KiCad and does JLCPCB support internal slots?
+(e) Your MOSFET DPAK thermal pad requires exposed copper (no soldermask) on the pad. Verify this in the soldermask Gerber — what should the DPAK footprint look like in the soldermask layer?
+Q4. BOM procurement planning:
+Using your flyback capstone BOM from this topic:
+(a) Which components are available at Ikeja Computer Village? Which may need to be ordered online?
+(b) The STD5NK60Z MOSFET may not be stocked locally. Name two alternative 650V N-channel MOSFETs with similar or better specifications that might be available from Mouser or AliExpress.
+(c) The MBRS4200 Schottky diode (200V, 4A): if not available locally, name an alternative with equivalent or better specs.
+(d) Calculate total component cost estimate in Nigerian Naira for all components (research approximate prices from Ikeja or online suppliers).
+(e) The transformer T1 must be wound manually. List all materials needed to wind it (core, bobbin, wire gauges and lengths for each winding, tape for insulation layers) and estimate cost.
+Q5. Pre-submission final checklist:
+Create a complete 20-item checklist that you would run through before clicking "submit" on JLCPCB. Categories to cover: DRC, Gerber review, layer stack verification, isolation clearances, component placements, silkscreen, drill file, board dimensions. For each item, state what you are checking and what the pass criterion is
