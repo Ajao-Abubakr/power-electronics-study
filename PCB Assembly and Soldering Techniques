@@ -1,0 +1,22 @@
+Practice Problems — Topic 9
+Q1. Solder joint quality identification:
+Describe the appearance of a correct solder joint and three types of defective joints. For each defective joint, state: (1) visual appearance, (2) likely cause, (3) effect on circuit operation if not caught, (4) repair procedure.
+Q2. Assembly sequence planning:
+For your flyback capstone PCB, create a detailed assembly sequence. List all 25+ components in the exact order you would solder them, explaining why each group comes before or after the next. Consider component height, thermal mass, and access difficulty.
+Q3. DPAK MOSFET soldering analysis:
+The STD5NK60Z MOSFET in DPAK has a large thermal tab that must make good thermal and electrical contact with the PCB pad.
+(a) Why is the thermal tab solder joint more thermally critical than the three pin joints?
+(b) If the tab solder joint has a 0.1mm air gap under 50% of the tab area: estimate the thermal resistance penalty. (Each 1mm² of air gap ≈ 4°C/W additional thermal resistance. Tab area = 10mm × 8mm = 80mm². 50% air gap = 40mm².)
+(c) How does insufficient flux cause tab soldering problems?
+(d) Describe how you would verify the tab is fully soldered from the visual appearance of the bottom of the PCB.
+(e) If you suspect the tab is not properly soldered after the circuit is already assembled: describe the rework procedure without removing other components.
+Q4. Pre-power inspection checklist:
+Before applying power to your assembled flyback PCB for the first time, create a 15-point inspection checklist. For each item, describe: (1) what you check, (2) how you check it (visual, multimeter, etc.), (3) what result indicates pass.
+Critical items to include: bulk capacitor polarity, MOSFET orientation, bridge rectifier diode orientations, output capacitor polarity, feedback divider resistance values, R_sense value, gate drive continuity, primary-secondary isolation resistance.
+Q5. Soldering problem-solving:
+During assembly of your flyback converter, you encounter these problems. For each, describe the cause and solution:
+(a) After soldering the 100µF/400V electrolytic capacitor, you notice it is installed backwards (+ to PGND instead of VIN)
+(b) While soldering the UC3842 socket, solder flowed between pins 5 and 6, creating a bridge
+(c) An 0805 resistor tombstoned during soldering — it is standing vertically on one end
+(d) After soldering the bridge rectifier diodes, you measure 0Ω resistance between the AC input terminals (they should be isolated from each other when the circuit is not powered)
+(e) The secondary Schottky diode pad lifted off the PCB during desoldering (you were trying to replace it). The SMB pad is now gone.
