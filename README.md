@@ -33,9 +33,9 @@ Nothing is copied — every solution is my own work.
 | Month 2 | Semiconductor Devices |  ✅️ Completed |
 | Month 3 | AC Circuit Analysis & Magnetics |  ✅️ Completed |
 | Month 4 | DC-DC Converters — Buck & Boost |  ✅️ Completed |
-| Month 5 | Isolated Converters — Flyback & Full Bridge | ⬜ Not Started |
-| Month 6 | PCB Design for Power Electronics | ⬜ Not Started |
-| Month 7 | Solar PV Systems & MPPT | ⬜ Not Started |
+| Month 5 | Isolated Converters — Flyback & Full Bridge | ✅️ Completed |
+| Month 6 | PCB Design for Power Electronics | ✅️ Completed|
+| Month 7 | Solar PV Systems & MPPT | ✅️ Started |
 | Month 8 | Electric Motors & Motor Drives | ⬜ Not Started |
 | Month 9 | Power Factor Correction | ⬜ Not Started |
 | Month 10 | Control Systems for Converters | ⬜ Not Started |
@@ -154,9 +154,9 @@ and complete the foundation for the Year 1 flyback capstone project.
 | 3 | Grounding Strategies | 18/07/2026 | 5/5 | ✅️ |
 | 4 | Thermal Management | 18/07/2026 | 5/5 | ✅️ |
 | 5 | EMI Reduction Through PCB Layout | 19/07/2026 | 5/5 | ✅️ |
-| 6 | KiCad — PCB Design Software | — | 0/5 | ⬜ |
-| 7 | Designing Your First Power Electronics PCB | — | 0/5 | ⬜ |
-| 8 | Design Rule Check and Manufacturing Preparation | — | 0/5 | ⬜ |
-| 9 | PCB Assembly and Soldering Techniques | — | 0/5 | ⬜ |
-| 10 | Board Bring-Up and Debug Procedure | — | 0/5 | ⬜ |
+| 6 | KiCad — PCB Design Software | 20/07/2026 | 5/5 | ✅️ |
+| 7 | Designing Your First Power Electronics PCB | 21/07/2026 | 5/5 | ✅️ |
+| 8 | Design Rule Check and Manufacturing Preparation | 22/07/2026 | 5/5 | ✅️ |
+| 9 | PCB Assembly and Soldering Techniques | 23/07/2026 | 5/5 | ✅️ |
+| 10 | Board Bring-Up and Debug Procedure | 24/07/2026 | 5/5 | ✅️ |
 
